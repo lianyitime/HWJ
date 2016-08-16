@@ -282,12 +282,12 @@
                   moduleName = "HWJ"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zhiyuan/Documents/HWJ/HWJ/Classes/Others/EaseUI/EMUIKit/Views/conversation/toolbar/FaceView/EaseFacialView.m"
-                  timestampString = "492921089.837123"
+                  timestampString = "493050848.861731"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "297"
                   endingLineNumber = "297"
-                  offsetFromSymbolStart = "100">
+                  offsetFromSymbolStart = "102">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -297,12 +297,12 @@
                   moduleName = "HWJ"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zhiyuan/Documents/HWJ/HWJ/Classes/Others/EaseUI/EMUIKit/Views/conversation/toolbar/FaceView/EaseFacialView.m"
-                  timestampString = "492921089.838349"
+                  timestampString = "493050848.861939"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "297"
                   endingLineNumber = "297"
-                  offsetFromSymbolStart = "116">
+                  offsetFromSymbolStart = "110">
                </Location>
             </Locations>
          </BreakpointContent>

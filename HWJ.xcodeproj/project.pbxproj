@@ -155,6 +155,7 @@
 		D734F7D31D525850007F5EF3 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D734F7D21D525850007F5EF3 /* Social.framework */; };
 		D734F7D51D5258C2007F5EF3 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D734F7D41D5258C2007F5EF3 /* Accounts.framework */; };
 		D73D84B51D615BBA005A0687 /* HWProcessListController.m in Sources */ = {isa = PBXBuildFile; fileRef = D73D84B41D615BBA005A0687 /* HWProcessListController.m */; };
+		D73D84DE1D62C875005A0687 /* ZYDropView.m in Sources */ = {isa = PBXBuildFile; fileRef = D73D84DD1D62C875005A0687 /* ZYDropView.m */; };
 		D78BDB0F1D49B23D00E97C39 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D78BDB0B1D49B23D00E97C39 /* libcrypto.a */; };
 		D78BDB101D49B23D00E97C39 /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D78BDB0C1D49B23D00E97C39 /* libcurl.a */; };
 		D78BDB111D49B23D00E97C39 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D78BDB0D1D49B23D00E97C39 /* libssl.a */; };
@@ -502,6 +503,8 @@
 		D734F7D41D5258C2007F5EF3 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		D73D84B31D615BBA005A0687 /* HWProcessListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWProcessListController.h; sourceTree = "<group>"; };
 		D73D84B41D615BBA005A0687 /* HWProcessListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWProcessListController.m; sourceTree = "<group>"; };
+		D73D84DC1D62C875005A0687 /* ZYDropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYDropView.h; sourceTree = "<group>"; };
+		D73D84DD1D62C875005A0687 /* ZYDropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYDropView.m; sourceTree = "<group>"; };
 		D78BDAE31D49B23D00E97C39 /* EMCallLocalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCallLocalView.h; sourceTree = "<group>"; };
 		D78BDAE41D49B23D00E97C39 /* EMCallManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCallManagerDelegate.h; sourceTree = "<group>"; };
 		D78BDAE51D49B23D00E97C39 /* EMCallRemoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCallRemoteView.h; sourceTree = "<group>"; };
@@ -1457,6 +1460,8 @@
 		D7E16B071D46F18600788CB1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D73D84DC1D62C875005A0687 /* ZYDropView.h */,
+				D73D84DD1D62C875005A0687 /* ZYDropView.m */,
 				D7E16B2C1D474A9D00788CB1 /* HWJobInfoCell.h */,
 				D7E16B2D1D474A9D00788CB1 /* HWJobInfoCell.m */,
 				D7E16B2F1D474AB800788CB1 /* HWCandidateInfoCell.h */,
@@ -1849,6 +1854,7 @@
 				D709C6DA1D4A5EA10093A0DE /* PSTCollectionViewData.m in Sources */,
 				D734F7AE1D524F0E007F5EF3 /* RobotChatViewController.m in Sources */,
 				D7E16B221D47315500788CB1 /* HWLoginComparySetController.m in Sources */,
+				D73D84DE1D62C875005A0687 /* ZYDropView.m in Sources */,
 				D709C6B11D4A5EA10093A0DE /* MJRefreshAutoStateFooter.m in Sources */,
 				D709C6CA1D4A5EA10093A0DE /* EMSDWebImageDownloaderOperation.m in Sources */,
 				D709C6C91D4A5EA10093A0DE /* EMSDWebImageDownloader.m in Sources */,
