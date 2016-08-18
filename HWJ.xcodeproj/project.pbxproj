@@ -159,6 +159,8 @@
 		D73D84DE1D62C875005A0687 /* ZYDropView.m in Sources */ = {isa = PBXBuildFile; fileRef = D73D84DD1D62C875005A0687 /* ZYDropView.m */; };
 		D76A49E51D641208003A8528 /* HWTempUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D76A49E41D641208003A8528 /* HWTempUserCell.m */; };
 		D76A49E81D64121A003A8528 /* HWProcessUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D76A49E71D64121A003A8528 /* HWProcessUserCell.m */; };
+		D77D80371D6551F900E81E51 /* ZYDoubleBtHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D77D80361D6551F900E81E51 /* ZYDoubleBtHeaderView.m */; };
+		D77D803A1D6564C700E81E51 /* NSDate+NVTimeAgo.m in Sources */ = {isa = PBXBuildFile; fileRef = D77D80391D6564C700E81E51 /* NSDate+NVTimeAgo.m */; };
 		D78BDB0F1D49B23D00E97C39 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D78BDB0B1D49B23D00E97C39 /* libcrypto.a */; };
 		D78BDB101D49B23D00E97C39 /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D78BDB0C1D49B23D00E97C39 /* libcurl.a */; };
 		D78BDB111D49B23D00E97C39 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D78BDB0D1D49B23D00E97C39 /* libssl.a */; };
@@ -511,6 +513,10 @@
 		D76A49E41D641208003A8528 /* HWTempUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWTempUserCell.m; sourceTree = "<group>"; };
 		D76A49E61D64121A003A8528 /* HWProcessUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWProcessUserCell.h; sourceTree = "<group>"; };
 		D76A49E71D64121A003A8528 /* HWProcessUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWProcessUserCell.m; sourceTree = "<group>"; };
+		D77D80351D6551F900E81E51 /* ZYDoubleBtHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYDoubleBtHeaderView.h; sourceTree = "<group>"; };
+		D77D80361D6551F900E81E51 /* ZYDoubleBtHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYDoubleBtHeaderView.m; sourceTree = "<group>"; };
+		D77D80381D6564C700E81E51 /* NSDate+NVTimeAgo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+NVTimeAgo.h"; sourceTree = "<group>"; };
+		D77D80391D6564C700E81E51 /* NSDate+NVTimeAgo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+NVTimeAgo.m"; sourceTree = "<group>"; };
 		D78BDAE31D49B23D00E97C39 /* EMCallLocalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCallLocalView.h; sourceTree = "<group>"; };
 		D78BDAE41D49B23D00E97C39 /* EMCallManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCallManagerDelegate.h; sourceTree = "<group>"; };
 		D78BDAE51D49B23D00E97C39 /* EMCallRemoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCallRemoteView.h; sourceTree = "<group>"; };
@@ -1476,6 +1482,8 @@
 				D76A49E41D641208003A8528 /* HWTempUserCell.m */,
 				D76A49E61D64121A003A8528 /* HWProcessUserCell.h */,
 				D76A49E71D64121A003A8528 /* HWProcessUserCell.m */,
+				D77D80351D6551F900E81E51 /* ZYDoubleBtHeaderView.h */,
+				D77D80361D6551F900E81E51 /* ZYDoubleBtHeaderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1491,6 +1499,8 @@
 		D7E16B091D46F18600788CB1 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				D77D80381D6564C700E81E51 /* NSDate+NVTimeAgo.h */,
+				D77D80391D6564C700E81E51 /* NSDate+NVTimeAgo.m */,
 				D734F79F1D524D95007F5EF3 /* UIImageView+HeadImage.h */,
 				D734F7A01D524D95007F5EF3 /* UIImageView+HeadImage.m */,
 			);
@@ -1763,6 +1773,7 @@
 				D709C6BC1D4A5EA10093A0DE /* UIView+MJExtension.m in Sources */,
 				D709C7061D4A5EA10093A0DE /* EaseBubbleView+Voice.m in Sources */,
 				D709C70B1D4A5EA10093A0DE /* EaseTextView.m in Sources */,
+				D77D80371D6551F900E81E51 /* ZYDoubleBtHeaderView.m in Sources */,
 				D709C70A1D4A5EA10093A0DE /* EaseImageView.m in Sources */,
 				D709C6B31D4A5EA10093A0DE /* MJRefreshBackNormalFooter.m in Sources */,
 				D709C7071D4A5EA10093A0DE /* EaseBubbleView.m in Sources */,
@@ -1791,6 +1802,7 @@
 				D709C6D91D4A5EA10093A0DE /* PSTCollectionViewController.m in Sources */,
 				D73D84B51D615BBA005A0687 /* HWProcessListController.m in Sources */,
 				D709C6B01D4A5EA10093A0DE /* MJRefreshAutoNormalFooter.m in Sources */,
+				D77D803A1D6564C700E81E51 /* NSDate+NVTimeAgo.m in Sources */,
 				D7E16B251D47318500788CB1 /* HWLoginComparyUserSetController.m in Sources */,
 				D709C6BE1D4A5EA10093A0DE /* MWGridCell.m in Sources */,
 				D709C6C61D4A5EA10093A0DE /* EMSDImageCache.m in Sources */,

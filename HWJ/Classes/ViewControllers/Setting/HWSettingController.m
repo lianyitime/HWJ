@@ -11,6 +11,7 @@
 #import <RETableViewManager/RETableViewManager.h>
 #import "Masonry.h"
 #import <UIImageView+WebCache.h>
+#import "ZYDoubleBtHeaderView.h"
 
 @interface HWSettingController()<UITableViewDelegate, UITableViewDataSource, RETableViewManagerDelegate>
 
@@ -30,11 +31,12 @@
     [self.view setBackgroundColor:[UIColor whiteColor]];
     
     UITableView *table = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
-    [table setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    //[table setSeparatorStyle:UITableViewCellSeparatorStyleNone];
 //    table.delegate = self;
 //    table.dataSource = self;
     [self.view addSubview:table];
     [table setBackgroundColor:[UIColor lightGrayColor]];
+    table.tableFooterView = [[UIView alloc] init];
     self.tableView = table;
     
     self.dropView = [ZYDropView loadHeadInTable:self.tableView height:200 img:[UIImage imageNamed:@"toutu"]];
@@ -74,12 +76,16 @@
 {
     //__typeof (&*self) __weak weakSelf = self;
     
-    UILabel *head =  [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 40)];
-    [head setBackgroundColor:[UIColor clearColor]];
-    [head setText:@""];
-    [head setTextColor:[UIColor darkTextColor]];
-    [head setTextAlignment:NSTextAlignmentCenter];
-    [head setFont:[UIFont systemFontOfSize:18]];
+//    UILabel *head =  [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 40)];
+//    [head setBackgroundColor:[UIColor clearColor]];
+//    [head setText:@""];
+//    [head setTextColor:[UIColor darkTextColor]];
+//    [head setTextAlignment:NSTextAlignmentCenter];
+//    [head setFont:[UIFont systemFontOfSize:18]];
+    
+    ZYDoubleBtHeaderView *head = [[ZYDoubleBtHeaderView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 44)];
+    [head setLeftTitle:@"梦想基金：100.00"];
+    [head setRightTitle:@"今日收益：20.00"];
     
     RETableViewSection *section = [RETableViewSection sectionWithHeaderView:head footerView:nil];
     [self.manager addSection:section];
@@ -93,7 +99,7 @@
         [item deselectRowAnimated:YES];
     }];
     
-    RETableViewItem *bill  = [RETableViewItem itemWithTitle:@"梦想基金" accessoryType:UITableViewCellAccessoryDisclosureIndicator selectionHandler:^(RETableViewItem *item) {
+    RETableViewItem *bill  = [RETableViewItem itemWithTitle:@"基金管理" accessoryType:UITableViewCellAccessoryDisclosureIndicator selectionHandler:^(RETableViewItem *item) {
         [item deselectRowAnimated:YES];
     }];
     

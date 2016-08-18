@@ -47,6 +47,8 @@
         NSLog(@"Value: %@", item.value);
     };
     
+    RETextItem *emailItem  = [RETextItem itemWithTitle:@"邮箱" value:nil placeholder:@"接收offer用"];
+
     REPickerItem *pickerItem = [REPickerItem itemWithTitle:@"性别" value:@[@"男"] placeholder:nil options:@[@[@"男", @"女"]]];
     pickerItem.onChange = ^(REPickerItem *item){
         NSLog(@"Value: %@", item.value);
@@ -58,6 +60,7 @@
     
     [section addItem:userItem];
     [section addItem:phoneItem];
+    [section addItem:emailItem];
     [section addItem:pickerItem];
 }
 

@@ -22,6 +22,7 @@
 #import "EaseConvertToCommonEmoticonsHelper.h"
 #import "EaseEmotionManager.h"
 #import "NSDate+Category.h"
+#import "NSDate+NVTimeAgo.h"
 //#import "ChatDemoHelper.h"
 
 
@@ -332,7 +333,9 @@
     NSString *latestMessageTime = @"";
     EMMessage *lastMessage = [conversationModel.conversation latestMessage];;
     if (lastMessage) {
-        latestMessageTime = [NSDate formattedTimeFromTimeInterval:lastMessage.timestamp];
+        NSDate *date = [NSDate dateWithTimeIntervalInMilliSecondSince1970:lastMessage.timestamp];
+        latestMessageTime = [date formattedAsTimeAgo];
+        //latestMessageTime = [NSDate formattedTimeFromTimeInterval:lastMessage.timestamp];
     }
 
     

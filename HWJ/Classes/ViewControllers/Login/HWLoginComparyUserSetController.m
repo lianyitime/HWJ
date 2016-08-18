@@ -42,7 +42,10 @@
     phoneItem.onEndEditing = ^(RETextItem *item){
         NSLog(@"Value: %@", item.value);
     };
-
+    
+    RETextItem *emailItem  = [RETextItem itemWithTitle:@"邮箱" value:nil placeholder:@"收取简历用"];
+    //emailItem.validators = @[@"presence", @"email"];
+    
     REPickerItem *pickerItem = [REPickerItem itemWithTitle:@"性别" value:@[@"男"] placeholder:nil options:@[@[@"男", @"女"]]];
     pickerItem.onChange = ^(REPickerItem *item){
         NSLog(@"Value: %@", item.value);
@@ -57,6 +60,7 @@
     [section addItem:titleItem];
     [section addItem:userItem];
     [section addItem:phoneItem];
+    [section addItem:emailItem];
     [section addItem:pickerItem];
     //[section addItem:skillItem];
     //[section addItem:introductItem];

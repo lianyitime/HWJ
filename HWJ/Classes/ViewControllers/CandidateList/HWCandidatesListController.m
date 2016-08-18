@@ -45,6 +45,7 @@
     [table setDelegate:self];
     [table setDataSource:self];
     [self.view addSubview:table];
+    self.tableView = table;
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(doSerach)];
     

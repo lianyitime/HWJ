@@ -36,7 +36,9 @@
     [ctrl addTarget:self action:@selector(onSelectedItemChanged:) forControlEvents:UIControlEventValueChanged];
     self.navigationItem.titleView = ctrl;
     
-    UIScrollView *scroll = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 64, self.view.bounds.size.width, self.view.frame.size.height - 64 - 49)];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    
+    UIScrollView *scroll = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.frame.size.height - 49 - 64)];
     scroll.pagingEnabled = YES;
     [self.view addSubview:scroll];
     self.scrollView = scroll;
@@ -46,6 +48,7 @@
     UITableView *tempUserList = [[UITableView alloc] initWithFrame:scroll.bounds style:UITableViewStylePlain];
     tempUserList.delegate = self;
     tempUserList.dataSource = self;
+    tempUserList.separatorStyle = UITableViewCellSeparatorStyleNone;
     [scroll addSubview:tempUserList];
     self.tempList = tempUserList;
     [self.tempList registerClass:[HWTempUserCell class] forCellReuseIdentifier:@"candiCell"];
@@ -55,6 +58,7 @@
     UITableView *processList = [[UITableView alloc] initWithFrame:frame style:UITableViewStylePlain];
     processList.delegate = self;
     processList.dataSource = self;
+    processList.separatorStyle = UITableViewCellSeparatorStyleNone;
     [scroll addSubview:processList];
     self.processList = processList;
     [self.processList registerClass:[HWTempUserCell class] forCellReuseIdentifier:@"candiCell"];
