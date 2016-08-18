@@ -281,13 +281,13 @@
                   symbolName = "-[EaseFacialView loadFacialView:size:]"
                   moduleName = "HWJ"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zhiyuan/Documents/HWJ/HWJ/Classes/Others/EaseUI/EMUIKit/Views/conversation/toolbar/FaceView/EaseFacialView.m"
-                  timestampString = "493050848.861731"
+                  urlString = "file:///Users/zhiyuan/Documents/Projects/HWJ/Classes/Others/EaseUI/EMUIKit/Views/conversation/toolbar/FaceView/EaseFacialView.m"
+                  timestampString = "493102725.843647"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "297"
                   endingLineNumber = "297"
-                  offsetFromSymbolStart = "102">
+                  offsetFromSymbolStart = "100">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -296,13 +296,13 @@
                   symbolName = "-[EaseFacialView loadFacialView:size:]"
                   moduleName = "HWJ"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zhiyuan/Documents/HWJ/HWJ/Classes/Others/EaseUI/EMUIKit/Views/conversation/toolbar/FaceView/EaseFacialView.m"
-                  timestampString = "493050848.861939"
+                  urlString = "file:///Users/zhiyuan/Documents/Projects/HWJ/Classes/Others/EaseUI/EMUIKit/Views/conversation/toolbar/FaceView/EaseFacialView.m"
+                  timestampString = "493102725.843742"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "297"
                   endingLineNumber = "297"
-                  offsetFromSymbolStart = "110">
+                  offsetFromSymbolStart = "116">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -384,6 +384,54 @@
             startingLineNumber = "200"
             endingLineNumber = "200"
             landmarkName = "-conversationListViewController:didSelectConversationModel:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HWJ/AppDelegate.m"
+            timestampString = "493101753.888868"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "-onLogin:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HWJ/Classes/ViewControllers/ProcessList/HWProcessListController.m"
+            timestampString = "493102724.703667"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HWJ/Classes/ViewControllers/ProcessList/HWProcessListController.m"
+            timestampString = "493102724.703667"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "-loadData"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

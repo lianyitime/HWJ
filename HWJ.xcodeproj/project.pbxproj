@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51CDE7CF0FBE5036AF4E1AB4 /* libPods-HWJ.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EE1491C49D7E67490F395F8 /* libPods-HWJ.a */; };
 		D709C69B1D4A5EA10093A0DE /* EaseUI.m in Sources */ = {isa = PBXBuildFile; fileRef = D709C5771D4A5EA00093A0DE /* EaseUI.m */; };
 		D709C69C1D4A5EA10093A0DE /* EMAudioPlayerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = D709C5811D4A5EA00093A0DE /* EMAudioPlayerUtil.m */; };
 		D709C69D1D4A5EA10093A0DE /* EMAudioRecorderUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = D709C5831D4A5EA00093A0DE /* EMAudioRecorderUtil.m */; };
@@ -156,6 +157,8 @@
 		D734F7D51D5258C2007F5EF3 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D734F7D41D5258C2007F5EF3 /* Accounts.framework */; };
 		D73D84B51D615BBA005A0687 /* HWProcessListController.m in Sources */ = {isa = PBXBuildFile; fileRef = D73D84B41D615BBA005A0687 /* HWProcessListController.m */; };
 		D73D84DE1D62C875005A0687 /* ZYDropView.m in Sources */ = {isa = PBXBuildFile; fileRef = D73D84DD1D62C875005A0687 /* ZYDropView.m */; };
+		D76A49E51D641208003A8528 /* HWTempUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D76A49E41D641208003A8528 /* HWTempUserCell.m */; };
+		D76A49E81D64121A003A8528 /* HWProcessUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D76A49E71D64121A003A8528 /* HWProcessUserCell.m */; };
 		D78BDB0F1D49B23D00E97C39 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D78BDB0B1D49B23D00E97C39 /* libcrypto.a */; };
 		D78BDB101D49B23D00E97C39 /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D78BDB0C1D49B23D00E97C39 /* libcurl.a */; };
 		D78BDB111D49B23D00E97C39 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D78BDB0D1D49B23D00E97C39 /* libssl.a */; };
@@ -190,13 +193,12 @@
 		D7E16B341D47788800788CB1 /* HWCandidateInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E16B331D47788800788CB1 /* HWCandidateInfo.m */; };
 		D7E16B391D4797E700788CB1 /* HWMsgsListController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E16B381D4797E700788CB1 /* HWMsgsListController.m */; };
 		D7E16B3C1D47981600788CB1 /* HWSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E16B3B1D47981600788CB1 /* HWSettingController.m */; };
-		E9DE55E594A259D3D204220C /* libPods-HWJ.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB26B6ED74DBDAEEE786053 /* libPods-HWJ.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3C9DAD7623FD5D810DD8EC87 /* Pods-HWJ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HWJ.release.xcconfig"; path = "Pods/Target Support Files/Pods-HWJ/Pods-HWJ.release.xcconfig"; sourceTree = "<group>"; };
-		6BB26B6ED74DBDAEEE786053 /* libPods-HWJ.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HWJ.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B5031998F046A661C39865CC /* Pods-HWJ.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HWJ.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HWJ/Pods-HWJ.debug.xcconfig"; sourceTree = "<group>"; };
+		4EE1491C49D7E67490F395F8 /* libPods-HWJ.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HWJ.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5ACE15E86821C03027AFF0F5 /* Pods-HWJ.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HWJ.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HWJ/Pods-HWJ.debug.xcconfig"; sourceTree = "<group>"; };
+		A4C7B6D04E851E9703947226 /* Pods-HWJ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HWJ.release.xcconfig"; path = "Pods/Target Support Files/Pods-HWJ/Pods-HWJ.release.xcconfig"; sourceTree = "<group>"; };
 		D709C5761D4A5EA00093A0DE /* EaseUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EaseUI.h; sourceTree = "<group>"; };
 		D709C5771D4A5EA00093A0DE /* EaseUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EaseUI.m; sourceTree = "<group>"; };
 		D709C57C1D4A5EA00093A0DE /* EMCDDeviceManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCDDeviceManagerDelegate.h; sourceTree = "<group>"; };
@@ -505,6 +507,10 @@
 		D73D84B41D615BBA005A0687 /* HWProcessListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWProcessListController.m; sourceTree = "<group>"; };
 		D73D84DC1D62C875005A0687 /* ZYDropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYDropView.h; sourceTree = "<group>"; };
 		D73D84DD1D62C875005A0687 /* ZYDropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYDropView.m; sourceTree = "<group>"; };
+		D76A49E31D641208003A8528 /* HWTempUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWTempUserCell.h; sourceTree = "<group>"; };
+		D76A49E41D641208003A8528 /* HWTempUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWTempUserCell.m; sourceTree = "<group>"; };
+		D76A49E61D64121A003A8528 /* HWProcessUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWProcessUserCell.h; sourceTree = "<group>"; };
+		D76A49E71D64121A003A8528 /* HWProcessUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWProcessUserCell.m; sourceTree = "<group>"; };
 		D78BDAE31D49B23D00E97C39 /* EMCallLocalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCallLocalView.h; sourceTree = "<group>"; };
 		D78BDAE41D49B23D00E97C39 /* EMCallManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCallManagerDelegate.h; sourceTree = "<group>"; };
 		D78BDAE51D49B23D00E97C39 /* EMCallRemoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCallRemoteView.h; sourceTree = "<group>"; };
@@ -623,14 +629,23 @@
 				D78BDB0F1D49B23D00E97C39 /* libcrypto.a in Frameworks */,
 				D78BDB121D49B23D00E97C39 /* libHyphenateFullSDK.a in Frameworks */,
 				D734F7AA1D524EE0007F5EF3 /* Bolts.framework in Frameworks */,
-				E9DE55E594A259D3D204220C /* libPods-HWJ.a in Frameworks */,
 				D78BDB101D49B23D00E97C39 /* libcurl.a in Frameworks */,
+				51CDE7CF0FBE5036AF4E1AB4 /* libPods-HWJ.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A1BFFAEB258096A37E13F9F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5ACE15E86821C03027AFF0F5 /* Pods-HWJ.debug.xcconfig */,
+				A4C7B6D04E851E9703947226 /* Pods-HWJ.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BBDB92B45B67FDC8337B551C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -649,18 +664,9 @@
 				D78BDB171D49B2A600E97C39 /* AVFoundation.framework */,
 				D78BDB151D49B29C00E97C39 /* AudioToolbox.framework */,
 				D78BDB131D49B29300E97C39 /* CoreMedia.framework */,
-				6BB26B6ED74DBDAEEE786053 /* libPods-HWJ.a */,
+				4EE1491C49D7E67490F395F8 /* libPods-HWJ.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D0729817547BCADF2B0157E4 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				B5031998F046A661C39865CC /* Pods-HWJ.debug.xcconfig */,
-				3C9DAD7623FD5D810DD8EC87 /* Pods-HWJ.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		D709C5751D4A5EA00093A0DE /* EaseUI */ = {
@@ -1379,8 +1385,8 @@
 			children = (
 				D7E16AC21D46DEF300788CB1 /* HWJ */,
 				D7E16AC11D46DEF200788CB1 /* Products */,
-				D0729817547BCADF2B0157E4 /* Pods */,
 				BBDB92B45B67FDC8337B551C /* Frameworks */,
+				3A1BFFAEB258096A37E13F9F /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1466,6 +1472,10 @@
 				D7E16B2D1D474A9D00788CB1 /* HWJobInfoCell.m */,
 				D7E16B2F1D474AB800788CB1 /* HWCandidateInfoCell.h */,
 				D7E16B301D474AB800788CB1 /* HWCandidateInfoCell.m */,
+				D76A49E31D641208003A8528 /* HWTempUserCell.h */,
+				D76A49E41D641208003A8528 /* HWTempUserCell.m */,
+				D76A49E61D64121A003A8528 /* HWProcessUserCell.h */,
+				D76A49E71D64121A003A8528 /* HWProcessUserCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1599,12 +1609,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D7E16AD71D46DEF300788CB1 /* Build configuration list for PBXNativeTarget "HWJ" */;
 			buildPhases = (
-				53CDAB7C1DC8D66F77817CA1 /* Check Pods Manifest.lock */,
+				498ADBB7AABE9625A9673244 /* 📦 Check Pods Manifest.lock */,
 				D7E16ABC1D46DEF200788CB1 /* Sources */,
 				D7E16ABD1D46DEF200788CB1 /* Frameworks */,
 				D7E16ABE1D46DEF200788CB1 /* Resources */,
-				0D7C74D19000B91B7EBB890B /* Embed Pods Frameworks */,
-				BEF381D87060A653E962965B /* Copy Pods Resources */,
+				3919A1DB89C222A187145E56 /* 📦 Embed Pods Frameworks */,
+				3AA49CF1012AAE25B422E5D4 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1666,14 +1676,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0D7C74D19000B91B7EBB890B /* Embed Pods Frameworks */ = {
+		3919A1DB89C222A187145E56 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1681,34 +1691,34 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HWJ/Pods-HWJ-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		53CDAB7C1DC8D66F77817CA1 /* Check Pods Manifest.lock */ = {
+		3AA49CF1012AAE25B422E5D4 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		BEF381D87060A653E962965B /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HWJ/Pods-HWJ-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		498ADBB7AABE9625A9673244 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1747,6 +1757,7 @@
 				D7E16B3C1D47981600788CB1 /* HWSettingController.m in Sources */,
 				D709C6D81D4A5EA10093A0DE /* PSTCollectionViewCell.m in Sources */,
 				D709C6DE1D4A5EA10093A0DE /* PSTCollectionViewUpdateItem.m in Sources */,
+				D76A49E81D64121A003A8528 /* HWProcessUserCell.m in Sources */,
 				D709C72B1D501ED60093A0DE /* HWJobBaseInfo.m in Sources */,
 				D709C6FC1D4A5EA10093A0DE /* EaseBaseMessageCell.m in Sources */,
 				D709C6BC1D4A5EA10093A0DE /* UIView+MJExtension.m in Sources */,
@@ -1785,6 +1796,7 @@
 				D709C6C61D4A5EA10093A0DE /* EMSDImageCache.m in Sources */,
 				D709C6DD1D4A5EA10093A0DE /* PSTCollectionViewLayout.m in Sources */,
 				D709C6ED1D4A5EA10093A0DE /* EaseChineseToPinyin.m in Sources */,
+				D76A49E51D641208003A8528 /* HWTempUserCell.m in Sources */,
 				D709C6F61D4A5EA10093A0DE /* EaseLocationViewController.m in Sources */,
 				D7E16B2E1D474A9D00788CB1 /* HWJobInfoCell.m in Sources */,
 				D7E16B131D46FED900788CB1 /* HWLoginSetUserController.m in Sources */,
@@ -1982,7 +1994,7 @@
 		};
 		D7E16AD81D46DEF300788CB1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B5031998F046A661C39865CC /* Pods-HWJ.debug.xcconfig */;
+			baseConfigurationReference = 5ACE15E86821C03027AFF0F5 /* Pods-HWJ.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
@@ -2009,7 +2021,7 @@
 		};
 		D7E16AD91D46DEF300788CB1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3C9DAD7623FD5D810DD8EC87 /* Pods-HWJ.release.xcconfig */;
+			baseConfigurationReference = A4C7B6D04E851E9703947226 /* Pods-HWJ.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
