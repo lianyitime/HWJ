@@ -135,6 +135,7 @@
 		D709C7241D4AFF3E0093A0DE /* RxWebViewNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D709C71E1D4AFF3E0093A0DE /* RxWebViewNavigationViewController.m */; };
 		D709C7281D4AFF950093A0DE /* HWNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D709C7271D4AFF950093A0DE /* HWNavigationViewController.m */; };
 		D709C72B1D501ED60093A0DE /* HWJobBaseInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D709C72A1D501ED60093A0DE /* HWJobBaseInfo.m */; };
+		D70FD48B1D66D80400D8E679 /* ZYAdTipsView.m in Sources */ = {isa = PBXBuildFile; fileRef = D70FD48A1D66D80400D8E679 /* ZYAdTipsView.m */; };
 		D734F78E1D52493F007F5EF3 /* HWRecommendJobsListController.m in Sources */ = {isa = PBXBuildFile; fileRef = D734F78D1D52493F007F5EF3 /* HWRecommendJobsListController.m */; };
 		D734F7911D524BEA007F5EF3 /* ConversationListController.m in Sources */ = {isa = PBXBuildFile; fileRef = D734F7901D524BEA007F5EF3 /* ConversationListController.m */; };
 		D734F7941D524C64007F5EF3 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D734F7931D524C64007F5EF3 /* ChatViewController.m */; };
@@ -469,6 +470,8 @@
 		D709C7271D4AFF950093A0DE /* HWNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HWNavigationViewController.m; path = ../Setting/HWNavigationViewController.m; sourceTree = "<group>"; };
 		D709C7291D501ED60093A0DE /* HWJobBaseInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWJobBaseInfo.h; sourceTree = "<group>"; };
 		D709C72A1D501ED60093A0DE /* HWJobBaseInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWJobBaseInfo.m; sourceTree = "<group>"; };
+		D70FD4891D66D80400D8E679 /* ZYAdTipsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYAdTipsView.h; sourceTree = "<group>"; };
+		D70FD48A1D66D80400D8E679 /* ZYAdTipsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYAdTipsView.m; sourceTree = "<group>"; };
 		D734F78C1D52493F007F5EF3 /* HWRecommendJobsListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWRecommendJobsListController.h; sourceTree = "<group>"; };
 		D734F78D1D52493F007F5EF3 /* HWRecommendJobsListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWRecommendJobsListController.m; sourceTree = "<group>"; };
 		D734F78F1D524BEA007F5EF3 /* ConversationListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversationListController.h; sourceTree = "<group>"; };
@@ -1484,6 +1487,8 @@
 				D76A49E71D64121A003A8528 /* HWProcessUserCell.m */,
 				D77D80351D6551F900E81E51 /* ZYDoubleBtHeaderView.h */,
 				D77D80361D6551F900E81E51 /* ZYDoubleBtHeaderView.m */,
+				D70FD4891D66D80400D8E679 /* ZYAdTipsView.h */,
+				D70FD48A1D66D80400D8E679 /* ZYAdTipsView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1894,6 +1899,7 @@
 				D709C6AA1D4A5EA10093A0DE /* MJRefreshAutoFooter.m in Sources */,
 				D709C6DF1D4A5EA10093A0DE /* PSTGridLayoutInfo.m in Sources */,
 				D734F7C91D52525A007F5EF3 /* ContactView.m in Sources */,
+				D70FD48B1D66D80400D8E679 /* ZYAdTipsView.m in Sources */,
 				D7E16B2B1D4746CB00788CB1 /* HWJosbListController.m in Sources */,
 				D709C6D01D4A5EA10093A0DE /* UIImage+EMGIF.m in Sources */,
 				D7E16AC51D46DEF300788CB1 /* main.m in Sources */,

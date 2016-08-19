@@ -9,6 +9,7 @@
 #import "HWJosbListController.h"
 #import "HWJobInfoCell.h"
 #import "HWJobBaseInfo.h"
+#import "ZYAdTipsView.h"
 
 @interface HWJosbListController()<UITableViewDelegate, UITableViewDataSource>
 
@@ -27,14 +28,23 @@
 {
     [super viewDidLoad];
     
-    UITableView *table = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+    UITableView *table = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     table.separatorStyle = UITableViewCellSeparatorStyleNone;
     [table registerClass:[HWJobInfoCell class] forCellReuseIdentifier:@"jobCell"];
     [table setDelegate:self];
     [table setDataSource:self];
     [self.view addSubview:table];
+    self.tableView = table;
     
+    //[self performSelector:@selector(showAdTip) withObject:nil afterDelay:0.5];
+    [self showAdTip];
+
     [self loadData];
+}
+
+- (void)showAdTip
+{
+    [ZYAdTipsView showInTable:self.tableView withTitle:@"今天投入多几百，明年年薪多几万"];
 }
 
 - (void)loadData
@@ -51,6 +61,7 @@
     candi.userImgUrl = @"http://tva4.sinaimg.cn/crop.0.0.180.180.180/62667ea8jw1e8qgp5bmzyj2050050aa8.jpg";
     candi.appName = @"涟漪相册";
     candi.peoples = @"20-50人";
+    candi.jobType = 0;
     
     self.jobs = [[NSMutableArray alloc] initWithObjects:candi, nil];
     [self.tableView reloadData];

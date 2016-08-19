@@ -25,6 +25,8 @@
 
 @property (nonatomic, strong)UIButton *userBtview;
 
+@property (nonatomic, strong)UILabel *workTipLabel;;
+
 @property (nonatomic, strong)UILabel *userInfoLabel;
 
 @property (nonatomic, strong)UIButton *appNameBt;
@@ -150,17 +152,28 @@
     [workTip setFont:[UIFont systemFontOfSize:12]];
     [workTip setTextColor:[UIColor grayColor]];
     [self.cardBgView addSubview:workTip];
-    self.userInfoLabel = workTip;
+    self.workTipLabel = workTip;
     
     [workTip mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(userBt.mas_right).offset(15);
         make.top.mas_equalTo(userBt.mas_top);
     }];
+    
+    UILabel *workInfo = [[UILabel alloc] init];
+    [workInfo setFont:[UIFont systemFontOfSize:12]];
+    [workInfo setTextColor:[UIColor grayColor]];
+    [self.cardBgView addSubview:workInfo];
+    self.userInfoLabel = workInfo;
+    
+    [workInfo mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(workTip.mas_right).offset(5);
+        make.top.mas_equalTo(workTip.mas_top);
+    }];
 
     UILabel *productTip = [[UILabel alloc] init];
     [productTip setFont:[UIFont systemFontOfSize:12]];
     [productTip setTextColor:[UIColor grayColor]];
-    [productTip setText:@"产品:"];
+    [productTip setText:@"产品线:"];
     [self.cardBgView addSubview:productTip];
     [productTip mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(workTip.mas_left);
@@ -226,7 +239,12 @@
     [self.expectMoney setText:[NSString stringWithFormat:@"%@-%@", data.expectMinMoney, data.expectMaxMoney]];
     [self.expectYear setText:data.expectYear];
     [self.location setText:data.location];
-    
+    if (data.jobType == 0) {
+        [self.workTipLabel setText:@"面试官:"];
+    }
+    else {
+        [self.workTipLabel setText:@"内推人:"];
+    }
     [self.userBtview sd_setImageWithURL:[NSURL URLWithString:data.userImgUrl] forState:UIControlStateNormal];
     [self.userInfoLabel setText:[NSString stringWithFormat:@"%@ | %@ | %@", data.userName, data.userTitle, data.company]];
     [self.appNameBt setTitle:[NSString stringWithFormat:@"%@", data.appName] forState:UIControlStateNormal];

@@ -32,4 +32,7 @@
 
 @property (nonatomic, strong)NSString *peoples;
 
+//0 直聘，1 内推
+@property (nonatomic, assign)NSInteger jobType;
+
 @end

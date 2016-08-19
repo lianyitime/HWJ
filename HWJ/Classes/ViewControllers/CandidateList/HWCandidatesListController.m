@@ -16,6 +16,8 @@
 #import "EaseEmoji.h"
 #import "EaseEmotionManager.h"
 
+#import "ZYAdTipsView.h"
+
 @interface HWCandidatesListController()<UITableViewDelegate, UITableViewDataSource, HWCandidateInfoDelegate>
 
 @property (nonatomic, strong)UITableView *tableView;
@@ -39,7 +41,7 @@
 {
     [super viewDidLoad];
     self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"人才" image:[UIImage imageNamed:@"LYTabBarMyInfo"] selectedImage:[UIImage imageNamed:@"LYTabBarMyInfo_h"]];
-    UITableView *table = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+    UITableView *table = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     table.separatorStyle = UITableViewCellSeparatorStyleNone;
     [table registerClass:[HWCandidateInfoCell class] forCellReuseIdentifier:@"candiCell"];
     [table setDelegate:self];
@@ -49,7 +51,15 @@
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(doSerach)];
     
+    //[self performSelector:@selector(showAdTip) withObject:nil afterDelay:0.5];
+    [self showAdTip];
+    
     [self loadData];
+}
+
+- (void)showAdTip
+{
+    [ZYAdTipsView showInTable:self.tableView withTitle:@"内推:成功推荐一人可获得奖励1千"];
 }
 
 - (void)loadData
