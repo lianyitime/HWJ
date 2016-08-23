@@ -14,6 +14,7 @@
 
 #import "EaseEmotionEscape.h"
 #import "EaseConvertToCommonEmoticonsHelper.h"
+#import "HWChatBaseMsgBody.h"
 
 @implementation EaseMessageModel
 
@@ -113,6 +114,14 @@
                 else if (self.fileSize < 2014 * 1024 * 1024){
                     self.fileSizeDes = [NSString stringWithFormat:@"%.2fMB", self.fileSize / (1024 * 1024)];
                 }
+            }
+                break;
+            case EMMessageBodyTypeCustom:
+            {
+                HWChatBaseMsgBody *textBody = (HWChatBaseMsgBody *)_firstMessageBody;
+                NSString *didReceiveText = [EaseConvertToCommonEmoticonsHelper convertToSystemEmoticons:textBody.text];
+                self.text = didReceiveText;
+                textBody.msgType = (HWChatBaseMsgType)[[message.ext objectForKey:@"msgBizType"] integerValue];
             }
                 break;
             default:

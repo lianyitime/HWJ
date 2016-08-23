@@ -1,16 +1,16 @@
 //
-//  HWCandidateInfoCell.m
+//  HWReqJobChatCell.m
 //  HWJ
 //
-//  Created by zhiyuan on 16/7/26.
+//  Created by zhiyuan on 16/8/22.
 //  Copyright © 2016年 zhiyuan. All rights reserved.
 //
 
-#import "HWCandidateInfoCell.h"
+#import "HWReqJobChatCell.h"
 #import "Masonry.h"
 #import "UIButton+WebCache.h"
 
-@interface HWCandidateInfoCell()
+@interface HWReqJobChatCell()
 
 @property(nonatomic, strong)UIView *cardBgView;
 
@@ -46,9 +46,26 @@
 
 @property(nonatomic, strong)UIButton *sendMsgBt;
 
+
+/**
+ *  job info
+ */
+
+@property(nonatomic, strong)UILabel *nameLabel;
+
+@property(nonatomic, strong)UILabel *expectYear;
+
+@property(nonatomic, strong)UILabel *expectJobMoney;
+
+@property (nonatomic,strong)UILabel *location;
+
+@property (nonatomic, strong)UILabel *managerName;
+
+@property (nonatomic, strong)UILabel *wordLabel;
+
 @end
 
-@implementation HWCandidateInfoCell
+@implementation HWReqJobChatCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -181,7 +198,7 @@
     
     UILabel *workTip = [[UILabel alloc] init];
     [workTip setFont:[UIFont systemFontOfSize:12]];
-    [workTip setText:@"曾就职于:"];
+    [workTip setText:@"单位:"];
     [workTip setTextColor:[UIColor grayColor]];
     [self.cardBgView addSubview:workTip];
     self.workTipLabel = workTip;
@@ -205,11 +222,11 @@
     UILabel *productTip = [[UILabel alloc] init];
     [productTip setFont:[UIFont systemFontOfSize:12]];
     [productTip setTextColor:[UIColor grayColor]];
-    [productTip setText:@"开发的产品:"];
+    [productTip setText:@"产品:"];
     [self.cardBgView addSubview:productTip];
     [productTip mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(workTip.mas_left);
-        make.top.mas_equalTo(workTip.mas_bottom).offset(10);
+        make.left.mas_equalTo(self.companyTagLabel.mas_right).offset(15);
+        make.centerY.mas_equalTo(self.companyTagLabel.mas_centerY);
     }];
     
     UIButton *productBt = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -227,11 +244,11 @@
     UILabel *blogTip = [[UILabel alloc] init];
     [blogTip setFont:[UIFont systemFontOfSize:12]];
     [blogTip setTextColor:[UIColor grayColor]];
-    [blogTip setText:@"技术blog:"];
+    [blogTip setText:@"博客:"];
     [self.cardBgView addSubview:blogTip];
     [blogTip mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(productTip.mas_left);
-        make.top.mas_equalTo(productTip.mas_bottom).offset(10);
+        make.left.mas_equalTo(workTip.mas_left);
+        make.top.mas_equalTo(workTip.mas_bottom).offset(10);
     }];
     
     UIButton *blog = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -245,33 +262,14 @@
         make.centerY.mas_equalTo(blogTip.mas_centerY);
     }];
     
-    UIImageView *sepLine2 = [[UIImageView alloc] init];
-    [sepLine2 setBackgroundColor:[UIColor lightGrayColor]];
-    [self.cardBgView addSubview:sepLine2];
-    [sepLine2 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(self.userBtview.mas_left);
-        make.centerX.mas_equalTo(self.cardBgView.mas_centerX);
-        make.top.mas_equalTo(blogTip.mas_bottom).offset(10);
-        make.height.mas_equalTo(0.5);
-    }];
-    
-    UIButton *sendBt = [UIButton buttonWithType:UIButtonTypeCustom];
-    [sendBt setTitle:@"￥搭讪￥" forState:UIControlStateNormal];
-    [sendBt addTarget:self action:@selector(sendInviteMsg:) forControlEvents:UIControlEventTouchUpInside];
-    [sendBt.titleLabel setFont:[UIFont systemFontOfSize:13]];
-    [sendBt setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [sendBt setClipsToBounds:YES];
-    [sendBt.layer setCornerRadius:4.0];
-    [sendBt setBackgroundColor:[UIColor colorWithRed:0.5 green:.9 blue:0.5 alpha:1.0]];
-    
-    [self.cardBgView addSubview:sendBt];
-    self.sendMsgBt = sendBt;
-    
-    [sendBt mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.mas_equalTo(self.cardBgView.mas_right).offset(-15);
-        make.top.mas_equalTo(sepLine2.mas_bottom).offset(7);
-        make.bottom.mas_equalTo(self.cardBgView.mas_bottom).offset(-7);
-        make.width.mas_equalTo(70);
+    UILabel *collageTip = [[UILabel alloc] init];
+    [collageTip setFont:[UIFont systemFontOfSize:12]];
+    [collageTip setTextColor:[UIColor grayColor]];
+    [collageTip setText:@"学校:"];
+    [self.cardBgView addSubview:collageTip];
+    [collageTip mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(productTip.mas_left);
+        make.centerY.mas_equalTo(blogTip.mas_centerY);
     }];
     
     UILabel *collage = [[UILabel alloc] init];
@@ -281,12 +279,122 @@
     self.collage = collage;
     
     [collage mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(self.nameLab.mas_left);
-        make.centerY.mas_equalTo(sendBt.mas_centerY);
+        make.left.mas_equalTo(collageTip.mas_right).offset(5);
+        make.centerY.mas_equalTo(collageTip.mas_centerY);
     }];
+    
+    UIImageView *sepLine2 = [[UIImageView alloc] init];
+    [sepLine2 setBackgroundColor:[UIColor lightGrayColor]];
+    [self.cardBgView addSubview:sepLine2];
+    [sepLine2 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.nameLab.mas_left);
+        make.centerX.mas_equalTo(self.cardBgView.mas_centerX);
+        make.top.mas_equalTo(self.collage.mas_bottom).offset(15);
+        make.height.mas_equalTo(0.5);
+    }];
+    
+    //
+    
+    UILabel *action = [[UILabel alloc] init];
+    [action setFont:[UIFont systemFontOfSize:14]];
+    [self.cardBgView addSubview:action];
+    [action setText:@"应聘"];
+    [action mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.cardBgView.mas_left).offset(10);
+        make.top.mas_equalTo(sepLine2.mas_top).offset(10);
+    }];
+    
+    UILabel *jobName = [[UILabel alloc] init];
+    [jobName setFont:[UIFont systemFontOfSize:14]];
+    [jobName setTextColor:[UIColor colorWithRed:0.5 green:.9 blue:0.5 alpha:1.0]];
+    [self.cardBgView addSubview:jobName];
+    self.nameLabel = jobName;
+    
+    [jobName mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(action.mas_right).offset(5);
+        make.centerY.mas_equalTo(action.mas_centerY);
+    }];
+    
+    UILabel *jobWorkYear = [[UILabel alloc] init];
+    [jobWorkYear setFont:[UIFont systemFontOfSize:11]];
+    [jobWorkYear setTextColor:[UIColor grayColor]];
+    [self.cardBgView addSubview:jobWorkYear];
+    self.expectYear = jobWorkYear;
+    [jobWorkYear mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.mas_equalTo(self.cardBgView.mas_right).offset(-10);
+        make.centerY.mas_equalTo(self.nameLabel.mas_centerY);
+    }];
+    
+    UIImageView *jobYearImgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"about"]];
+    [self.cardBgView addSubview:jobYearImgView];
+    [jobYearImgView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.mas_equalTo(jobWorkYear.mas_centerY);
+        make.right.mas_equalTo(jobWorkYear.mas_left).offset(-5);
+    }];
+    
+    UILabel *location = [[UILabel alloc] init];
+    [location setFont:[UIFont systemFontOfSize:12]];
+    [location setTextColor:[UIColor grayColor]];
+    [self.cardBgView addSubview:location];
+    self.location = location;
+    
+    [location mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.mas_equalTo(jobYearImgView.mas_left).offset(-10);
+        make.centerY.mas_equalTo(jobYearImgView.mas_centerY);
+    }];
+    
+    UIImageView *jobExpectImgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"about"]];
+    [self.cardBgView addSubview:jobExpectImgView];
+    [jobExpectImgView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.mas_equalTo(location.mas_centerY);
+        make.right.mas_equalTo(location.mas_left).offset(-5);
+    }];
+    
+    UILabel *jobExpectLab = [[UILabel alloc] init];
+    [jobExpectLab setFont:[UIFont systemFontOfSize:11]];
+    [jobExpectLab setTextColor:[UIColor colorWithRed:0.5 green:.9 blue:0.5 alpha:1.0]];
+    [self.cardBgView addSubview:jobExpectLab];
+    self.expectJobMoney = jobExpectLab;
+    
+    [jobExpectLab mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.mas_equalTo(jobExpectLab.mas_left).offset(-10);
+        make.centerY.mas_equalTo(jobExpectLab.mas_centerY);
+    }];
+    
+    UILabel *wordTip = [[UILabel alloc] init];
+    [wordTip setFont:[UIFont systemFontOfSize:14]];
+    [self.cardBgView addSubview:wordTip];
+    [wordTip setText:@"To"];
+    [wordTip mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.cardBgView.mas_left).offset(10);
+        make.top.mas_equalTo(action.mas_bottom).offset(10);
+    }];
+    
+    UILabel *managerName = [[UILabel alloc] init];
+    [managerName setFont:[UIFont systemFontOfSize:14]];
+    [managerName setTextColor:[UIColor colorWithRed:0.5 green:.9 blue:0.5 alpha:1.0]];
+    [self.cardBgView addSubview:managerName];
+    self.managerName = managerName;
+    
+    [managerName mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(wordTip.mas_right).offset(5);
+        make.centerY.mas_equalTo(wordTip.mas_centerY);
+    }];
+    
+    UILabel *wordLabel = [[UILabel alloc] init];
+    [wordLabel setFont:[UIFont systemFontOfSize:12]];
+    [self.cardBgView addSubview:wordLabel];
+    self.wordLabel = wordLabel;
+    
+    [wordLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(managerName.mas_right).offset(5);
+        make.centerY.mas_equalTo(wordTip.mas_centerY);
+        make.right.mas_equalTo(self.cardBgView.mas_right).offset(-10);
+    }];
+
 }
 
-- (void)loadData:(HWCandidateInfo *)data
+- (void)loadUserData:(HWCandidateInfo *)data
 {
     [self.nameLab setText:data.name];
     if([data.gender isEqualToString:@"男"]) {
@@ -310,26 +418,16 @@
     
 }
 
-- (void)sendInviteMsg:(UIButton *)sender
+- (void)loadJobData:(HWJobBaseInfo *)data
 {
-    if ([self.delegate respondsToSelector:@selector(onClickCell:event:)]) {
-        [self.delegate onClickCell:self event:HWCandidateEventSendMsg];
-    }
-}
-
-- (void)onSelectedBlog:(UIButton *)sender
-{
-    if ([self.delegate respondsToSelector:@selector(onClickCell:event:)]) {
-        [self.delegate onClickCell:self event:HWCandidateEventClickBlog];
-    }
-}
-
-- (void)onSelectedProduct:(UIButton *)sender
-{
-    if ([self.delegate respondsToSelector:@selector(onClickCell:event:)]) {
-        [self.delegate onClickCell:self event:HWCandidateEventClickProduct];
-    }
-
+    [self.nameLabel setText:data.title];
+    
+    [self.expectMoney setText:[NSString stringWithFormat:@"%@-%@", data.expectMinMoney, data.expectMaxMoney]];
+    [self.expectYear setText:data.expectYear];
+    [self.location setText:data.location];
+    
+    [self.managerName setText:[NSString stringWithFormat:@"%@|%@:", data.userTitle, data.company]];
+    [self.wordLabel setText:@"我觉的自己适合此岗位，是否可以进一步沟通"];
 }
 
 @end

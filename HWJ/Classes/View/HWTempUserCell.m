@@ -172,7 +172,7 @@
     
     UILabel *workTip = [[UILabel alloc] init];
     [workTip setFont:[UIFont systemFontOfSize:12]];
-    [workTip setText:@"曾供职于:"];
+    [workTip setText:@"曾就职于:"];
     [workTip setTextColor:[UIColor grayColor]];
     [self.cardBgView addSubview:workTip];
     self.workTipLabel = workTip;

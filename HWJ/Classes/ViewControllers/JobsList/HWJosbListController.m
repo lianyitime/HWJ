@@ -10,6 +10,7 @@
 #import "HWJobInfoCell.h"
 #import "HWJobBaseInfo.h"
 #import "ZYAdTipsView.h"
+#import "EaseSDKHelper.h"
 
 @interface HWJosbListController()<UITableViewDelegate, UITableViewDataSource>
 
@@ -92,7 +93,49 @@
 {
     HWJobInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:@"jobCell"];
     [cell loadData:[self.jobs firstObject]];
+    cell.delegate = self;
     return cell;
+}
+
+
+- (void)onClickCell:(HWJobInfoCell *)cell event:(HWJobInfoEvent)event
+{
+    switch (event) {
+        case HWJobInfoEventSendMsg:
+        {
+            EMMessage *message = [EaseSDKHelper sendCustomMessageWithTitle:@"测试信息"
+                                                             to:@"8001"
+                                                    messageType:EMChatTypeChat
+                                                        bizType:HWChatBaseMsgTypeReqFindJobByBoss
+                                                     messageExt:nil];
+            //message.ext = @{@"msgBizType":@(HWChatBaseMsgTypeReqFindJobByBoss)}; // 扩展消息部分
+            
+            __weak typeof(self) weakself = self;
+            [[EMClient sharedClient].chatManager asyncSendMessage:message progress:nil completion:^(EMMessage *aMessage, EMError *aError) {
+                if (!aError) {
+                    
+                }
+                else {
+                    
+                }
+            }];
+        }
+            break;
+        case HWJobInfoEventClickBlog:
+        {
+
+        }
+            break;
+        case HWJobInfoEventClickProduct:
+        {
+
+        }
+            break;
+            
+        default:
+            break;
+    }
+    
 }
 
 @end

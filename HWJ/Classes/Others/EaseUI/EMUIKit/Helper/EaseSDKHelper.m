@@ -14,6 +14,7 @@
 #import "EaseSDKHelper.h"
 
 #import "EaseConvertToCommonEmoticonsHelper.h"
+#import "HWChatBaseMsgBody.h"
 
 //@interface EMChatImageOptions : NSObject<IChatImageOptions>
 //
@@ -232,6 +233,22 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     EMMessage *message = [[EMMessage alloc] initWithConversationID:to from:from to:to body:body ext:messageExt];
     message.chatType = messageType;
     
+    return message;
+}
+
++ (EMMessage *)sendCustomMessageWithTitle:(NSString *)text
+                                       to:(NSString *)toUser
+                              messageType:(EMChatType)messageType
+                                  bizType:(HWChatBaseMsgType)bizType
+                               messageExt:(NSDictionary *)messageExt
+{
+    EMTextMessageBody *body = [[EMTextMessageBody alloc] initWithText:text];
+    NSMutableDictionary *info = [NSMutableDictionary dictionaryWithDictionary:messageExt];
+    [info setObject:@(bizType) forKey:@"bizType"];
+    NSString *from = [[EMClient sharedClient] currentUsername];
+    EMMessage *message = [[EMMessage alloc] initWithConversationID:toUser from:from to:toUser body:body ext:info];
+    message.chatType = messageType;
+
     return message;
 }
 

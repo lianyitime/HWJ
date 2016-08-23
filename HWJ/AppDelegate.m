@@ -18,6 +18,7 @@
 #import "HWRecommendJobsListController.h"
 #import "ConversationListController.h"
 #import "HWProcessListController.h"
+#import "HWJobsManagerController.h"
 
 @interface AppDelegate ()<EMClientDelegate>
 
@@ -140,6 +141,7 @@
         HWNavigationViewController *navi = [[HWNavigationViewController alloc] initWithRootViewController:recommendVC];
         
         ConversationListController *chatListVC = [[ConversationListController alloc] init];
+        
         chatListVC.title = @"消息";
         chatListVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"消息" image:[UIImage imageNamed:@"LYTabBarMyInfo"] selectedImage:[UIImage imageNamed:@"LYTabBarMyInfo_h"]];
         
@@ -164,6 +166,11 @@
         
         HWNavigationViewController *nav2 = [[HWNavigationViewController alloc] initWithRootViewController:chatListVC];
         
+        
+        HWJobsManagerController * jobsManager = [[HWJobsManagerController alloc] init];
+        jobsManager.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"职位" image:[UIImage imageNamed:@"LYTabBarMyInfo"] selectedImage:[UIImage imageNamed:@"LYTabBarMyInfo_h"]];
+        HWNavigationViewController *naviCenter = [[HWNavigationViewController alloc] initWithRootViewController:jobsManager];
+                                                  
         HWProcessListController *processList = [[HWProcessListController alloc] initWithNibName:nil bundle:nil];
         processList.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"进度" image:[UIImage imageNamed:@"LYTabBarMyInfo"] selectedImage:[UIImage imageNamed:@"LYTabBarMyInfo_h"]];
 
@@ -175,7 +182,7 @@
         
         HWNavigationViewController *nav4 = [[HWNavigationViewController alloc] initWithRootViewController:setVC];
         
-        tabController.viewControllers = @[navi1, nav2, nav3, nav4];
+        tabController.viewControllers = @[navi1, nav2, naviCenter, nav3, nav4];
     }
     
     HWNavigationViewController *navi = [[HWNavigationViewController alloc] initWithRootViewController:tabController];

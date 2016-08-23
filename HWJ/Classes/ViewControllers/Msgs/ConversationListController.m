@@ -23,6 +23,7 @@
 #import "EaseEmotionManager.h"
 #import "NSDate+Category.h"
 #import "NSDate+NVTimeAgo.h"
+#import "HWChatBaseMsgBody.h"
 //#import "ChatDemoHelper.h"
 
 
@@ -74,6 +75,7 @@
     [self searchController];
     
     [self removeEmptyConversationsFromDB];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -281,6 +283,7 @@
                 if ([lastMessage.ext objectForKey:MESSAGE_ATTR_IS_BIG_EXPRESSION]) {
                     latestMessageTitle = @"[动画表情]";
                 }
+                
             } break;
             case EMMessageBodyTypeVoice:{
                 latestMessageTitle = NSLocalizedString(@"message.voice1", @"[voice]");
@@ -294,6 +297,7 @@
             case EMMessageBodyTypeFile: {
                 latestMessageTitle = NSLocalizedString(@"message.file1", @"[file]");
             } break;
+                
             default: {
             } break;
         }
@@ -318,6 +322,46 @@
             latestMessageTitle = [NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"group.atMe", @"[Somebody @ me]"), latestMessageTitle];
             attributedStr = [[NSMutableAttributedString alloc] initWithString:latestMessageTitle];
             [attributedStr setAttributes:@{NSForegroundColorAttributeName : [UIColor colorWithRed:1.0 green:.0 blue:.0 alpha:0.5]} range:NSMakeRange(0, NSLocalizedString(@"group.atMe", @"[Somebody @ me]").length)];
+        }
+        else if([lastMessage.ext objectForKey:@"bizType"]) {
+            NSString *tag;
+            HWChatBaseMsgType msgType = (HWChatBaseMsgType)[[lastMessage.ext objectForKey:@"bizType"] integerValue];
+            switch(msgType) {
+                case HWChatBaseMsgTypeReqFindJobByBoss: {
+                    tag = @"￥应聘消息￥";
+                }
+                    break;
+                case HWChatBaseMsgTypeReqFindJobByRecommend:
+                {
+                    tag = @"￥求内推￥";
+                }
+                    break;
+                case HWChatBaseMsgTypeReqHireByBoss: {
+                    tag = @"￥直聘搭讪￥";
+                }
+                    break;
+                case HWChatBaseMsgTypeReqHireByRecommend:
+                {
+                    tag = @"￥内推搭讪￥";
+                }
+                    break;
+                case HWChatBaseMsgTypeRespFindJob:
+                {
+                    tag = @"求职响应";
+                }
+                    break;
+                case HWChatBaseMsgTypeRespHire:
+                {
+                    tag = @"招聘响应";
+                }
+                    break;
+                default:
+                    break;
+            }
+            EMTextMessageBody *textBody = (EMTextMessageBody *)messageBody;
+            latestMessageTitle = [NSString stringWithFormat:@"%@%@", tag, textBody.text];
+            attributedStr = [[NSMutableAttributedString alloc] initWithString:latestMessageTitle];
+            [attributedStr setAttributes:@{NSForegroundColorAttributeName : [UIColor colorWithRed:1.0 green:.0 blue:.0 alpha:0.5]} range:NSMakeRange(0, tag.length)];
         }
         else {
             attributedStr = [[NSMutableAttributedString alloc] initWithString:latestMessageTitle];

@@ -22,6 +22,7 @@
 //#import "ContactSelectionViewController.h"
 #import "EaseEmoji.h"
 #import "EaseEmotionManager.h"
+#import "HWReqJobChatCell.h"
 
 @interface ChatViewController ()<UIAlertViewDelegate,EMClientDelegate, EMChooseViewDelegate>
 {
@@ -145,6 +146,107 @@
 }
 
 #pragma mark - EaseMessageViewControllerDelegate
+
+- (UITableViewCell *)messageViewController:(UITableView *)tableView
+                       cellForMessageModel:(id<IMessageModel>)messageModel
+{
+    EMMessage *msg = messageModel.message;
+    if([msg.body isKindOfClass:[EMTextMessageBody class]]) {
+        //EMTextMessageBody *body = (EMTextMessageBody *)msg.body;
+        HWChatBaseMsgType msgType = (HWChatBaseMsgType)[[msg.ext objectForKey:@"bizType"] integerValue];
+        switch(msgType) {
+            case HWChatBaseMsgTypeReqFindJobByBoss: {
+                HWReqJobChatCell *reqcell = [tableView dequeueReusableCellWithIdentifier:@"reqjobCell"];
+                if (reqcell == nil) {
+                    reqcell = [[HWReqJobChatCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"reqjobCell"];
+                }
+                
+                HWCandidateInfo *candi = [[HWCandidateInfo alloc] init];
+                candi.name = @"张三";
+                candi.gender = @"男";
+                candi.expectMaxMoney = @"15K";
+                candi.expectMinMoney = @"12K";
+                candi.wordYear = @"3年";
+                candi.companyTags = @"微博,搜狐";
+                candi.skill = @"iOS";
+                candi.skillYear = @"5年";
+                candi.appUrl = @"https://itunes.apple.com/us/app/lian-yi-xiang-ce/id1040060813?mt=8";
+                candi.appName = @"讲个故事给宝听";
+                candi.appDesc = @"宝宝想听妈妈讲故事，一遍遍口干舌燥，现在好了，录下来，可以反复放给宝宝听。";
+                candi.appIconUrl = @"http://tva4.sinaimg.cn/crop.0.0.180.180.180/62667ea8jw1e8qgp5bmzyj2050050aa8.jpg";
+                candi.blogType = @"github";
+                candi.blogUrl = @"https://github.com/rs/SDWebImage";
+                candi.collageName = @"清华大学";
+                candi.subcollageName = @"软件学院";
+                candi.collageLevel = @"本科";
+                candi.finishyear = @"09届";
+                
+                [reqcell loadUserData:candi];
+                
+                HWJobBaseInfo *job = [[HWJobBaseInfo alloc] init];
+                job.title = @"iOS高级工程师";
+                job.expectMaxMoney = @"15K";
+                job.expectMinMoney = @"12K";
+                job.expectYear = @"3年以上";
+                job.location = @"望京";
+                job.company = @"哈哈科技";
+                job.userTitle = @"CXO";
+                job.userName = @"杨志远";
+                job.userImgUrl = @"http://tva4.sinaimg.cn/crop.0.0.180.180.180/62667ea8jw1e8qgp5bmzyj2050050aa8.jpg";
+                job.appName = @"涟漪相册";
+                job.peoples = @"20-50人";
+                job.jobType = 0;
+                [reqcell loadJobData:job];
+                
+                return reqcell;
+                
+            }
+                break;
+            case HWChatBaseMsgTypeReqFindJobByRecommend:
+            {
+
+            }
+                break;
+            case HWChatBaseMsgTypeReqHireByBoss: {
+            }
+                break;
+            case HWChatBaseMsgTypeReqHireByRecommend:
+            {
+
+            }
+                break;
+            case HWChatBaseMsgTypeRespFindJob:
+            {
+
+            }
+                break;
+            case HWChatBaseMsgTypeRespHire:
+            {
+
+            }
+                break;
+            default:
+                break;
+        }
+    }
+        return nil;
+}
+
+- (CGFloat)messageViewController:(EaseMessageViewController *)viewController
+           heightForMessageModel:(id<IMessageModel>)messageModel
+                   withCellWidth:(CGFloat)cellWidth
+{
+    EMMessage *msg = messageModel.message;
+    if([msg.body isKindOfClass:[EMTextMessageBody class]]) {
+        HWChatBaseMsgType msgType = (HWChatBaseMsgType)[[msg.ext objectForKey:@"bizType"] integerValue];
+        if (msgType) {
+            return 185;
+
+        }
+    }
+    return 0;
+
+}
 
 - (BOOL)messageViewController:(EaseMessageViewController *)viewController
    canLongPressRowAtIndexPath:(NSIndexPath *)indexPath

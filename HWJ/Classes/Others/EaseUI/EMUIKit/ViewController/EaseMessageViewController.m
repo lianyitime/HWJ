@@ -1765,7 +1765,7 @@
 {
     EMMessage *message = [EaseSDKHelper sendTextMessage:text
                                                    to:self.conversation.conversationId
-                                          messageType:[self _messageTypeFromConversationType]
+                                          messageType:EMChatTypeChat
                                            messageExt:ext];
     [self _sendMessage:message];
 }

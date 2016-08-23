@@ -253,7 +253,9 @@
 
 - (void)sendInviteMsg:(UIButton *)sender
 {
-    
+    if ([self.delegate respondsToSelector:@selector(onClickCell:event:)]) {
+        [self.delegate onClickCell:self event:HWJobInfoEventSendMsg];
+    }
 }
 
 - (void)onSelectedProduct:(UIButton *)sender

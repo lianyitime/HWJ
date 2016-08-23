@@ -136,6 +136,11 @@
 		D709C7281D4AFF950093A0DE /* HWNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D709C7271D4AFF950093A0DE /* HWNavigationViewController.m */; };
 		D709C72B1D501ED60093A0DE /* HWJobBaseInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D709C72A1D501ED60093A0DE /* HWJobBaseInfo.m */; };
 		D70FD48B1D66D80400D8E679 /* ZYAdTipsView.m in Sources */ = {isa = PBXBuildFile; fileRef = D70FD48A1D66D80400D8E679 /* ZYAdTipsView.m */; };
+		D72CDC7F1D6AA82300A7DD25 /* HWJobsManagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = D72CDC7E1D6AA82200A7DD25 /* HWJobsManagerController.m */; };
+		D72CDC831D6AF74B00A7DD25 /* HWChatBaseMsgBody.m in Sources */ = {isa = PBXBuildFile; fileRef = D72CDC821D6AF74B00A7DD25 /* HWChatBaseMsgBody.m */; };
+		D72CDC871D6B23EF00A7DD25 /* HWReqJobChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D72CDC861D6B23EF00A7DD25 /* HWReqJobChatCell.m */; };
+		D72CDC8A1D6B240100A7DD25 /* HWReqHireChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D72CDC891D6B240100A7DD25 /* HWReqHireChatCell.m */; };
+		D72CDC8D1D6BFF0C00A7DD25 /* HWJobSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D72CDC8C1D6BFF0C00A7DD25 /* HWJobSettingCell.m */; };
 		D734F78E1D52493F007F5EF3 /* HWRecommendJobsListController.m in Sources */ = {isa = PBXBuildFile; fileRef = D734F78D1D52493F007F5EF3 /* HWRecommendJobsListController.m */; };
 		D734F7911D524BEA007F5EF3 /* ConversationListController.m in Sources */ = {isa = PBXBuildFile; fileRef = D734F7901D524BEA007F5EF3 /* ConversationListController.m */; };
 		D734F7941D524C64007F5EF3 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D734F7931D524C64007F5EF3 /* ChatViewController.m */; };
@@ -472,6 +477,16 @@
 		D709C72A1D501ED60093A0DE /* HWJobBaseInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWJobBaseInfo.m; sourceTree = "<group>"; };
 		D70FD4891D66D80400D8E679 /* ZYAdTipsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYAdTipsView.h; sourceTree = "<group>"; };
 		D70FD48A1D66D80400D8E679 /* ZYAdTipsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYAdTipsView.m; sourceTree = "<group>"; };
+		D72CDC7D1D6AA82200A7DD25 /* HWJobsManagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWJobsManagerController.h; sourceTree = "<group>"; };
+		D72CDC7E1D6AA82200A7DD25 /* HWJobsManagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWJobsManagerController.m; sourceTree = "<group>"; };
+		D72CDC811D6AF74B00A7DD25 /* HWChatBaseMsgBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWChatBaseMsgBody.h; sourceTree = "<group>"; };
+		D72CDC821D6AF74B00A7DD25 /* HWChatBaseMsgBody.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWChatBaseMsgBody.m; sourceTree = "<group>"; };
+		D72CDC851D6B23EF00A7DD25 /* HWReqJobChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWReqJobChatCell.h; sourceTree = "<group>"; };
+		D72CDC861D6B23EF00A7DD25 /* HWReqJobChatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWReqJobChatCell.m; sourceTree = "<group>"; };
+		D72CDC881D6B240100A7DD25 /* HWReqHireChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWReqHireChatCell.h; sourceTree = "<group>"; };
+		D72CDC891D6B240100A7DD25 /* HWReqHireChatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWReqHireChatCell.m; sourceTree = "<group>"; };
+		D72CDC8B1D6BFF0C00A7DD25 /* HWJobSettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWJobSettingCell.h; sourceTree = "<group>"; };
+		D72CDC8C1D6BFF0C00A7DD25 /* HWJobSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWJobSettingCell.m; sourceTree = "<group>"; };
 		D734F78C1D52493F007F5EF3 /* HWRecommendJobsListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWRecommendJobsListController.h; sourceTree = "<group>"; };
 		D734F78D1D52493F007F5EF3 /* HWRecommendJobsListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWRecommendJobsListController.m; sourceTree = "<group>"; };
 		D734F78F1D524BEA007F5EF3 /* ConversationListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversationListController.h; sourceTree = "<group>"; };
@@ -1292,6 +1307,24 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		D72CDC7C1D6AA7FA00A7DD25 /* JobsManager */ = {
+			isa = PBXGroup;
+			children = (
+				D72CDC7D1D6AA82200A7DD25 /* HWJobsManagerController.h */,
+				D72CDC7E1D6AA82200A7DD25 /* HWJobsManagerController.m */,
+			);
+			path = JobsManager;
+			sourceTree = "<group>";
+		};
+		D72CDC801D6AF71B00A7DD25 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				D72CDC811D6AF74B00A7DD25 /* HWChatBaseMsgBody.h */,
+				D72CDC821D6AF74B00A7DD25 /* HWChatBaseMsgBody.m */,
+			);
+			name = Custom;
+			sourceTree = "<group>";
+		};
 		D734F7981D524CD5007F5EF3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -1461,6 +1494,7 @@
 		D7E16B061D46F18600788CB1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D72CDC7C1D6AA7FA00A7DD25 /* JobsManager */,
 				D73D84B21D615B8C005A0687 /* ProcessList */,
 				D709C7251D4AFF6C0093A0DE /* Base */,
 				D7E16B351D4797C400788CB1 /* Setting */,
@@ -1479,6 +1513,8 @@
 				D73D84DD1D62C875005A0687 /* ZYDropView.m */,
 				D7E16B2C1D474A9D00788CB1 /* HWJobInfoCell.h */,
 				D7E16B2D1D474A9D00788CB1 /* HWJobInfoCell.m */,
+				D72CDC8B1D6BFF0C00A7DD25 /* HWJobSettingCell.h */,
+				D72CDC8C1D6BFF0C00A7DD25 /* HWJobSettingCell.m */,
 				D7E16B2F1D474AB800788CB1 /* HWCandidateInfoCell.h */,
 				D7E16B301D474AB800788CB1 /* HWCandidateInfoCell.m */,
 				D76A49E31D641208003A8528 /* HWTempUserCell.h */,
@@ -1489,6 +1525,10 @@
 				D77D80361D6551F900E81E51 /* ZYDoubleBtHeaderView.m */,
 				D70FD4891D66D80400D8E679 /* ZYAdTipsView.h */,
 				D70FD48A1D66D80400D8E679 /* ZYAdTipsView.m */,
+				D72CDC851D6B23EF00A7DD25 /* HWReqJobChatCell.h */,
+				D72CDC861D6B23EF00A7DD25 /* HWReqJobChatCell.m */,
+				D72CDC881D6B240100A7DD25 /* HWReqHireChatCell.h */,
+				D72CDC891D6B240100A7DD25 /* HWReqHireChatCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1590,6 +1630,7 @@
 		D7E16B361D4797C400788CB1 /* Msgs */ = {
 			isa = PBXGroup;
 			children = (
+				D72CDC801D6AF71B00A7DD25 /* Custom */,
 				D734F7981D524CD5007F5EF3 /* Views */,
 				D734F7921D524C64007F5EF3 /* ChatViewController.h */,
 				D734F7931D524C64007F5EF3 /* ChatViewController.m */,
@@ -1799,8 +1840,10 @@
 				D709C6AE1D4A5EA10093A0DE /* MJRefreshHeader.m in Sources */,
 				D709C6B91D4A5EA10093A0DE /* MJRefreshConst.m in Sources */,
 				D709C6A51D4A5EA10093A0DE /* EMVoiceConverter.mm in Sources */,
+				D72CDC8D1D6BFF0C00A7DD25 /* HWJobSettingCell.m in Sources */,
 				D709C6A41D4A5EA10093A0DE /* wav.mm in Sources */,
 				D709C6F31D4A5EA10093A0DE /* EaseEmotionManager.m in Sources */,
+				D72CDC7F1D6AA82300A7DD25 /* HWJobsManagerController.m in Sources */,
 				D7E16ACB1D46DEF300788CB1 /* ViewController.m in Sources */,
 				D709C6EE1D4A5EA10093A0DE /* EaseConvertToCommonEmoticonsHelper.m in Sources */,
 				D734F78E1D52493F007F5EF3 /* HWRecommendJobsListController.m in Sources */,
@@ -1839,6 +1882,7 @@
 				D709C7031D4A5EA10093A0DE /* EaseBubbleView+Location.m in Sources */,
 				D709C6CC1D4A5EA10093A0DE /* EMSDWebImagePrefetcher.m in Sources */,
 				D709C6AC1D4A5EA10093A0DE /* MJRefreshComponent.m in Sources */,
+				D72CDC8A1D6B240100A7DD25 /* HWReqHireChatCell.m in Sources */,
 				D709C6F91D4A5EA10093A0DE /* EaseUsersListViewController.m in Sources */,
 				D734F7CC1D5252D7007F5EF3 /* ChatroomDetailViewController.m in Sources */,
 				D709C6F41D4A5EA10093A0DE /* FixFopen.c in Sources */,
@@ -1857,6 +1901,7 @@
 				D709C6E11D4A5EA10093A0DE /* PSTGridLayoutRow.m in Sources */,
 				D709C6D31D4A5EA10093A0DE /* UIImageView+EMHighlightedWebCache.m in Sources */,
 				D7E16B341D47788800788CB1 /* HWCandidateInfo.m in Sources */,
+				D72CDC871D6B23EF00A7DD25 /* HWReqJobChatCell.m in Sources */,
 				D709C6D11D4A5EA10093A0DE /* UIImage+EMMultiFormat.m in Sources */,
 				D709C6FD1D4A5EA10093A0DE /* EaseCustomMessageCell.m in Sources */,
 				D709C6E51D4A5EA10093A0DE /* EaseConversationModel.m in Sources */,
@@ -1883,6 +1928,7 @@
 				D709C6DA1D4A5EA10093A0DE /* PSTCollectionViewData.m in Sources */,
 				D734F7AE1D524F0E007F5EF3 /* RobotChatViewController.m in Sources */,
 				D7E16B221D47315500788CB1 /* HWLoginComparySetController.m in Sources */,
+				D72CDC831D6AF74B00A7DD25 /* HWChatBaseMsgBody.m in Sources */,
 				D73D84DE1D62C875005A0687 /* ZYDropView.m in Sources */,
 				D709C6B11D4A5EA10093A0DE /* MJRefreshAutoStateFooter.m in Sources */,
 				D709C6CA1D4A5EA10093A0DE /* EMSDWebImageDownloaderOperation.m in Sources */,

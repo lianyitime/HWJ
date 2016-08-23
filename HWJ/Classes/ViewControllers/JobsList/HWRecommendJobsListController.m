@@ -28,7 +28,7 @@
 
 - (void)showAdTip
 {
-    [ZYAdTipsView showInTable:self.tableView withTitle:@"内部员工推荐，入职BAT不太遥不可及"];
+    [ZYAdTipsView showInTable:self.tableView withTitle:@"内部员工推荐，入职BAT不再遥不可及"];
 }
 
 - (void)loadData
@@ -45,7 +45,7 @@
     candi.userImgUrl = @"http://tva4.sinaimg.cn/crop.0.0.180.180.180/62667ea8jw1e8qgp5bmzyj2050050aa8.jpg";
     candi.appName = @"涟漪相册";
     candi.peoples = @"10000人以上";
-    candi.jobType = 0;
+    candi.jobType = 1;
     
     self.jobs = [[NSMutableArray alloc] initWithObjects:candi, nil];
     [self.tableView reloadData];

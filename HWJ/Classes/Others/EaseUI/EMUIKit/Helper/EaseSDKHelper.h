@@ -15,6 +15,7 @@
 #import <Foundation/Foundation.h>
 
 #import "EMSDK.h"
+#import "HWChatBaseMsgBody.h"
 
 #define KNOTIFICATION_LOGINCHANGE @"loginStateChange"
 #define KNOTIFICATION_CALL @"callOutWithChatter"
@@ -83,6 +84,11 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
                            messageType:(EMChatType)messageType
                             messageExt:(NSDictionary *)messageExt;
 
++ (EMMessage *)sendCustomMessageWithTitle:(NSString *)text
+                                       to:(NSString *)toUser
+                              messageType:(EMChatType)messageType
+                                  bizType:(HWChatBaseMsgType)bizType
+                               messageExt:(NSDictionary *)messageExt;
 #pragma mark - call
 
 @end
