@@ -12,6 +12,7 @@
 #import "EaseMessageViewController.h"
 #import "HWNavigationViewController.h"
 #import "RxWebViewController.h"
+#import "HWCandidateDetailController.h"
 
 #import "EaseEmoji.h"
 #import "EaseEmotionManager.h"
@@ -113,7 +114,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    HWCandidateDetailController *detail = [[HWCandidateDetailController alloc] initWithNibName:nil bundle:nil];
+    HWCandidateInfo *candi  = [self.jobs firstObject];
+    detail.title = candi.name;
+    [self.navigationController pushViewController:detail animated:YES];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

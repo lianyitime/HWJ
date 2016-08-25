@@ -165,6 +165,13 @@
 		D73D84DE1D62C875005A0687 /* ZYDropView.m in Sources */ = {isa = PBXBuildFile; fileRef = D73D84DD1D62C875005A0687 /* ZYDropView.m */; };
 		D76A49E51D641208003A8528 /* HWTempUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D76A49E41D641208003A8528 /* HWTempUserCell.m */; };
 		D76A49E81D64121A003A8528 /* HWProcessUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D76A49E71D64121A003A8528 /* HWProcessUserCell.m */; };
+		D772B6761D6D9B710077BCB7 /* HWJobDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = D772B6751D6D9B710077BCB7 /* HWJobDetailController.m */; };
+		D772B6791D6D9B890077BCB7 /* HWCandidateDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = D772B6781D6D9B890077BCB7 /* HWCandidateDetailController.m */; };
+		D772B67D1D6D9E7E0077BCB7 /* HWJobDetailInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D772B67C1D6D9E7E0077BCB7 /* HWJobDetailInfoCell.m */; };
+		D772B6801D6D9EC90077BCB7 /* HWJobDetailRequestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D772B67F1D6D9EC90077BCB7 /* HWJobDetailRequestCell.m */; };
+		D772B6831D6DA2060077BCB7 /* HWJobBossInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D772B6821D6DA2060077BCB7 /* HWJobBossInfoCell.m */; };
+		D772B6861D6DA2210077BCB7 /* HWJobCompanyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D772B6851D6DA2210077BCB7 /* HWJobCompanyCell.m */; };
+		D772B6891D6DA3CC0077BCB7 /* HWRoundBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D772B6881D6DA3CC0077BCB7 /* HWRoundBaseCell.m */; };
 		D77D80371D6551F900E81E51 /* ZYDoubleBtHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D77D80361D6551F900E81E51 /* ZYDoubleBtHeaderView.m */; };
 		D77D803A1D6564C700E81E51 /* NSDate+NVTimeAgo.m in Sources */ = {isa = PBXBuildFile; fileRef = D77D80391D6564C700E81E51 /* NSDate+NVTimeAgo.m */; };
 		D78BDB0F1D49B23D00E97C39 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D78BDB0B1D49B23D00E97C39 /* libcrypto.a */; };
@@ -181,6 +188,9 @@
 		D78BDB241D49B2F400E97C39 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D78BDB231D49B2F400E97C39 /* libstdc++.6.0.9.tbd */; };
 		D78BDB261D49B2FB00E97C39 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D78BDB251D49B2FB00E97C39 /* libsqlite3.tbd */; };
 		D78BDB281D49B31400E97C39 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D78BDB271D49B31400E97C39 /* libiconv.tbd */; };
+		D7B01FAE1D6E9B1200B0E6C1 /* HWCandidateDetailInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B01FAD1D6E9B1200B0E6C1 /* HWCandidateDetailInfoCell.m */; };
+		D7B01FB11D6E9B2600B0E6C1 /* HWCandidateDetailWorkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B01FB01D6E9B2600B0E6C1 /* HWCandidateDetailWorkCell.m */; };
+		D7B01FB41D6E9B7000B0E6C1 /* HWCandidateDetailEducation.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B01FB31D6E9B7000B0E6C1 /* HWCandidateDetailEducation.m */; };
 		D7E16AC51D46DEF300788CB1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E16AC41D46DEF300788CB1 /* main.m */; };
 		D7E16AC81D46DEF300788CB1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E16AC71D46DEF300788CB1 /* AppDelegate.m */; };
 		D7E16ACB1D46DEF300788CB1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E16ACA1D46DEF300788CB1 /* ViewController.m */; };
@@ -531,6 +541,20 @@
 		D76A49E41D641208003A8528 /* HWTempUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWTempUserCell.m; sourceTree = "<group>"; };
 		D76A49E61D64121A003A8528 /* HWProcessUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWProcessUserCell.h; sourceTree = "<group>"; };
 		D76A49E71D64121A003A8528 /* HWProcessUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWProcessUserCell.m; sourceTree = "<group>"; };
+		D772B6741D6D9B710077BCB7 /* HWJobDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWJobDetailController.h; sourceTree = "<group>"; };
+		D772B6751D6D9B710077BCB7 /* HWJobDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWJobDetailController.m; sourceTree = "<group>"; };
+		D772B6771D6D9B890077BCB7 /* HWCandidateDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWCandidateDetailController.h; sourceTree = "<group>"; };
+		D772B6781D6D9B890077BCB7 /* HWCandidateDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWCandidateDetailController.m; sourceTree = "<group>"; };
+		D772B67B1D6D9E7E0077BCB7 /* HWJobDetailInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWJobDetailInfoCell.h; sourceTree = "<group>"; };
+		D772B67C1D6D9E7E0077BCB7 /* HWJobDetailInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWJobDetailInfoCell.m; sourceTree = "<group>"; };
+		D772B67E1D6D9EC90077BCB7 /* HWJobDetailRequestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWJobDetailRequestCell.h; sourceTree = "<group>"; };
+		D772B67F1D6D9EC90077BCB7 /* HWJobDetailRequestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWJobDetailRequestCell.m; sourceTree = "<group>"; };
+		D772B6811D6DA2060077BCB7 /* HWJobBossInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWJobBossInfoCell.h; sourceTree = "<group>"; };
+		D772B6821D6DA2060077BCB7 /* HWJobBossInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWJobBossInfoCell.m; sourceTree = "<group>"; };
+		D772B6841D6DA2210077BCB7 /* HWJobCompanyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWJobCompanyCell.h; sourceTree = "<group>"; };
+		D772B6851D6DA2210077BCB7 /* HWJobCompanyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWJobCompanyCell.m; sourceTree = "<group>"; };
+		D772B6871D6DA3CC0077BCB7 /* HWRoundBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWRoundBaseCell.h; sourceTree = "<group>"; };
+		D772B6881D6DA3CC0077BCB7 /* HWRoundBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWRoundBaseCell.m; sourceTree = "<group>"; };
 		D77D80351D6551F900E81E51 /* ZYDoubleBtHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYDoubleBtHeaderView.h; sourceTree = "<group>"; };
 		D77D80361D6551F900E81E51 /* ZYDoubleBtHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYDoubleBtHeaderView.m; sourceTree = "<group>"; };
 		D77D80381D6564C700E81E51 /* NSDate+NVTimeAgo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+NVTimeAgo.h"; sourceTree = "<group>"; };
@@ -588,6 +612,12 @@
 		D78BDB231D49B2F400E97C39 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		D78BDB251D49B2FB00E97C39 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		D78BDB271D49B31400E97C39 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		D7B01FAC1D6E9B1200B0E6C1 /* HWCandidateDetailInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWCandidateDetailInfoCell.h; sourceTree = "<group>"; };
+		D7B01FAD1D6E9B1200B0E6C1 /* HWCandidateDetailInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWCandidateDetailInfoCell.m; sourceTree = "<group>"; };
+		D7B01FAF1D6E9B2600B0E6C1 /* HWCandidateDetailWorkCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWCandidateDetailWorkCell.h; sourceTree = "<group>"; };
+		D7B01FB01D6E9B2600B0E6C1 /* HWCandidateDetailWorkCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWCandidateDetailWorkCell.m; sourceTree = "<group>"; };
+		D7B01FB21D6E9B7000B0E6C1 /* HWCandidateDetailEducation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWCandidateDetailEducation.h; sourceTree = "<group>"; };
+		D7B01FB31D6E9B7000B0E6C1 /* HWCandidateDetailEducation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWCandidateDetailEducation.m; sourceTree = "<group>"; };
 		D7E16AC01D46DEF200788CB1 /* HWJ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HWJ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7E16AC41D46DEF300788CB1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D7E16AC61D46DEF300788CB1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1349,6 +1379,21 @@
 			path = ProcessList;
 			sourceTree = "<group>";
 		};
+		D772B67A1D6D9E230077BCB7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D772B67B1D6D9E7E0077BCB7 /* HWJobDetailInfoCell.h */,
+				D772B67C1D6D9E7E0077BCB7 /* HWJobDetailInfoCell.m */,
+				D772B67E1D6D9EC90077BCB7 /* HWJobDetailRequestCell.h */,
+				D772B67F1D6D9EC90077BCB7 /* HWJobDetailRequestCell.m */,
+				D772B6811D6DA2060077BCB7 /* HWJobBossInfoCell.h */,
+				D772B6821D6DA2060077BCB7 /* HWJobBossInfoCell.m */,
+				D772B6841D6DA2210077BCB7 /* HWJobCompanyCell.h */,
+				D772B6851D6DA2210077BCB7 /* HWJobCompanyCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		D78BDAE11D49B23D00E97C39 /* HyphenateFullSDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -1420,6 +1465,19 @@
 				D78BDB0D1D49B23D00E97C39 /* libssl.a */,
 			);
 			path = 3rdparty;
+			sourceTree = "<group>";
+		};
+		D7B01FAB1D6E99A200B0E6C1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D7B01FAC1D6E9B1200B0E6C1 /* HWCandidateDetailInfoCell.h */,
+				D7B01FAD1D6E9B1200B0E6C1 /* HWCandidateDetailInfoCell.m */,
+				D7B01FAF1D6E9B2600B0E6C1 /* HWCandidateDetailWorkCell.h */,
+				D7B01FB01D6E9B2600B0E6C1 /* HWCandidateDetailWorkCell.m */,
+				D7B01FB21D6E9B7000B0E6C1 /* HWCandidateDetailEducation.h */,
+				D7B01FB31D6E9B7000B0E6C1 /* HWCandidateDetailEducation.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		D7E16AB71D46DEF200788CB1 = {
@@ -1529,6 +1587,8 @@
 				D72CDC861D6B23EF00A7DD25 /* HWReqJobChatCell.m */,
 				D72CDC881D6B240100A7DD25 /* HWReqHireChatCell.h */,
 				D72CDC891D6B240100A7DD25 /* HWReqHireChatCell.m */,
+				D772B6871D6DA3CC0077BCB7 /* HWRoundBaseCell.h */,
+				D772B6881D6DA3CC0077BCB7 /* HWRoundBaseCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1601,8 +1661,11 @@
 		D7E16B1A1D4707C300788CB1 /* CandidateList */ = {
 			isa = PBXGroup;
 			children = (
+				D7B01FAB1D6E99A200B0E6C1 /* Views */,
 				D7E16B261D4746BA00788CB1 /* HWCandidatesListController.h */,
 				D7E16B271D4746BA00788CB1 /* HWCandidatesListController.m */,
+				D772B6771D6D9B890077BCB7 /* HWCandidateDetailController.h */,
+				D772B6781D6D9B890077BCB7 /* HWCandidateDetailController.m */,
 			);
 			path = CandidateList;
 			sourceTree = "<group>";
@@ -1610,10 +1673,13 @@
 		D7E16B1B1D4707C300788CB1 /* JobsList */ = {
 			isa = PBXGroup;
 			children = (
+				D772B67A1D6D9E230077BCB7 /* Views */,
 				D7E16B291D4746CB00788CB1 /* HWJosbListController.h */,
 				D7E16B2A1D4746CB00788CB1 /* HWJosbListController.m */,
 				D734F78C1D52493F007F5EF3 /* HWRecommendJobsListController.h */,
 				D734F78D1D52493F007F5EF3 /* HWRecommendJobsListController.m */,
+				D772B6741D6D9B710077BCB7 /* HWJobDetailController.h */,
+				D772B6751D6D9B710077BCB7 /* HWJobDetailController.m */,
 			);
 			path = JobsList;
 			sourceTree = "<group>";
@@ -1797,6 +1863,7 @@
 				D734F7911D524BEA007F5EF3 /* ConversationListController.m in Sources */,
 				D709C6DB1D4A5EA10093A0DE /* PSTCollectionViewFlowLayout.m in Sources */,
 				D709C6C81D4A5EA10093A0DE /* EMSDWebImageDecoder.m in Sources */,
+				D7B01FAE1D6E9B1200B0E6C1 /* HWCandidateDetailInfoCell.m in Sources */,
 				D709C6C51D4A5EA10093A0DE /* DACircularProgressView.m in Sources */,
 				D709C6E91D4A5EA10093A0DE /* NSDateFormatter+Category.m in Sources */,
 				D709C6F81D4A5EA10093A0DE /* EaseRefreshTableViewController.m in Sources */,
@@ -1806,12 +1873,14 @@
 				D709C7051D4A5EA10093A0DE /* EaseBubbleView+Video.m in Sources */,
 				D709C6BF1D4A5EA10093A0DE /* MWGridViewController.m in Sources */,
 				D709C7011D4A5EA10093A0DE /* EaseBubbleView+Gif.m in Sources */,
+				D772B6791D6D9B890077BCB7 /* HWCandidateDetailController.m in Sources */,
 				D709C6CE1D4A5EA10093A0DE /* NSData+EMImageContentType.m in Sources */,
 				D709C6EA1D4A5EA10093A0DE /* NSString+Valid.m in Sources */,
 				D7E16B311D474AB800788CB1 /* HWCandidateInfoCell.m in Sources */,
 				D709C6A11D4A5EA10093A0DE /* EMCDDeviceManager+Remind.m in Sources */,
 				D7E16B3C1D47981600788CB1 /* HWSettingController.m in Sources */,
 				D709C6D81D4A5EA10093A0DE /* PSTCollectionViewCell.m in Sources */,
+				D772B6861D6DA2210077BCB7 /* HWJobCompanyCell.m in Sources */,
 				D709C6DE1D4A5EA10093A0DE /* PSTCollectionViewUpdateItem.m in Sources */,
 				D76A49E81D64121A003A8528 /* HWProcessUserCell.m in Sources */,
 				D709C72B1D501ED60093A0DE /* HWJobBaseInfo.m in Sources */,
@@ -1824,6 +1893,7 @@
 				D709C6B31D4A5EA10093A0DE /* MJRefreshBackNormalFooter.m in Sources */,
 				D709C7071D4A5EA10093A0DE /* EaseBubbleView.m in Sources */,
 				D734F7A41D524DD5007F5EF3 /* RobotManager.m in Sources */,
+				D772B67D1D6D9E7E0077BCB7 /* HWJobDetailInfoCell.m in Sources */,
 				D709C6A31D4A5EA10093A0DE /* amrFileCodec.mm in Sources */,
 				D7E16B1F1D4726FC00788CB1 /* HWLoginSetBaseController.m in Sources */,
 				D709C6F21D4A5EA10093A0DE /* EaseEmotionEscape.m in Sources */,
@@ -1844,6 +1914,7 @@
 				D709C6A41D4A5EA10093A0DE /* wav.mm in Sources */,
 				D709C6F31D4A5EA10093A0DE /* EaseEmotionManager.m in Sources */,
 				D72CDC7F1D6AA82300A7DD25 /* HWJobsManagerController.m in Sources */,
+				D7B01FB11D6E9B2600B0E6C1 /* HWCandidateDetailWorkCell.m in Sources */,
 				D7E16ACB1D46DEF300788CB1 /* ViewController.m in Sources */,
 				D709C6EE1D4A5EA10093A0DE /* EaseConvertToCommonEmoticonsHelper.m in Sources */,
 				D734F78E1D52493F007F5EF3 /* HWRecommendJobsListController.m in Sources */,
@@ -1857,12 +1928,14 @@
 				D709C6DD1D4A5EA10093A0DE /* PSTCollectionViewLayout.m in Sources */,
 				D709C6ED1D4A5EA10093A0DE /* EaseChineseToPinyin.m in Sources */,
 				D76A49E51D641208003A8528 /* HWTempUserCell.m in Sources */,
+				D7B01FB41D6E9B7000B0E6C1 /* HWCandidateDetailEducation.m in Sources */,
 				D709C6F61D4A5EA10093A0DE /* EaseLocationViewController.m in Sources */,
 				D7E16B2E1D474A9D00788CB1 /* HWJobInfoCell.m in Sources */,
 				D7E16B131D46FED900788CB1 /* HWLoginSetUserController.m in Sources */,
 				D709C6EF1D4A5EA10093A0DE /* EaseMessageReadManager.m in Sources */,
 				D709C6D61D4A5EA10093A0DE /* NSIndexPath+PSTCollectionViewAdditions.m in Sources */,
 				D709C69E1D4A5EA10093A0DE /* EMCDDeviceManager+Media.m in Sources */,
+				D772B6891D6DA3CC0077BCB7 /* HWRoundBaseCell.m in Sources */,
 				D709C7091D4A5EA10093A0DE /* EaseChatToolbarItem.m in Sources */,
 				D709C6E71D4A5EA10093A0DE /* EaseUserModel.m in Sources */,
 				D709C7001D4A5EA10093A0DE /* EaseBubbleView+File.m in Sources */,
@@ -1875,12 +1948,14 @@
 				D709C6AF1D4A5EA10093A0DE /* MJRefreshAutoGifFooter.m in Sources */,
 				D709C6B51D4A5EA10093A0DE /* MJRefreshGifHeader.m in Sources */,
 				D709C6C21D4A5EA10093A0DE /* MWTapDetectingImageView.m in Sources */,
+				D772B6761D6D9B710077BCB7 /* HWJobDetailController.m in Sources */,
 				D709C6C11D4A5EA10093A0DE /* MWPhotoBrowser.m in Sources */,
 				D709C6CD1D4A5EA10093A0DE /* MKAnnotationView+EMWebCache.m in Sources */,
 				D709C70C1D4A5EA10093A0DE /* EaseFaceView.m in Sources */,
 				D734F7941D524C64007F5EF3 /* ChatViewController.m in Sources */,
 				D709C7031D4A5EA10093A0DE /* EaseBubbleView+Location.m in Sources */,
 				D709C6CC1D4A5EA10093A0DE /* EMSDWebImagePrefetcher.m in Sources */,
+				D772B6801D6D9EC90077BCB7 /* HWJobDetailRequestCell.m in Sources */,
 				D709C6AC1D4A5EA10093A0DE /* MJRefreshComponent.m in Sources */,
 				D72CDC8A1D6B240100A7DD25 /* HWReqHireChatCell.m in Sources */,
 				D709C6F91D4A5EA10093A0DE /* EaseUsersListViewController.m in Sources */,
@@ -1897,6 +1972,7 @@
 				D709C6E21D4A5EA10093A0DE /* PSTGridLayoutSection.m in Sources */,
 				D709C6EB1D4A5EA10093A0DE /* UIViewController+DismissKeyboard.m in Sources */,
 				D709C6D51D4A5EA10093A0DE /* UIView+EMWebCacheOperation.m in Sources */,
+				D772B6831D6DA2060077BCB7 /* HWJobBossInfoCell.m in Sources */,
 				D709C7241D4AFF3E0093A0DE /* RxWebViewNavigationViewController.m in Sources */,
 				D709C6E11D4A5EA10093A0DE /* PSTGridLayoutRow.m in Sources */,
 				D709C6D31D4A5EA10093A0DE /* UIImageView+EMHighlightedWebCache.m in Sources */,

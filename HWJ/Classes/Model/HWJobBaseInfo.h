@@ -18,6 +18,8 @@
 
 @property (nonatomic, strong)NSString *expectMaxMoney;
 
+@property (nonatomic, strong)NSString *expectEdutation;
+
 @property (nonatomic, strong)NSString *location;
 
 @property (nonatomic, strong)NSString *userImgUrl;

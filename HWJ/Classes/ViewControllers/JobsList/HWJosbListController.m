@@ -11,6 +11,7 @@
 #import "HWJobBaseInfo.h"
 #import "ZYAdTipsView.h"
 #import "EaseSDKHelper.h"
+#import "HWJobDetailController.h"
 
 @interface HWJosbListController()<UITableViewDelegate, UITableViewDataSource>
 
@@ -86,7 +87,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    HWJobDetailController *detailVC = [[HWJobDetailController alloc] initWithNibName:nil bundle:nil];
+    [self.navigationController pushViewController:detailVC animated:YES];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

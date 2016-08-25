@@ -173,7 +173,14 @@
     UILabel *productTip = [[UILabel alloc] init];
     [productTip setFont:[UIFont systemFontOfSize:12]];
     [productTip setTextColor:[UIColor grayColor]];
-    [productTip setText:@"产品线:"];
+    
+    NSShadow *shadow = [[NSShadow alloc] init];
+    shadow.shadowBlurRadius = 2.0;
+    shadow.shadowColor = [UIColor lightGrayColor];
+    shadow.shadowOffset = CGSizeMake(2,2);
+    NSAttributedString *attStr = [[NSAttributedString alloc] initWithString:@"产品线:" attributes:[NSDictionary dictionaryWithObjectsAndKeys: shadow, NSShadowAttributeName, @(0), NSVerticalGlyphFormAttributeName, nil]];
+    //[productTip setText:@"产品线:"];
+    [productTip setAttributedText:attStr];
     [self.cardBgView addSubview:productTip];
     [productTip mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(workTip.mas_left);
@@ -216,8 +223,8 @@
     
     [sendBt mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.mas_equalTo(self.cardBgView.mas_right).offset(-15);
-        make.top.mas_equalTo(sepLine2.mas_bottom).offset(7);
-        make.bottom.mas_equalTo(self.cardBgView.mas_bottom).offset(-7);
+        make.top.mas_equalTo(sepLine2.mas_bottom).offset(5);
+        make.bottom.mas_equalTo(self.cardBgView.mas_bottom).offset(-5);
         make.width.mas_equalTo(70);
     }];
     
