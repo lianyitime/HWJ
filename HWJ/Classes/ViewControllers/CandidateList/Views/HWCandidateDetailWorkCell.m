@@ -19,6 +19,10 @@
 
 @property(nonatomic, strong)UIButton *appNameBt;
 
+@property (nonatomic, strong)UIButton *appImgBt;
+
+@property(nonatomic, strong)UILabel *dutyLabel;
+
 @property(nonatomic, strong)UIButton *blogBt;
 
 @end
@@ -74,28 +78,45 @@
         make.centerY.mas_equalTo(productTip.mas_centerY);
     }];
     
-    UILabel *blogTip = [[UILabel alloc] init];
-    [blogTip setFont:[UIFont systemFontOfSize:12]];
-    [blogTip setTextColor:[UIColor grayColor]];
-    [blogTip setText:@"技术blog:"];
-    [self.cardBgView addSubview:blogTip];
-    [blogTip mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(productTip.mas_left);
-        make.top.mas_equalTo(productTip.mas_bottom).offset(10);
+    UIButton *appImgBt = [UIButton buttonWithType:UIButtonTypeCustom];
+    [appImgBt setClipsToBounds:YES];
+    [appImgBt.layer setCornerRadius:4.0];
+    [self.cardBgView addSubview:appImgBt];
+    self.appImgBt = appImgBt;
+    
+    [appImgBt mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.mas_equalTo(self.cardBgView.mas_right).mas_offset(-15);
+        make.top.mas_equalTo(self.cardBgView.mas_top).offset(15);
+        make.width.mas_equalTo(40);
+        make.height.mas_equalTo(40);
     }];
     
-    UIButton *blog = [UIButton buttonWithType:UIButtonTypeCustom];
-    [blog setTitleColor:[UIColor colorWithRed:0.5 green:.9 blue:0.5 alpha:1.0] forState:UIControlStateNormal];
-    [blog.titleLabel setFont:[UIFont systemFontOfSize:13]];
-    [blog addTarget:self action:@selector(onSelectedBlog:) forControlEvents:UIControlEventTouchUpInside];
-    [self.cardBgView addSubview:blog];
-    self.blogBt = blog;
-    [blog mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(blogTip.mas_right).offset(5);
-        make.centerY.mas_equalTo(blogTip.mas_centerY);
-        make.bottom.mas_equalTo(self.cardBgView.mas_bottom).offset(-15);
-
+    UILabel *dutyTip = [[UILabel alloc] init];
+    [dutyTip setFont:[UIFont systemFontOfSize:12]];
+    [dutyTip setTextColor:[UIColor grayColor]];
+    [dutyTip setText:@"负责模块:"];
+    [self.cardBgView addSubview:dutyTip];
+    [dutyTip mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(productTip.mas_left);
+        make.top.mas_equalTo(productTip.mas_bottom).offset(15);
+        make.width.mas_equalTo(53);
     }];
+    
+    UILabel *duty = [[UILabel alloc] init];
+    [duty setNumberOfLines:0];
+    [duty setFont:[UIFont systemFontOfSize:13]];
+    [duty setTextColor:[UIColor darkGrayColor]];
+    [self.cardBgView addSubview:duty];
+    self.dutyLabel = duty;
+    [duty mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(dutyTip.mas_right).offset(5);
+        make.right.mas_equalTo(self.cardBgView.mas_right).offset(-15);
+        make.top.mas_equalTo(dutyTip.mas_top);
+        make.bottom.mas_equalTo(self.cardBgView.mas_bottom).offset(-15);
+        
+    }];
+    
+
 
 }
 
@@ -103,7 +124,10 @@
 {
     [self.companyTagLabel setText:data.companyTags];
     [self.appNameBt setTitle:[NSString stringWithFormat:@"%@", data.appName] forState:UIControlStateNormal];
-    [self.blogBt setTitle:data.blogType forState:UIControlStateNormal];
+    [self.dutyLabel setText:data.dutyDesc];
+    [self.appImgBt sd_setImageWithURL:[NSURL URLWithString:@"http://a5.mzstatic.com/us/r30/Purple69/v4/d8/ed/69/d8ed694c-a269-80f2-eab8-f5ac9f948ba5/icon175x175.jpeg"] forState:UIControlStateNormal];
+    //
+    //[self.blogBt setTitle:data.blogType forState:UIControlStateNormal];
 }
 
 @end

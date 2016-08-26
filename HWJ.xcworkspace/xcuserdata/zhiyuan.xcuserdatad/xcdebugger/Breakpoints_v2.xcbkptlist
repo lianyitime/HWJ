@@ -282,7 +282,7 @@
                   moduleName = "HWJ"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zhiyuan/Documents/Projects/HWJ/Classes/Others/EaseUI/EMUIKit/Views/conversation/toolbar/FaceView/EaseFacialView.m"
-                  timestampString = "493786030.55634"
+                  timestampString = "493873625.729062"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "297"
@@ -297,7 +297,7 @@
                   moduleName = "HWJ"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zhiyuan/Documents/Projects/HWJ/Classes/Others/EaseUI/EMUIKit/Views/conversation/toolbar/FaceView/EaseFacialView.m"
-                  timestampString = "493786030.556441"
+                  timestampString = "493873625.729143"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "297"
@@ -762,11 +762,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HWJ/Classes/View/HWJobSettingCell.m"
-            timestampString = "493621848.164865"
+            timestampString = "493874051.088665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
             landmarkName = "-loadSubviews"
             landmarkType = "5">
          </BreakpointContent>
@@ -831,6 +831,86 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "22"
             endingLineNumber = "22"
+            landmarkName = "-loadSubviews"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HWJ/Classes/ViewControllers/CandidateList/Views/HWCandidateDetailInfoCell.m"
+            timestampString = "493872062.738793"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
+            landmarkName = "-loadData:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HWJ/Classes/View/HWJobSettingCell.m"
+            timestampString = "493874051.088665"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
+            landmarkName = "-loadSubviews"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[HWJobSettingCell loadSubviews]"
+                  moduleName = "HWJ"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhiyuan/Documents/Projects/HWJ/Classes/View/HWJobSettingCell.m"
+                  timestampString = "493873625.738998"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "146"
+                  endingLineNumber = "146"
+                  offsetFromSymbolStart = "4780">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__32-[HWJobSettingCell loadSubviews]_block_invoke.146"
+                  moduleName = "HWJ"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhiyuan/Documents/Projects/HWJ/Classes/View/HWJobSettingCell.m"
+                  timestampString = "493873625.739089"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "146"
+                  endingLineNumber = "146"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HWJ/Classes/View/HWJobSettingCell.m"
+            timestampString = "493874051.088665"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
             landmarkName = "-loadSubviews"
             landmarkType = "5">
          </BreakpointContent>

@@ -9,6 +9,7 @@
 #import "HWCandidateDetailController.h"
 #import "HWCandidateDetailInfoCell.h"
 #import "HWCandidateDetailWorkCell.h"
+#import "HWCandidateBlogCell.h"
 #import "HWCandidateDetailEducation.h"
 #import "HWCandidateInfo.h"
 #import "ZYAdTipsView.h"
@@ -39,6 +40,8 @@
     [table registerClass:[HWCandidateDetailInfoCell class] forCellReuseIdentifier:@"HWCandidateDetailInfoCell"];
     [table registerClass:[HWCandidateDetailWorkCell class] forCellReuseIdentifier:@"HWCandidateDetailWorkCell"];
     [table registerClass:[HWCandidateDetailEducation class] forCellReuseIdentifier:@"HWCandidateDetailEducation"];
+    [table registerClass:[HWCandidateBlogCell class] forCellReuseIdentifier:@"HWCandidateBlogCell"];
+    
     [table setDelegate:self];
     [table setDataSource:self];
     
@@ -86,6 +89,7 @@
     candi.appUrl = @"https://itunes.apple.com/us/app/lian-yi-xiang-ce/id1040060813?mt=8";
     candi.appName = @"讲个故事给宝听";
     candi.appDesc = @"宝宝想听妈妈讲故事，一遍遍口干舌燥，现在好了，录下来，可以反复放给宝宝听。";
+    candi.dutyDesc = @"负责A、B、C等业务模块的开发，负责项目的基础搭建，XX定义实现,主要用到了XX技术和YY框架";
     candi.appIconUrl = @"http://tva4.sinaimg.cn/crop.0.0.180.180.180/62667ea8jw1e8qgp5bmzyj2050050aa8.jpg";
     candi.blogType = @"github";
     candi.blogUrl = @"https://github.com/rs/SDWebImage";
@@ -108,7 +112,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -129,6 +133,13 @@
         }
             break;
         case 2:
+        {
+            HWCandidateBlogCell *infoCell = [tableView dequeueReusableCellWithIdentifier:@"HWCandidateBlogCell"];
+            [infoCell loadData:self.jobInfo];
+            return infoCell;
+        }
+            break;
+        case 3:
         {
             HWCandidateDetailEducation *infoCell = [tableView dequeueReusableCellWithIdentifier:@"HWCandidateDetailEducation"];
             [infoCell loadData:self.jobInfo];

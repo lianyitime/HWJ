@@ -121,7 +121,7 @@
     
     [userBt mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.mas_equalTo(self.cardBgView.mas_right).mas_offset(-15);
-        make.top.mas_equalTo(self.cardBgView.mas_right).offset(15);
+        make.top.mas_equalTo(self.cardBgView.mas_top).offset(15);
         make.width.mas_equalTo(40);
         make.height.mas_equalTo(40);
     }];

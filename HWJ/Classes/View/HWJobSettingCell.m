@@ -66,6 +66,7 @@
     [name mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.cardBgView.mas_left).offset(10);
         make.top.mas_equalTo(self.cardBgView.mas_top).offset(10);
+        make.height.mas_equalTo(20.);
     }];
     
     UILabel *workYear = [[UILabel alloc] init];
@@ -133,21 +134,22 @@
     [skillTip mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.nameLabel.mas_left);
         make.top.mas_equalTo(sepLine1.mas_bottom).offset(15);
+        make.width.mas_equalTo(53);
+        make.height.mas_equalTo(15.);
     }];
     
     UILabel *skillsLabel = [[UILabel alloc] init];
     [skillsLabel setFont:[UIFont systemFontOfSize:12]];
-    [skillsLabel setTextColor:[UIColor colorWithRed:0.5 green:.9 blue:0.5 alpha:1.0]];
-    //[skillsLabel setNumberOfLines:0];
+    [skillsLabel setTextColor:[UIColor grayColor]];
+    [skillsLabel setNumberOfLines:3];
     [self.cardBgView addSubview:skillsLabel];
     self.skillsLabel = skillsLabel;
     
     [skillsLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(skillTip.mas_right).offset(5);
-        //make.top.mas_equalTo(skillTip.mas_top).offset(15);
-        make.centerY.mas_equalTo(skillTip.mas_centerY);
-        make.right.mas_equalTo(self.cardBgView.mas_right).offset(-5);
-       // make.height.lessThanOrEqualTo(self.cardBgView.mas_bottom).offset(-10);
+        make.top.mas_equalTo(skillTip.mas_top);
+        make.right.mas_equalTo(self.cardBgView.mas_right).offset(-15);
+        make.bottom.mas_equalTo(self.cardBgView.mas_bottom).offset(-10);
     }];
 }
 
@@ -159,7 +161,7 @@
     [self.expectYear setText:data.expectYear];
     [self.location setText:data.location];
 
-    [self.skillsLabel setText:@"XCode, OC, runtime, 多线程,http,动画, MVC"];
+    [self.skillsLabel setText:@"熟练使用XCode, 熟悉OC语法, 了解OC runtime, 熟悉多线程,http,动画, MVC等等，有上进心，学习能力强，抗压能力强..."];
 }
 
 - (void)sendInviteMsg:(UIButton *)sender

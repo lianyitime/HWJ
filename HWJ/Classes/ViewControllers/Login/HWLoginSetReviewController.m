@@ -45,7 +45,7 @@
 //    };
     RETextItem *prodNameItem  = [RETextItem itemWithTitle:@"开发的产品" value:nil placeholder:@"（选填）"];
     RETextItem *prodLinkItem  = [RETextItem itemWithTitle:@"产品地址" value:nil placeholder:@"网站地址或AppStore地址"];
-    RETextItem *prodWorkItem  = [RETextItem itemWithTitle:@"负责的模块" value:nil placeholder:@"负责的模块及使用到的技术"];
+    RETextItem *prodWorkItem  = [RETextItem itemWithTitle:@"负责模块" value:nil placeholder:@"负责的模块及使用到的技术"];
     
     RETextItem *blogItem  = [RETextItem itemWithTitle:@"我的博客" value:nil placeholder:@"github/stackoverflow（选填）"];
     

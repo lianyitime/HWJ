@@ -21,6 +21,7 @@
 @property(nonatomic, strong)NSString *appUrl;
 @property(nonatomic, strong)NSString *appName;
 @property(nonatomic, strong)NSString *appDesc;
+@property(nonatomic, strong)NSString *dutyDesc;
 @property(nonatomic, strong)NSString *appIconUrl;
 @property(nonatomic, strong)NSString *blogType;
 @property(nonatomic, strong)NSString *blogUrl;

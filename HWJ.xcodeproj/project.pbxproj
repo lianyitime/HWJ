@@ -136,6 +136,7 @@
 		D709C7281D4AFF950093A0DE /* HWNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D709C7271D4AFF950093A0DE /* HWNavigationViewController.m */; };
 		D709C72B1D501ED60093A0DE /* HWJobBaseInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D709C72A1D501ED60093A0DE /* HWJobBaseInfo.m */; };
 		D70FD48B1D66D80400D8E679 /* ZYAdTipsView.m in Sources */ = {isa = PBXBuildFile; fileRef = D70FD48A1D66D80400D8E679 /* ZYAdTipsView.m */; };
+		D72AAA351D6FDA76003A6359 /* HWCandidateBlogCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D72AAA341D6FDA76003A6359 /* HWCandidateBlogCell.m */; };
 		D72CDC7F1D6AA82300A7DD25 /* HWJobsManagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = D72CDC7E1D6AA82200A7DD25 /* HWJobsManagerController.m */; };
 		D72CDC831D6AF74B00A7DD25 /* HWChatBaseMsgBody.m in Sources */ = {isa = PBXBuildFile; fileRef = D72CDC821D6AF74B00A7DD25 /* HWChatBaseMsgBody.m */; };
 		D72CDC871D6B23EF00A7DD25 /* HWReqJobChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D72CDC861D6B23EF00A7DD25 /* HWReqJobChatCell.m */; };
@@ -487,6 +488,8 @@
 		D709C72A1D501ED60093A0DE /* HWJobBaseInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWJobBaseInfo.m; sourceTree = "<group>"; };
 		D70FD4891D66D80400D8E679 /* ZYAdTipsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYAdTipsView.h; sourceTree = "<group>"; };
 		D70FD48A1D66D80400D8E679 /* ZYAdTipsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYAdTipsView.m; sourceTree = "<group>"; };
+		D72AAA331D6FDA76003A6359 /* HWCandidateBlogCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWCandidateBlogCell.h; sourceTree = "<group>"; };
+		D72AAA341D6FDA76003A6359 /* HWCandidateBlogCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWCandidateBlogCell.m; sourceTree = "<group>"; };
 		D72CDC7D1D6AA82200A7DD25 /* HWJobsManagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWJobsManagerController.h; sourceTree = "<group>"; };
 		D72CDC7E1D6AA82200A7DD25 /* HWJobsManagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWJobsManagerController.m; sourceTree = "<group>"; };
 		D72CDC811D6AF74B00A7DD25 /* HWChatBaseMsgBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWChatBaseMsgBody.h; sourceTree = "<group>"; };
@@ -1476,6 +1479,8 @@
 				D7B01FB01D6E9B2600B0E6C1 /* HWCandidateDetailWorkCell.m */,
 				D7B01FB21D6E9B7000B0E6C1 /* HWCandidateDetailEducation.h */,
 				D7B01FB31D6E9B7000B0E6C1 /* HWCandidateDetailEducation.m */,
+				D72AAA331D6FDA76003A6359 /* HWCandidateBlogCell.h */,
+				D72AAA341D6FDA76003A6359 /* HWCandidateBlogCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1946,6 +1951,7 @@
 				D709C6F01D4A5EA10093A0DE /* EaseEmoji.m in Sources */,
 				D709C6E81D4A5EA10093A0DE /* NSDate+Category.m in Sources */,
 				D709C6AF1D4A5EA10093A0DE /* MJRefreshAutoGifFooter.m in Sources */,
+				D72AAA351D6FDA76003A6359 /* HWCandidateBlogCell.m in Sources */,
 				D709C6B51D4A5EA10093A0DE /* MJRefreshGifHeader.m in Sources */,
 				D709C6C21D4A5EA10093A0DE /* MWTapDetectingImageView.m in Sources */,
 				D772B6761D6D9B710077BCB7 /* HWJobDetailController.m in Sources */,
