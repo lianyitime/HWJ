@@ -11,6 +11,8 @@
 #import "HWLoginSetUserController.h"
 #import "HWLoginComparySetController.h"
 
+#import "HWUsersManager.h"
+
 #define mainSize    [UIScreen mainScreen].bounds.size
 
 #define offsetLeftHand      60
@@ -248,6 +250,10 @@
     } completion:^(BOOL finished) {
         
     }];
+    
+    HWUserProfile *user = [[HWUserProfile alloc] init];
+    user.account = txtUser.text;
+    [HWUsersManager sharedInstance].currentUser = user;
 }
 
 - (void)onFindJob:(UIButton *)sender
