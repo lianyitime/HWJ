@@ -79,9 +79,19 @@
 
 - (void)loadSubviews
 {
+    UIButton *bgbt = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self addSubview:bgbt];
+    [bgbt addTarget:self action:@selector(onTapBg:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [bgbt mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.mas_equalTo(self.mas_width);
+        make.height.mas_equalTo(self.mas_height);
+        make.centerX.mas_equalTo(self.mas_centerX);
+        make.centerY.mas_equalTo(self.mas_centerY);
+    }];
+
     self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
-    UIButton *content = [UIButton buttonWithType:UIButtonTypeCustom];
-    [content addTarget:self action:@selector(onTapBg:) forControlEvents:UIControlEventTouchUpInside];
+    UIView *content = [[UIView alloc] init];
     [content setClipsToBounds:YES];
     [content.layer setCornerRadius:4.0];
     [content setBackgroundColor:[UIColor whiteColor]];
