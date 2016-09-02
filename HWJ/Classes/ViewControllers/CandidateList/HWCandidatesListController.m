@@ -268,19 +268,19 @@ static inline void delay(NSTimeInterval delay, dispatch_block_t block) {
 #pragma mark - MKDropdownMenuDelegate
 
 - (CGFloat)dropdownMenu:(MKDropdownMenu *)dropdownMenu rowHeightForComponent:(NSInteger)component {
-    return 60;
+    return 50;
 }
 
 - (NSAttributedString *)dropdownMenu:(MKDropdownMenu *)dropdownMenu attributedTitleForComponent:(NSInteger)component {
     return [[NSAttributedString alloc] initWithString:self.titleStr
-                                           attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:18 weight:UIFontWeightLight],
+                                           attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:16 weight:UIFontWeightLight],
                                                         NSForegroundColorAttributeName: [UIColor grayColor]}];
 }
 
 - (NSAttributedString *)dropdownMenu:(MKDropdownMenu *)dropdownMenu attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component {
     NSMutableAttributedString *string =
     [[NSMutableAttributedString alloc] initWithString: [NSString stringWithFormat:@"岗位%ld", row + 1]
-                                           attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:20 weight:UIFontWeightLight],
+                                           attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:16 weight:UIFontWeightLight],
                                                         NSForegroundColorAttributeName: [UIColor grayColor]}];
     return string;
 }

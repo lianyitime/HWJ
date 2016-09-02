@@ -193,6 +193,7 @@
 		D78BDB281D49B31400E97C39 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D78BDB271D49B31400E97C39 /* libiconv.tbd */; };
 		D796BCC41D75B55A007B680F /* MKDropdownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = D796BCC31D75B55A007B680F /* MKDropdownMenu.m */; };
 		D796BCCB1D75B7E9007B680F /* UIColor+RGB.m in Sources */ = {isa = PBXBuildFile; fileRef = D796BCCA1D75B7E9007B680F /* UIColor+RGB.m */; };
+		D7AE923A1D79180A008DBDAC /* HWSayHelloView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7AE92391D79180A008DBDAC /* HWSayHelloView.m */; };
 		D7B01FAE1D6E9B1200B0E6C1 /* HWCandidateDetailInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B01FAD1D6E9B1200B0E6C1 /* HWCandidateDetailInfoCell.m */; };
 		D7B01FB11D6E9B2600B0E6C1 /* HWCandidateDetailWorkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B01FB01D6E9B2600B0E6C1 /* HWCandidateDetailWorkCell.m */; };
 		D7B01FB41D6E9B7000B0E6C1 /* HWCandidateDetailEducation.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B01FB31D6E9B7000B0E6C1 /* HWCandidateDetailEducation.m */; };
@@ -627,6 +628,8 @@
 		D796BCC31D75B55A007B680F /* MKDropdownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKDropdownMenu.m; sourceTree = "<group>"; };
 		D796BCC91D75B7E9007B680F /* UIColor+RGB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RGB.h"; sourceTree = "<group>"; };
 		D796BCCA1D75B7E9007B680F /* UIColor+RGB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RGB.m"; sourceTree = "<group>"; };
+		D7AE92381D79180A008DBDAC /* HWSayHelloView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWSayHelloView.h; sourceTree = "<group>"; };
+		D7AE92391D79180A008DBDAC /* HWSayHelloView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWSayHelloView.m; sourceTree = "<group>"; };
 		D7B01FAC1D6E9B1200B0E6C1 /* HWCandidateDetailInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWCandidateDetailInfoCell.h; sourceTree = "<group>"; };
 		D7B01FAD1D6E9B1200B0E6C1 /* HWCandidateDetailInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWCandidateDetailInfoCell.m; sourceTree = "<group>"; };
 		D7B01FAF1D6E9B2600B0E6C1 /* HWCandidateDetailWorkCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWCandidateDetailWorkCell.h; sourceTree = "<group>"; };
@@ -1616,6 +1619,8 @@
 				D72CDC891D6B240100A7DD25 /* HWReqHireChatCell.m */,
 				D772B6871D6DA3CC0077BCB7 /* HWRoundBaseCell.h */,
 				D772B6881D6DA3CC0077BCB7 /* HWRoundBaseCell.m */,
+				D7AE92381D79180A008DBDAC /* HWSayHelloView.h */,
+				D7AE92391D79180A008DBDAC /* HWSayHelloView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2030,6 +2035,7 @@
 				D709C6D41D4A5EA10093A0DE /* UIImageView+EMWebCache.m in Sources */,
 				D709C69B1D4A5EA10093A0DE /* EaseUI.m in Sources */,
 				D709C6C71D4A5EA10093A0DE /* EMSDWebImageCompat.m in Sources */,
+				D7AE923A1D79180A008DBDAC /* HWSayHelloView.m in Sources */,
 				D709C6D21D4A5EA10093A0DE /* UIImage+EMWebP.m in Sources */,
 				D7E16B391D4797E700788CB1 /* HWMsgsListController.m in Sources */,
 				D709C6D71D4A5EA10093A0DE /* PSTCollectionView.m in Sources */,

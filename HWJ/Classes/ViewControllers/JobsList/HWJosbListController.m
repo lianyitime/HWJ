@@ -12,6 +12,7 @@
 #import "ZYAdTipsView.h"
 #import "EaseSDKHelper.h"
 #import "HWJobDetailController.h"
+#import "HWSayHelloView.h"
 
 @interface HWJosbListController()<UITableViewDelegate, UITableViewDataSource>
 
@@ -105,22 +106,25 @@
     switch (event) {
         case HWJobInfoEventSendMsg:
         {
-            EMMessage *message = [EaseSDKHelper sendCustomMessageWithTitle:@"测试信息"
-                                                             to:@"8001"
-                                                    messageType:EMChatTypeChat
-                                                        bizType:HWChatBaseMsgTypeReqFindJobByBoss
-                                                     messageExt:nil];
-            //message.ext = @{@"msgBizType":@(HWChatBaseMsgTypeReqFindJobByBoss)}; // 扩展消息部分
-            
-            __weak typeof(self) weakself = self;
-            [[EMClient sharedClient].chatManager asyncSendMessage:message progress:nil completion:^(EMMessage *aMessage, EMError *aError) {
-                if (!aError) {
-                    
-                }
-                else {
-                    
-                }
-            }];
+            HWSayHelloView *helloView = [[HWSayHelloView alloc] initWithFrame:self.view.bounds];
+            [helloView loadData:nil];
+            [self.view addSubview:helloView];
+//            EMMessage *message = [EaseSDKHelper sendCustomMessageWithTitle:@"测试信息"
+//                                                             to:@"8001"
+//                                                    messageType:EMChatTypeChat
+//                                                        bizType:HWChatBaseMsgTypeReqFindJobByBoss
+//                                                     messageExt:nil];
+//            //message.ext = @{@"msgBizType":@(HWChatBaseMsgTypeReqFindJobByBoss)}; // 扩展消息部分
+//            
+//            __weak typeof(self) weakself = self;
+//            [[EMClient sharedClient].chatManager asyncSendMessage:message progress:nil completion:^(EMMessage *aMessage, EMError *aError) {
+//                if (!aError) {
+//                    
+//                }
+//                else {
+//                    
+//                }
+//            }];
         }
             break;
         case HWJobInfoEventClickBlog:
