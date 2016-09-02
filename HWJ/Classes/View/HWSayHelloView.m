@@ -33,13 +33,55 @@
 {
     self = [super initWithFrame:frame];
     [self loadSubviews];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onKeyboardShow:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onKeyboardHide:) name:UIKeyboardWillHideNotification object:nil];
+    
     return self;
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)onKeyboardShow:(NSNotification *)notification
+{
+    CGRect keyboardRect = [notification.userInfo[@"UIKeyboardFrameEndUserInfoKey"] CGRectValue];
+
+    CGFloat keyboardDuration = [notification.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    
+    [_contentView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.centerY.mas_equalTo(self.mas_centerY).offset(- (keyboardRect.size.height - 44) / 2);
+        
+    }];
+    
+    [UIView animateWithDuration:keyboardDuration animations:^{
+        [self layoutIfNeeded];
+    }];
+    
+
+}
+
+- (void)onKeyboardHide:(NSNotification *)notification
+{
+    [_contentView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.centerY.mas_equalTo(self.mas_centerY);
+        
+    }];
+    
+    CGFloat keyboardDuration = [notification.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+
+    [UIView animateWithDuration:keyboardDuration animations:^{
+        [self layoutIfNeeded];
+    }];
 }
 
 - (void)loadSubviews
 {
     self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
-    UIView *content = [[UIView alloc] init];
+    UIButton *content = [UIButton buttonWithType:UIButtonTypeCustom];
+    [content addTarget:self action:@selector(onTapBg:) forControlEvents:UIControlEventTouchUpInside];
     [content setClipsToBounds:YES];
     [content.layer setCornerRadius:4.0];
     [content setBackgroundColor:[UIColor whiteColor]];
@@ -120,9 +162,9 @@
     
     [sendBt mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.mas_equalTo(self.textView.mas_right);
-        make.top.mas_equalTo(self.textView.mas_bottom).offset(5);
+        make.top.mas_equalTo(self.textView.mas_bottom).offset(7);
         make.width.mas_equalTo(70);
-        make.height.mas_equalTo(30);
+        make.height.mas_equalTo(26);
     }];
     
 }
@@ -143,5 +185,11 @@
 {
     [self removeFromSuperview];
 }
+
+- (void)onTapBg:(UIButton *)send
+{
+    [self removeFromSuperview];
+}
+
 
 @end
