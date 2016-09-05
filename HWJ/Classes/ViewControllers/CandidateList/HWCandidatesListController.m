@@ -83,7 +83,7 @@ static inline void delay(NSTimeInterval delay, dispatch_block_t block) {
 {
     // Create dropdown menu in code
     
-    self.navBarMenu = [[MKDropdownMenu alloc] initWithFrame:CGRectMake(0, 0, 200, 44)];
+    self.navBarMenu = [[MKDropdownMenu alloc] initWithFrame:CGRectMake(0, 0, 100, 44)];
     self.navBarMenu.dataSource = self;
     self.navBarMenu.delegate = self;
     
@@ -127,7 +127,7 @@ static inline void delay(NSTimeInterval delay, dispatch_block_t block) {
 
 - (void)showAdTip
 {
-    [ZYAdTipsView showInTable:self.tableView withTitle:@"内推:成功推荐一人可获得奖励1千"];
+    [ZYAdTipsView showInTable:self.tableView withTitle:@"内推:每推荐成功一人可获得奖励1千"];
 }
 
 - (void)loadData
@@ -210,9 +210,15 @@ static inline void delay(NSTimeInterval delay, dispatch_block_t block) {
             break;
         case HWCandidateEventClickProduct:
         {
-            RxWebViewController *webVC = [[RxWebViewController alloc] initWithUrl:[NSURL URLWithString:@"https://itunes.apple.com/us/app/lian-yi-xiang-ce/id1040060813?l=zh&ls=1&mt=8"]];
-            webVC.hidesBottomBarWhenPushed = YES;
-            [self.navigationController pushViewController:webVC animated:YES];
+            NSURL *url = [NSURL URLWithString:@"https://itunes.apple.com/us/app/lian-yi-xiang-ce/id1040060813?l=zh&ls=1&mt=8"];
+            if ([url.host.lowercaseString isEqualToString:@"itunes.apple.com"]) {
+                [[UIApplication sharedApplication] openURL:url];
+            }
+            else {
+                RxWebViewController *webVC = [[RxWebViewController alloc] initWithUrl:[NSURL URLWithString:@"https://itunes.apple.com/us/app/lian-yi-xiang-ce/id1040060813?l=zh&ls=1&mt=8"]];
+                webVC.hidesBottomBarWhenPushed = YES;
+                [self.navigationController pushViewController:webVC animated:YES];
+            }
         }
             break;
         case HWCandidateEventClickBlog:

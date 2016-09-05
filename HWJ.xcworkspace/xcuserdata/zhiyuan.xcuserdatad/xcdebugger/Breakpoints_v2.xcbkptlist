@@ -249,22 +249,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HWJ/Classes/ViewControllers/CandidateList/HWCandidatesListController.m"
-            timestampString = "494254880.996462"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "215"
-            endingLineNumber = "215"
-            landmarkName = "-onClickCell:event:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "HWJ/Classes/Others/EaseUI/EMUIKit/Views/conversation/toolbar/FaceView/EaseFacialView.m"
             timestampString = "491624391.200021"
             startingColumnNumber = "9223372036854775807"
@@ -314,11 +298,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HWJ/Classes/ViewControllers/CandidateList/HWCandidatesListController.m"
-            timestampString = "494254880.996462"
+            timestampString = "494737349.96349"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "235"
-            endingLineNumber = "235"
+            startingLineNumber = "241"
+            endingLineNumber = "241"
             landmarkName = "-emotionFormessageViewController:"
             landmarkType = "5">
          </BreakpointContent>
@@ -330,11 +314,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HWJ/Classes/ViewControllers/CandidateList/HWCandidatesListController.m"
-            timestampString = "494254880.996462"
+            timestampString = "494737349.96349"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "253"
-            endingLineNumber = "253"
+            startingLineNumber = "259"
+            endingLineNumber = "259"
             landmarkName = "-emotionFormessageViewController:"
             landmarkType = "5">
          </BreakpointContent>
@@ -922,11 +906,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HWJ/Classes/ViewControllers/CandidateList/HWCandidatesListController.m"
-            timestampString = "494254880.996462"
+            timestampString = "494737349.96349"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "297"
-            endingLineNumber = "297"
+            startingLineNumber = "303"
+            endingLineNumber = "303"
             landmarkName = "-dropdownMenu:didSelectRow:inComponent:"
             landmarkType = "5">
          </BreakpointContent>
@@ -938,11 +922,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HWJ/Classes/ViewControllers/CandidateList/HWCandidatesListController.m"
-            timestampString = "494254880.996462"
+            timestampString = "494737349.96349"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "275"
-            endingLineNumber = "275"
+            startingLineNumber = "281"
+            endingLineNumber = "281"
             landmarkName = "-dropdownMenu:attributedTitleForComponent:"
             landmarkType = "5">
          </BreakpointContent>
@@ -954,11 +938,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HWJ/Classes/ViewControllers/JobsList/HWJosbListController.m"
-            timestampString = "494479562.691157"
+            timestampString = "494740705.016712"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
             landmarkName = "-onClickCell:event:"
             landmarkType = "5">
          </BreakpointContent>

@@ -8,6 +8,7 @@
 
 #import "HWJobsManagerController.h"
 #import "HWJobSettingCell.h"
+#import "HWJobNewController.h"
 
 @interface HWJobsManagerController()<UITableViewDelegate, UITableViewDataSource>
 
@@ -34,6 +35,8 @@
     [ctrl setSelectedSegmentIndex:0];
     [ctrl addTarget:self action:@selector(onSelectedItemChanged:) forControlEvents:UIControlEventValueChanged];
     self.navigationItem.titleView = ctrl;
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(onNewJob)];
     
     self.edgesForExtendedLayout = UIRectEdgeNone;
     
@@ -103,6 +106,12 @@
     self.historyJobs = [[NSMutableArray alloc] initWithObjects:candi, nil];
     
     [self.currentJobsList reloadData];
+}
+
+- (void)onNewJob
+{
+    HWJobNewController *vc = [[HWJobNewController alloc] initWithNibName:nil bundle:nil];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark -

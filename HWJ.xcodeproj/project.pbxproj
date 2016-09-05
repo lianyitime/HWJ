@@ -164,6 +164,7 @@
 		D734F7D11D5256D0007F5EF3 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D734F7D01D5256D0007F5EF3 /* Parse.framework */; };
 		D734F7D31D525850007F5EF3 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D734F7D21D525850007F5EF3 /* Social.framework */; };
 		D734F7D51D5258C2007F5EF3 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D734F7D41D5258C2007F5EF3 /* Accounts.framework */; };
+		D73ACDF51D7D124D00722007 /* HWJobNewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D73ACDF41D7D124D00722007 /* HWJobNewController.m */; };
 		D73D84B51D615BBA005A0687 /* HWProcessListController.m in Sources */ = {isa = PBXBuildFile; fileRef = D73D84B41D615BBA005A0687 /* HWProcessListController.m */; };
 		D73D84DE1D62C875005A0687 /* ZYDropView.m in Sources */ = {isa = PBXBuildFile; fileRef = D73D84DD1D62C875005A0687 /* ZYDropView.m */; };
 		D76A49E51D641208003A8528 /* HWTempUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D76A49E41D641208003A8528 /* HWTempUserCell.m */; };
@@ -545,6 +546,8 @@
 		D734F7D01D5256D0007F5EF3 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		D734F7D21D525850007F5EF3 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		D734F7D41D5258C2007F5EF3 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		D73ACDF31D7D124D00722007 /* HWJobNewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWJobNewController.h; sourceTree = "<group>"; };
+		D73ACDF41D7D124D00722007 /* HWJobNewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWJobNewController.m; sourceTree = "<group>"; };
 		D73D84B31D615BBA005A0687 /* HWProcessListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWProcessListController.h; sourceTree = "<group>"; };
 		D73D84B41D615BBA005A0687 /* HWProcessListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWProcessListController.m; sourceTree = "<group>"; };
 		D73D84DC1D62C875005A0687 /* ZYDropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYDropView.h; sourceTree = "<group>"; };
@@ -1360,6 +1363,8 @@
 			children = (
 				D72CDC7D1D6AA82200A7DD25 /* HWJobsManagerController.h */,
 				D72CDC7E1D6AA82200A7DD25 /* HWJobsManagerController.m */,
+				D73ACDF31D7D124D00722007 /* HWJobNewController.h */,
+				D73ACDF41D7D124D00722007 /* HWJobNewController.m */,
 			);
 			path = JobsManager;
 			sourceTree = "<group>";
@@ -1981,6 +1986,7 @@
 				D709C6E71D4A5EA10093A0DE /* EaseUserModel.m in Sources */,
 				D72AAA3C1D73CF66003A6359 /* HWUsersManager.m in Sources */,
 				D709C7001D4A5EA10093A0DE /* EaseBubbleView+File.m in Sources */,
+				D73ACDF51D7D124D00722007 /* HWJobNewController.m in Sources */,
 				D734F7971D524CB9007F5EF3 /* EMSearchBar.m in Sources */,
 				D709C6CF1D4A5EA10093A0DE /* UIButton+EMWebCache.m in Sources */,
 				D709C6B21D4A5EA10093A0DE /* MJRefreshBackGifFooter.m in Sources */,
