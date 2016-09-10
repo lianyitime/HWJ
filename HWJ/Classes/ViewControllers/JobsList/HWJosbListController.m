@@ -38,6 +38,12 @@
     [self.view addSubview:table];
     self.tableView = table;
     
+    UIImage *image =  [[UIImage imageNamed:@"rmb"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    // 禁用图片渲染
+    UIBarButtonItem *bar = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(onSelectedRMBMsg)];
+    
+    self.navigationItem.rightBarButtonItem = bar;
+    
     //[self performSelector:@selector(showAdTip) withObject:nil afterDelay:0.5];
     [self showAdTip];
 
@@ -67,6 +73,11 @@
     
     self.jobs = [[NSMutableArray alloc] initWithObjects:candi, nil];
     [self.tableView reloadData];
+}
+
+- (void)onSelectedRMBMsg
+{
+    
 }
 
 #pragma mark -

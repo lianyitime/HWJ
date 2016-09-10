@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HWJ/AppDelegate.m"
-            timestampString = "493530377.240532"
+            timestampString = "495211419.565665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
             landmarkName = "-loginUserIM"
             landmarkType = "5">
          </BreakpointContent>
@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HWJ/AppDelegate.m"
-            timestampString = "493530377.240532"
+            timestampString = "495211419.565665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
             landmarkName = "-loginUserIM"
             landmarkType = "5">
          </BreakpointContent>
@@ -154,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HWJ/AppDelegate.m"
-            timestampString = "493530377.240532"
+            timestampString = "495211419.565665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
             landmarkName = "-loginUserIM"
             landmarkType = "5">
          </BreakpointContent>
@@ -170,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HWJ/AppDelegate.m"
-            timestampString = "493530377.240532"
+            timestampString = "495211419.565665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
             landmarkName = "-loginUserIM"
             landmarkType = "5">
          </BreakpointContent>
@@ -281,13 +281,13 @@
                   symbolName = "-[EaseFacialView loadFacialView:size:]"
                   moduleName = "HWJ"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zhiyuan/Documents/Projects/HWJ/Classes/Others/EaseUI/EMUIKit/Views/conversation/toolbar/FaceView/EaseFacialView.m"
-                  timestampString = "493873625.729062"
+                  urlString = "file:///Users/zhiyuan/Documents/HWJ/HWJ/Classes/Others/EaseUI/EMUIKit/Views/conversation/toolbar/FaceView/EaseFacialView.m"
+                  timestampString = "495212093.324097"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "297"
                   endingLineNumber = "297"
-                  offsetFromSymbolStart = "100">
+                  offsetFromSymbolStart = "102">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -296,13 +296,13 @@
                   symbolName = "-[EaseFacialView loadFacialView:size:]"
                   moduleName = "HWJ"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zhiyuan/Documents/Projects/HWJ/Classes/Others/EaseUI/EMUIKit/Views/conversation/toolbar/FaceView/EaseFacialView.m"
-                  timestampString = "493873625.729143"
+                  urlString = "file:///Users/zhiyuan/Documents/HWJ/HWJ/Classes/Others/EaseUI/EMUIKit/Views/conversation/toolbar/FaceView/EaseFacialView.m"
+                  timestampString = "495212093.324347"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "297"
                   endingLineNumber = "297"
-                  offsetFromSymbolStart = "116">
+                  offsetFromSymbolStart = "110">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -394,11 +394,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HWJ/AppDelegate.m"
-            timestampString = "493530377.240532"
+            timestampString = "495211419.565665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
             landmarkName = "-onLogin:"
             landmarkType = "5">
          </BreakpointContent>
@@ -873,13 +873,13 @@
                   symbolName = "-[HWJobSettingCell loadSubviews]"
                   moduleName = "HWJ"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zhiyuan/Documents/Projects/HWJ/Classes/View/HWJobSettingCell.m"
-                  timestampString = "493873625.738998"
+                  urlString = "file:///Users/zhiyuan/Documents/HWJ/HWJ/Classes/View/HWJobSettingCell.m"
+                  timestampString = "495212093.343489"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "146"
-                  endingLineNumber = "146"
-                  offsetFromSymbolStart = "4780">
+                  startingLineNumber = "148"
+                  endingLineNumber = "148"
+                  offsetFromSymbolStart = "5021">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -888,13 +888,13 @@
                   symbolName = "__32-[HWJobSettingCell loadSubviews]_block_invoke.146"
                   moduleName = "HWJ"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zhiyuan/Documents/Projects/HWJ/Classes/View/HWJobSettingCell.m"
-                  timestampString = "493873625.739089"
+                  urlString = "file:///Users/zhiyuan/Documents/HWJ/HWJ/Classes/View/HWJobSettingCell.m"
+                  timestampString = "495212093.343656"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "146"
-                  endingLineNumber = "146"
-                  offsetFromSymbolStart = "28">
+                  startingLineNumber = "148"
+                  endingLineNumber = "148"
+                  offsetFromSymbolStart = "19">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -912,6 +912,22 @@
             startingLineNumber = "149"
             endingLineNumber = "149"
             landmarkName = "-loadSubviews"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HWJ/AppDelegate.m"
+            timestampString = "495211365.979465"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "-loadPhoneLogin"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

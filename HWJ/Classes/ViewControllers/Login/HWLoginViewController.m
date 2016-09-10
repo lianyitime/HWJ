@@ -10,8 +10,7 @@
 #import "HWNotificationDef.h"
 #import "HWLoginSetUserController.h"
 #import "HWLoginComparySetController.h"
-
-#define mainSize    [UIScreen mainScreen].bounds.size
+#import "HWFrameSet.h"
 
 #define offsetLeftHand      60
 

@@ -162,6 +162,16 @@
 		D734F7D11D5256D0007F5EF3 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D734F7D01D5256D0007F5EF3 /* Parse.framework */; };
 		D734F7D31D525850007F5EF3 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D734F7D21D525850007F5EF3 /* Social.framework */; };
 		D734F7D51D5258C2007F5EF3 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D734F7D41D5258C2007F5EF3 /* Accounts.framework */; };
+		D73B0EEF1D83B2F900FC5710 /* LYOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D73B0EED1D83B2F900FC5710 /* LYOperationManager.m */; };
+		D73B0EF21D83B30500FC5710 /* LYAccountDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D73B0EF11D83B30500FC5710 /* LYAccountDataManager.m */; };
+		D73B0EF51D83B3B500FC5710 /* LYLoginedAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = D73B0EF41D83B3B500FC5710 /* LYLoginedAccount.m */; };
+		D73B0EF81D83B4B300FC5710 /* LYUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D73B0EF61D83B4B300FC5710 /* LYUserInfo.m */; };
+		D73B0EFB1D83B8AE00FC5710 /* NSString+md5.m in Sources */ = {isa = PBXBuildFile; fileRef = D73B0EFA1D83B8AE00FC5710 /* NSString+md5.m */; };
+		D73B0F011D83C56200FC5710 /* PhoneLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = D73B0EFF1D83C56200FC5710 /* PhoneLoginController.m */; };
+		D73B0F021D83C56200FC5710 /* PhoneLoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D73B0F001D83C56200FC5710 /* PhoneLoginController.xib */; };
+		D73B0F051D83C5CF00FC5710 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = D73B0F041D83C5CF00FC5710 /* MBProgressHUD+MJ.m */; };
+		D73B0F081D83C84200FC5710 /* RTAlbumsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D73B0F071D83C84200FC5710 /* RTAlbumsManager.m */; };
+		D73B0F0B1D844F6800FC5710 /* HWWelcomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = D73B0F0A1D844F6800FC5710 /* HWWelcomeController.m */; };
 		D73D84B51D615BBA005A0687 /* HWProcessListController.m in Sources */ = {isa = PBXBuildFile; fileRef = D73D84B41D615BBA005A0687 /* HWProcessListController.m */; };
 		D73D84DE1D62C875005A0687 /* ZYDropView.m in Sources */ = {isa = PBXBuildFile; fileRef = D73D84DD1D62C875005A0687 /* ZYDropView.m */; };
 		D76A49E51D641208003A8528 /* HWTempUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D76A49E41D641208003A8528 /* HWTempUserCell.m */; };
@@ -536,6 +546,27 @@
 		D734F7D01D5256D0007F5EF3 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		D734F7D21D525850007F5EF3 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		D734F7D41D5258C2007F5EF3 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		D73B0EED1D83B2F900FC5710 /* LYOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYOperationManager.m; sourceTree = "<group>"; };
+		D73B0EEE1D83B2F900FC5710 /* LYOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYOperationManager.h; sourceTree = "<group>"; };
+		D73B0EF01D83B30500FC5710 /* LYAccountDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYAccountDataManager.h; sourceTree = "<group>"; };
+		D73B0EF11D83B30500FC5710 /* LYAccountDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYAccountDataManager.m; sourceTree = "<group>"; };
+		D73B0EF31D83B3B500FC5710 /* LYLoginedAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLoginedAccount.h; sourceTree = "<group>"; };
+		D73B0EF41D83B3B500FC5710 /* LYLoginedAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYLoginedAccount.m; sourceTree = "<group>"; };
+		D73B0EF61D83B4B300FC5710 /* LYUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYUserInfo.m; sourceTree = "<group>"; };
+		D73B0EF71D83B4B300FC5710 /* LYUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYUserInfo.h; sourceTree = "<group>"; };
+		D73B0EF91D83B8AE00FC5710 /* NSString+md5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+md5.h"; sourceTree = "<group>"; };
+		D73B0EFA1D83B8AE00FC5710 /* NSString+md5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+md5.m"; sourceTree = "<group>"; };
+		D73B0EFC1D83B9DF00FC5710 /* HWInterfaceDef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWInterfaceDef.h; sourceTree = "<group>"; };
+		D73B0EFD1D83BA0100FC5710 /* HWFrameSet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWFrameSet.h; sourceTree = "<group>"; };
+		D73B0EFE1D83C56200FC5710 /* PhoneLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneLoginController.h; sourceTree = "<group>"; };
+		D73B0EFF1D83C56200FC5710 /* PhoneLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneLoginController.m; sourceTree = "<group>"; };
+		D73B0F001D83C56200FC5710 /* PhoneLoginController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhoneLoginController.xib; sourceTree = "<group>"; };
+		D73B0F031D83C5CF00FC5710 /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
+		D73B0F041D83C5CF00FC5710 /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
+		D73B0F061D83C84200FC5710 /* RTAlbumsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTAlbumsManager.h; sourceTree = "<group>"; };
+		D73B0F071D83C84200FC5710 /* RTAlbumsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTAlbumsManager.m; sourceTree = "<group>"; };
+		D73B0F091D844F6800FC5710 /* HWWelcomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWWelcomeController.h; sourceTree = "<group>"; };
+		D73B0F0A1D844F6800FC5710 /* HWWelcomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWWelcomeController.m; sourceTree = "<group>"; };
 		D73D84B31D615BBA005A0687 /* HWProcessListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWProcessListController.h; sourceTree = "<group>"; };
 		D73D84B41D615BBA005A0687 /* HWProcessListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWProcessListController.m; sourceTree = "<group>"; };
 		D73D84DC1D62C875005A0687 /* ZYDropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYDropView.h; sourceTree = "<group>"; };
@@ -1602,6 +1633,8 @@
 			isa = PBXGroup;
 			children = (
 				D7E16B1C1D470C7500788CB1 /* HWNotificationDef.h */,
+				D73B0EFC1D83B9DF00FC5710 /* HWInterfaceDef.h */,
+				D73B0EFD1D83BA0100FC5710 /* HWFrameSet.h */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -1609,6 +1642,8 @@
 		D7E16B091D46F18600788CB1 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				D73B0F031D83C5CF00FC5710 /* MBProgressHUD+MJ.h */,
+				D73B0F041D83C5CF00FC5710 /* MBProgressHUD+MJ.m */,
 				D77D80381D6564C700E81E51 /* NSDate+NVTimeAgo.h */,
 				D77D80391D6564C700E81E51 /* NSDate+NVTimeAgo.m */,
 				D734F79F1D524D95007F5EF3 /* UIImageView+HeadImage.h */,
@@ -1620,6 +1655,8 @@
 		D7E16B0A1D46F18600788CB1 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				D73B0EF91D83B8AE00FC5710 /* NSString+md5.h */,
+				D73B0EFA1D83B8AE00FC5710 /* NSString+md5.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1627,6 +1664,12 @@
 		D7E16B0B1D46F18600788CB1 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				D73B0F061D83C84200FC5710 /* RTAlbumsManager.h */,
+				D73B0F071D83C84200FC5710 /* RTAlbumsManager.m */,
+				D73B0EF01D83B30500FC5710 /* LYAccountDataManager.h */,
+				D73B0EF11D83B30500FC5710 /* LYAccountDataManager.m */,
+				D73B0EED1D83B2F900FC5710 /* LYOperationManager.m */,
+				D73B0EEE1D83B2F900FC5710 /* LYOperationManager.h */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -1634,6 +1677,10 @@
 		D7E16B0C1D46F18600788CB1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D73B0EF31D83B3B500FC5710 /* LYLoginedAccount.h */,
+				D73B0EF41D83B3B500FC5710 /* LYLoginedAccount.m */,
+				D73B0EF61D83B4B300FC5710 /* LYUserInfo.m */,
+				D73B0EF71D83B4B300FC5710 /* LYUserInfo.h */,
 				D7E16B321D47788800788CB1 /* HWCandidateInfo.h */,
 				D7E16B331D47788800788CB1 /* HWCandidateInfo.m */,
 				D709C7291D501ED60093A0DE /* HWJobBaseInfo.h */,
@@ -1659,6 +1706,11 @@
 				D7E16B211D47315500788CB1 /* HWLoginComparySetController.m */,
 				D7E16B231D47318500788CB1 /* HWLoginComparyUserSetController.h */,
 				D7E16B241D47318500788CB1 /* HWLoginComparyUserSetController.m */,
+				D73B0EFE1D83C56200FC5710 /* PhoneLoginController.h */,
+				D73B0EFF1D83C56200FC5710 /* PhoneLoginController.m */,
+				D73B0F001D83C56200FC5710 /* PhoneLoginController.xib */,
+				D73B0F091D844F6800FC5710 /* HWWelcomeController.h */,
+				D73B0F0A1D844F6800FC5710 /* HWWelcomeController.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -1742,6 +1794,7 @@
 				D7E16ABE1D46DEF200788CB1 /* Resources */,
 				3919A1DB89C222A187145E56 /* 📦 Embed Pods Frameworks */,
 				3AA49CF1012AAE25B422E5D4 /* 📦 Copy Pods Resources */,
+				B9C87BBA76E2DB5049FD59AC /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1793,6 +1846,7 @@
 				D709C7111D4A5EA10093A0DE /* EaseUIResource.bundle in Resources */,
 				D709C7201D4AFF3E0093A0DE /* backItemImage_hl@2x.png in Resources */,
 				D7E16AD01D46DEF300788CB1 /* Assets.xcassets in Resources */,
+				D73B0F021D83C56200FC5710 /* PhoneLoginController.xib in Resources */,
 				D709C6B81D4A5EA10093A0DE /* MJRefresh.bundle in Resources */,
 				D709C71F1D4AFF3E0093A0DE /* backItemImage@2x.png in Resources */,
 				D7E16ACE1D46DEF300788CB1 /* Main.storyboard in Resources */,
@@ -1848,6 +1902,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		B9C87BBA76E2DB5049FD59AC /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HWJ/Pods-HWJ-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1890,6 +1959,7 @@
 				D76A49E81D64121A003A8528 /* HWProcessUserCell.m in Sources */,
 				D709C72B1D501ED60093A0DE /* HWJobBaseInfo.m in Sources */,
 				D709C6FC1D4A5EA10093A0DE /* EaseBaseMessageCell.m in Sources */,
+				D73B0EF51D83B3B500FC5710 /* LYLoginedAccount.m in Sources */,
 				D709C6BC1D4A5EA10093A0DE /* UIView+MJExtension.m in Sources */,
 				D709C7061D4A5EA10093A0DE /* EaseBubbleView+Voice.m in Sources */,
 				D709C70B1D4A5EA10093A0DE /* EaseTextView.m in Sources */,
@@ -1912,6 +1982,7 @@
 				D709C6CB1D4A5EA10093A0DE /* EMSDWebImageManager.m in Sources */,
 				D734F79E1D524D6D007F5EF3 /* BaseTableViewCell.m in Sources */,
 				D709C6A81D4A5EA10093A0DE /* MBProgressHUD+Add.m in Sources */,
+				D73B0F0B1D844F6800FC5710 /* HWWelcomeController.m in Sources */,
 				D709C6AE1D4A5EA10093A0DE /* MJRefreshHeader.m in Sources */,
 				D709C6B91D4A5EA10093A0DE /* MJRefreshConst.m in Sources */,
 				D709C6A51D4A5EA10093A0DE /* EMVoiceConverter.mm in Sources */,
@@ -1943,13 +2014,16 @@
 				D772B6891D6DA3CC0077BCB7 /* HWRoundBaseCell.m in Sources */,
 				D709C7091D4A5EA10093A0DE /* EaseChatToolbarItem.m in Sources */,
 				D709C6E71D4A5EA10093A0DE /* EaseUserModel.m in Sources */,
+				D73B0EF21D83B30500FC5710 /* LYAccountDataManager.m in Sources */,
 				D709C7001D4A5EA10093A0DE /* EaseBubbleView+File.m in Sources */,
+				D73B0EFB1D83B8AE00FC5710 /* NSString+md5.m in Sources */,
 				D734F7971D524CB9007F5EF3 /* EMSearchBar.m in Sources */,
 				D709C6CF1D4A5EA10093A0DE /* UIButton+EMWebCache.m in Sources */,
 				D709C6B21D4A5EA10093A0DE /* MJRefreshBackGifFooter.m in Sources */,
 				D7E16B101D46F21900788CB1 /* HWLoginViewController.m in Sources */,
 				D709C6F01D4A5EA10093A0DE /* EaseEmoji.m in Sources */,
 				D709C6E81D4A5EA10093A0DE /* NSDate+Category.m in Sources */,
+				D73B0F011D83C56200FC5710 /* PhoneLoginController.m in Sources */,
 				D709C6AF1D4A5EA10093A0DE /* MJRefreshAutoGifFooter.m in Sources */,
 				D72AAA351D6FDA76003A6359 /* HWCandidateBlogCell.m in Sources */,
 				D709C6B51D4A5EA10093A0DE /* MJRefreshGifHeader.m in Sources */,
@@ -1964,10 +2038,12 @@
 				D772B6801D6D9EC90077BCB7 /* HWJobDetailRequestCell.m in Sources */,
 				D709C6AC1D4A5EA10093A0DE /* MJRefreshComponent.m in Sources */,
 				D72CDC8A1D6B240100A7DD25 /* HWReqHireChatCell.m in Sources */,
+				D73B0F081D83C84200FC5710 /* RTAlbumsManager.m in Sources */,
 				D709C6F91D4A5EA10093A0DE /* EaseUsersListViewController.m in Sources */,
 				D734F7CC1D5252D7007F5EF3 /* ChatroomDetailViewController.m in Sources */,
 				D709C6F41D4A5EA10093A0DE /* FixFopen.c in Sources */,
 				D7E16B191D46FFBE00788CB1 /* HWLoginSetExpectController.m in Sources */,
+				D73B0F051D83C5CF00FC5710 /* MBProgressHUD+MJ.m in Sources */,
 				D709C7231D4AFF3E0093A0DE /* RxWebViewController.m in Sources */,
 				D709C69F1D4A5EA10093A0DE /* EMCDDeviceManager+Microphone.m in Sources */,
 				D734F7A11D524D95007F5EF3 /* UIImageView+HeadImage.m in Sources */,
@@ -1980,11 +2056,13 @@
 				D709C6D51D4A5EA10093A0DE /* UIView+EMWebCacheOperation.m in Sources */,
 				D772B6831D6DA2060077BCB7 /* HWJobBossInfoCell.m in Sources */,
 				D709C7241D4AFF3E0093A0DE /* RxWebViewNavigationViewController.m in Sources */,
+				D73B0EF81D83B4B300FC5710 /* LYUserInfo.m in Sources */,
 				D709C6E11D4A5EA10093A0DE /* PSTGridLayoutRow.m in Sources */,
 				D709C6D31D4A5EA10093A0DE /* UIImageView+EMHighlightedWebCache.m in Sources */,
 				D7E16B341D47788800788CB1 /* HWCandidateInfo.m in Sources */,
 				D72CDC871D6B23EF00A7DD25 /* HWReqJobChatCell.m in Sources */,
 				D709C6D11D4A5EA10093A0DE /* UIImage+EMMultiFormat.m in Sources */,
+				D73B0EEF1D83B2F900FC5710 /* LYOperationManager.m in Sources */,
 				D709C6FD1D4A5EA10093A0DE /* EaseCustomMessageCell.m in Sources */,
 				D709C6E51D4A5EA10093A0DE /* EaseConversationModel.m in Sources */,
 				D709C6F51D4A5EA10093A0DE /* EaseConversationListViewController.m in Sources */,
