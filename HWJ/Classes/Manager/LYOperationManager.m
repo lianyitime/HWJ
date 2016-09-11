@@ -10,6 +10,7 @@
 #import "LYAccountDataManager.h"
 #import "HWInterfaceDef.h"
 #import "NSString+md5.h"
+#import "NSString+hmac.h"
 
 @interface LYOperationManager()
 
@@ -127,14 +128,13 @@
     [result addEntriesFromDictionary:[self getSystemInfo]];
     NSString *sign = [self getSignFromParam:result];
     if (sign) {
-        [result setObject:sign forKey:@"sign"];
+        [result setObject:sign forKey:@"_s"];
     }
     return result;
 }
 
 - (NSDictionary *)getSystemInfo
 {
-    NSString *appkey = [NSString stringWithFormat:@"%@",@"XIC6Z8MC"];
     NSDictionary *info = nil;
 
     LYLoginedAccount *account = [LYAccountDataManager sharedLYAccountDataManager].currentUser;
@@ -142,10 +142,10 @@
     //设备id
     NSString *uuid = [[NSUUID UUID] UUIDString];
     if (account.userToken) {
-        info = [NSDictionary dictionaryWithObjectsAndKeys:account.userToken, @"token", @"iphone", @"client", appkey,@"app_key", @"1.0", @"v", uuid, @"dev_id", nil];
+        info = [NSDictionary dictionaryWithObjectsAndKeys:account.userToken, @"token", @"iphone", @"client", uuid, @"dev_id", nil];
     }
     else {
-        info = [NSDictionary dictionaryWithObjectsAndKeys: @"iphone", @"client", appkey,@"app_key", @"1.0", @"v", uuid, @"dev_id", nil];
+        info = [NSDictionary dictionaryWithObjectsAndKeys: @"iphone", @"client", uuid, @"dev_id", nil];
     }
     return info;
 }
@@ -160,9 +160,8 @@
         NSString *formatStr = [NSString stringWithFormat:@"%@%@", key, [param objectForKey:key]];
         [sourceStr appendString:formatStr];
     }
-    NSString *appCode = [NSString  stringWithFormat:@"%@",@"508a9e60d7471febxjc6z8lc1wulp1ts"];
-    [sourceStr appendString:appCode];
-    NSString *signStr = [[sourceStr md5HexDigest] uppercaseString];
+    NSString *appCode = [NSString  stringWithFormat:@"%@",@"218abfa6e12e2adcfa0657840cb73ac45640fc07bc724485"];
+    NSString *signStr = [NSString hmacSha1:appCode text:sourceStr];
     
     return signStr;
 }
