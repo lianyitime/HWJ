@@ -164,6 +164,7 @@
 		D734F7D11D5256D0007F5EF3 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D734F7D01D5256D0007F5EF3 /* Parse.framework */; };
 		D734F7D31D525850007F5EF3 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D734F7D21D525850007F5EF3 /* Social.framework */; };
 		D734F7D51D5258C2007F5EF3 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D734F7D41D5258C2007F5EF3 /* Accounts.framework */; };
+		D73ACDF51D7D124D00722007 /* HWJobNewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D73ACDF41D7D124D00722007 /* HWJobNewController.m */; };
 		D73B0EEF1D83B2F900FC5710 /* LYOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D73B0EED1D83B2F900FC5710 /* LYOperationManager.m */; };
 		D73B0EF21D83B30500FC5710 /* LYAccountDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D73B0EF11D83B30500FC5710 /* LYAccountDataManager.m */; };
 		D73B0EF51D83B3B500FC5710 /* LYLoginedAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = D73B0EF41D83B3B500FC5710 /* LYLoginedAccount.m */; };
@@ -174,9 +175,7 @@
 		D73B0F051D83C5CF00FC5710 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = D73B0F041D83C5CF00FC5710 /* MBProgressHUD+MJ.m */; };
 		D73B0F081D83C84200FC5710 /* RTAlbumsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D73B0F071D83C84200FC5710 /* RTAlbumsManager.m */; };
 		D73B0F0B1D844F6800FC5710 /* HWWelcomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = D73B0F0A1D844F6800FC5710 /* HWWelcomeController.m */; };
-
-		D73ACDF51D7D124D00722007 /* HWJobNewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D73ACDF41D7D124D00722007 /* HWJobNewController.m */; };
-
+		D73B0F0E1D85A92E00FC5710 /* NSString+hmac.m in Sources */ = {isa = PBXBuildFile; fileRef = D73B0F0D1D85A92E00FC5710 /* NSString+hmac.m */; };
 		D73D84B51D615BBA005A0687 /* HWProcessListController.m in Sources */ = {isa = PBXBuildFile; fileRef = D73D84B41D615BBA005A0687 /* HWProcessListController.m */; };
 		D73D84DE1D62C875005A0687 /* ZYDropView.m in Sources */ = {isa = PBXBuildFile; fileRef = D73D84DD1D62C875005A0687 /* ZYDropView.m */; };
 		D76A49E51D641208003A8528 /* HWTempUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D76A49E41D641208003A8528 /* HWTempUserCell.m */; };
@@ -558,7 +557,8 @@
 		D734F7D01D5256D0007F5EF3 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		D734F7D21D525850007F5EF3 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		D734F7D41D5258C2007F5EF3 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
-
+		D73ACDF31D7D124D00722007 /* HWJobNewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWJobNewController.h; sourceTree = "<group>"; };
+		D73ACDF41D7D124D00722007 /* HWJobNewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWJobNewController.m; sourceTree = "<group>"; };
 		D73B0EED1D83B2F900FC5710 /* LYOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYOperationManager.m; sourceTree = "<group>"; };
 		D73B0EEE1D83B2F900FC5710 /* LYOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYOperationManager.h; sourceTree = "<group>"; };
 		D73B0EF01D83B30500FC5710 /* LYAccountDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYAccountDataManager.h; sourceTree = "<group>"; };
@@ -580,10 +580,8 @@
 		D73B0F071D83C84200FC5710 /* RTAlbumsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTAlbumsManager.m; sourceTree = "<group>"; };
 		D73B0F091D844F6800FC5710 /* HWWelcomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWWelcomeController.h; sourceTree = "<group>"; };
 		D73B0F0A1D844F6800FC5710 /* HWWelcomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWWelcomeController.m; sourceTree = "<group>"; };
-
-		D73ACDF31D7D124D00722007 /* HWJobNewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWJobNewController.h; sourceTree = "<group>"; };
-		D73ACDF41D7D124D00722007 /* HWJobNewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWJobNewController.m; sourceTree = "<group>"; };
-
+		D73B0F0C1D85A92E00FC5710 /* NSString+hmac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+hmac.h"; sourceTree = "<group>"; };
+		D73B0F0D1D85A92E00FC5710 /* NSString+hmac.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+hmac.m"; sourceTree = "<group>"; };
 		D73D84B31D615BBA005A0687 /* HWProcessListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWProcessListController.h; sourceTree = "<group>"; };
 		D73D84B41D615BBA005A0687 /* HWProcessListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWProcessListController.m; sourceTree = "<group>"; };
 		D73D84DC1D62C875005A0687 /* ZYDropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYDropView.h; sourceTree = "<group>"; };
@@ -1679,17 +1677,16 @@
 		D7E16B091D46F18600788CB1 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-
 				D73B0F031D83C5CF00FC5710 /* MBProgressHUD+MJ.h */,
 				D73B0F041D83C5CF00FC5710 /* MBProgressHUD+MJ.m */,
-
 				D796BCC91D75B7E9007B680F /* UIColor+RGB.h */,
 				D796BCCA1D75B7E9007B680F /* UIColor+RGB.m */,
-
 				D77D80381D6564C700E81E51 /* NSDate+NVTimeAgo.h */,
 				D77D80391D6564C700E81E51 /* NSDate+NVTimeAgo.m */,
 				D734F79F1D524D95007F5EF3 /* UIImageView+HeadImage.h */,
 				D734F7A01D524D95007F5EF3 /* UIImageView+HeadImage.m */,
+				D73B0F0C1D85A92E00FC5710 /* NSString+hmac.h */,
+				D73B0F0D1D85A92E00FC5710 /* NSString+hmac.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1706,17 +1703,14 @@
 		D7E16B0B1D46F18600788CB1 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-
 				D73B0F061D83C84200FC5710 /* RTAlbumsManager.h */,
 				D73B0F071D83C84200FC5710 /* RTAlbumsManager.m */,
 				D73B0EF01D83B30500FC5710 /* LYAccountDataManager.h */,
 				D73B0EF11D83B30500FC5710 /* LYAccountDataManager.m */,
 				D73B0EED1D83B2F900FC5710 /* LYOperationManager.m */,
 				D73B0EEE1D83B2F900FC5710 /* LYOperationManager.h */,
-
 				D72AAA3A1D73CF66003A6359 /* HWUsersManager.h */,
 				D72AAA3B1D73CF66003A6359 /* HWUsersManager.m */,
-
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -2066,15 +2060,12 @@
 				D772B6891D6DA3CC0077BCB7 /* HWRoundBaseCell.m in Sources */,
 				D709C7091D4A5EA10093A0DE /* EaseChatToolbarItem.m in Sources */,
 				D709C6E71D4A5EA10093A0DE /* EaseUserModel.m in Sources */,
-
 				D73B0EF21D83B30500FC5710 /* LYAccountDataManager.m in Sources */,
 				D709C7001D4A5EA10093A0DE /* EaseBubbleView+File.m in Sources */,
 				D73B0EFB1D83B8AE00FC5710 /* NSString+md5.m in Sources */,
-
 				D72AAA3C1D73CF66003A6359 /* HWUsersManager.m in Sources */,
 				D709C7001D4A5EA10093A0DE /* EaseBubbleView+File.m in Sources */,
 				D73ACDF51D7D124D00722007 /* HWJobNewController.m in Sources */,
-
 				D734F7971D524CB9007F5EF3 /* EMSearchBar.m in Sources */,
 				D709C6CF1D4A5EA10093A0DE /* UIButton+EMWebCache.m in Sources */,
 				D709C6B21D4A5EA10093A0DE /* MJRefreshBackGifFooter.m in Sources */,
@@ -2157,6 +2148,7 @@
 				D709C70E1D4A5EA10093A0DE /* EaseChatBarMoreView.m in Sources */,
 				D734F7B11D524F22007F5EF3 /* RealtimeSearchUtil.m in Sources */,
 				D734F7C31D525226007F5EF3 /* EMRemarkImageView.m in Sources */,
+				D73B0F0E1D85A92E00FC5710 /* NSString+hmac.m in Sources */,
 				D709C7041D4A5EA10093A0DE /* EaseBubbleView+Text.m in Sources */,
 				D709C7101D4A5EA10093A0DE /* EaseConversationCell.m in Sources */,
 				D709C6DC1D4A5EA10093A0DE /* PSTCollectionViewItemKey.m in Sources */,

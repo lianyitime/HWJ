@@ -492,10 +492,10 @@
 {
     //actionAuthCodex
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObject:phone forKey:@"mobile"];
-    if (exist) {
-        [params setObject:@"1" forKey:@"exist_account"];
-    }
-    [[LYOperationManager sharedInstance] POST:@"/api/authcode" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+//    if (exist) {
+//        [params setObject:@"1" forKey:@"exist_account"];
+//    }
+    [[LYOperationManager sharedInstance] GET:@"/v1/login/sms" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         if ([self checkResultSuccess:responseObject]) {
             block(YES, responseObject, nil);
         }

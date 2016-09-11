@@ -17,7 +17,7 @@ typedef enum {
     TPreloadTypeInitByIndex//从指定数据开始
 }TPreloadType;
 
-#define HWBaseHost   @"http://api.lianyitime.com"
+#define HWBaseHost   @"http://121.42.204.209:8080"//@"http://api.helloworld-job.com:8080"
 
 #define URL_GET_CAPTCHA [HWBaseHost stringByAppendingString:@"/v1/captcha/3"]
 
