@@ -137,6 +137,8 @@
 		D709C72B1D501ED60093A0DE /* HWJobBaseInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D709C72A1D501ED60093A0DE /* HWJobBaseInfo.m */; };
 		D70FD48B1D66D80400D8E679 /* ZYAdTipsView.m in Sources */ = {isa = PBXBuildFile; fileRef = D70FD48A1D66D80400D8E679 /* ZYAdTipsView.m */; };
 		D72AAA351D6FDA76003A6359 /* HWCandidateBlogCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D72AAA341D6FDA76003A6359 /* HWCandidateBlogCell.m */; };
+		D72AAA3C1D73CF66003A6359 /* HWUsersManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D72AAA3B1D73CF66003A6359 /* HWUsersManager.m */; };
+		D72AAA3F1D73CF86003A6359 /* HWUserProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = D72AAA3E1D73CF86003A6359 /* HWUserProfile.m */; };
 		D72CDC7F1D6AA82300A7DD25 /* HWJobsManagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = D72CDC7E1D6AA82200A7DD25 /* HWJobsManagerController.m */; };
 		D72CDC831D6AF74B00A7DD25 /* HWChatBaseMsgBody.m in Sources */ = {isa = PBXBuildFile; fileRef = D72CDC821D6AF74B00A7DD25 /* HWChatBaseMsgBody.m */; };
 		D72CDC871D6B23EF00A7DD25 /* HWReqJobChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D72CDC861D6B23EF00A7DD25 /* HWReqJobChatCell.m */; };
@@ -172,6 +174,9 @@
 		D73B0F051D83C5CF00FC5710 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = D73B0F041D83C5CF00FC5710 /* MBProgressHUD+MJ.m */; };
 		D73B0F081D83C84200FC5710 /* RTAlbumsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D73B0F071D83C84200FC5710 /* RTAlbumsManager.m */; };
 		D73B0F0B1D844F6800FC5710 /* HWWelcomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = D73B0F0A1D844F6800FC5710 /* HWWelcomeController.m */; };
+
+		D73ACDF51D7D124D00722007 /* HWJobNewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D73ACDF41D7D124D00722007 /* HWJobNewController.m */; };
+
 		D73D84B51D615BBA005A0687 /* HWProcessListController.m in Sources */ = {isa = PBXBuildFile; fileRef = D73D84B41D615BBA005A0687 /* HWProcessListController.m */; };
 		D73D84DE1D62C875005A0687 /* ZYDropView.m in Sources */ = {isa = PBXBuildFile; fileRef = D73D84DD1D62C875005A0687 /* ZYDropView.m */; };
 		D76A49E51D641208003A8528 /* HWTempUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D76A49E41D641208003A8528 /* HWTempUserCell.m */; };
@@ -199,6 +204,9 @@
 		D78BDB241D49B2F400E97C39 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D78BDB231D49B2F400E97C39 /* libstdc++.6.0.9.tbd */; };
 		D78BDB261D49B2FB00E97C39 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D78BDB251D49B2FB00E97C39 /* libsqlite3.tbd */; };
 		D78BDB281D49B31400E97C39 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D78BDB271D49B31400E97C39 /* libiconv.tbd */; };
+		D796BCC41D75B55A007B680F /* MKDropdownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = D796BCC31D75B55A007B680F /* MKDropdownMenu.m */; };
+		D796BCCB1D75B7E9007B680F /* UIColor+RGB.m in Sources */ = {isa = PBXBuildFile; fileRef = D796BCCA1D75B7E9007B680F /* UIColor+RGB.m */; };
+		D7AE923A1D79180A008DBDAC /* HWSayHelloView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7AE92391D79180A008DBDAC /* HWSayHelloView.m */; };
 		D7B01FAE1D6E9B1200B0E6C1 /* HWCandidateDetailInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B01FAD1D6E9B1200B0E6C1 /* HWCandidateDetailInfoCell.m */; };
 		D7B01FB11D6E9B2600B0E6C1 /* HWCandidateDetailWorkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B01FB01D6E9B2600B0E6C1 /* HWCandidateDetailWorkCell.m */; };
 		D7B01FB41D6E9B7000B0E6C1 /* HWCandidateDetailEducation.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B01FB31D6E9B7000B0E6C1 /* HWCandidateDetailEducation.m */; };
@@ -500,6 +508,10 @@
 		D70FD48A1D66D80400D8E679 /* ZYAdTipsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYAdTipsView.m; sourceTree = "<group>"; };
 		D72AAA331D6FDA76003A6359 /* HWCandidateBlogCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWCandidateBlogCell.h; sourceTree = "<group>"; };
 		D72AAA341D6FDA76003A6359 /* HWCandidateBlogCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWCandidateBlogCell.m; sourceTree = "<group>"; };
+		D72AAA3A1D73CF66003A6359 /* HWUsersManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWUsersManager.h; sourceTree = "<group>"; };
+		D72AAA3B1D73CF66003A6359 /* HWUsersManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWUsersManager.m; sourceTree = "<group>"; };
+		D72AAA3D1D73CF86003A6359 /* HWUserProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWUserProfile.h; sourceTree = "<group>"; };
+		D72AAA3E1D73CF86003A6359 /* HWUserProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWUserProfile.m; sourceTree = "<group>"; };
 		D72CDC7D1D6AA82200A7DD25 /* HWJobsManagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWJobsManagerController.h; sourceTree = "<group>"; };
 		D72CDC7E1D6AA82200A7DD25 /* HWJobsManagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWJobsManagerController.m; sourceTree = "<group>"; };
 		D72CDC811D6AF74B00A7DD25 /* HWChatBaseMsgBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWChatBaseMsgBody.h; sourceTree = "<group>"; };
@@ -546,6 +558,7 @@
 		D734F7D01D5256D0007F5EF3 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		D734F7D21D525850007F5EF3 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		D734F7D41D5258C2007F5EF3 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+
 		D73B0EED1D83B2F900FC5710 /* LYOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYOperationManager.m; sourceTree = "<group>"; };
 		D73B0EEE1D83B2F900FC5710 /* LYOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYOperationManager.h; sourceTree = "<group>"; };
 		D73B0EF01D83B30500FC5710 /* LYAccountDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYAccountDataManager.h; sourceTree = "<group>"; };
@@ -567,6 +580,10 @@
 		D73B0F071D83C84200FC5710 /* RTAlbumsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTAlbumsManager.m; sourceTree = "<group>"; };
 		D73B0F091D844F6800FC5710 /* HWWelcomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWWelcomeController.h; sourceTree = "<group>"; };
 		D73B0F0A1D844F6800FC5710 /* HWWelcomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWWelcomeController.m; sourceTree = "<group>"; };
+
+		D73ACDF31D7D124D00722007 /* HWJobNewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWJobNewController.h; sourceTree = "<group>"; };
+		D73ACDF41D7D124D00722007 /* HWJobNewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWJobNewController.m; sourceTree = "<group>"; };
+
 		D73D84B31D615BBA005A0687 /* HWProcessListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWProcessListController.h; sourceTree = "<group>"; };
 		D73D84B41D615BBA005A0687 /* HWProcessListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWProcessListController.m; sourceTree = "<group>"; };
 		D73D84DC1D62C875005A0687 /* ZYDropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYDropView.h; sourceTree = "<group>"; };
@@ -646,6 +663,12 @@
 		D78BDB231D49B2F400E97C39 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		D78BDB251D49B2FB00E97C39 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		D78BDB271D49B31400E97C39 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		D796BCC21D75B55A007B680F /* MKDropdownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKDropdownMenu.h; sourceTree = "<group>"; };
+		D796BCC31D75B55A007B680F /* MKDropdownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKDropdownMenu.m; sourceTree = "<group>"; };
+		D796BCC91D75B7E9007B680F /* UIColor+RGB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RGB.h"; sourceTree = "<group>"; };
+		D796BCCA1D75B7E9007B680F /* UIColor+RGB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RGB.m"; sourceTree = "<group>"; };
+		D7AE92381D79180A008DBDAC /* HWSayHelloView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWSayHelloView.h; sourceTree = "<group>"; };
+		D7AE92391D79180A008DBDAC /* HWSayHelloView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWSayHelloView.m; sourceTree = "<group>"; };
 		D7B01FAC1D6E9B1200B0E6C1 /* HWCandidateDetailInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWCandidateDetailInfoCell.h; sourceTree = "<group>"; };
 		D7B01FAD1D6E9B1200B0E6C1 /* HWCandidateDetailInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWCandidateDetailInfoCell.m; sourceTree = "<group>"; };
 		D7B01FAF1D6E9B2600B0E6C1 /* HWCandidateDetailWorkCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWCandidateDetailWorkCell.h; sourceTree = "<group>"; };
@@ -1376,6 +1399,8 @@
 			children = (
 				D72CDC7D1D6AA82200A7DD25 /* HWJobsManagerController.h */,
 				D72CDC7E1D6AA82200A7DD25 /* HWJobsManagerController.m */,
+				D73ACDF31D7D124D00722007 /* HWJobNewController.h */,
+				D73ACDF41D7D124D00722007 /* HWJobNewController.m */,
 			);
 			path = JobsManager;
 			sourceTree = "<group>";
@@ -1501,6 +1526,15 @@
 			path = 3rdparty;
 			sourceTree = "<group>";
 		};
+		D796BCC11D75B55A007B680F /* MKDropdownMenu */ = {
+			isa = PBXGroup;
+			children = (
+				D796BCC21D75B55A007B680F /* MKDropdownMenu.h */,
+				D796BCC31D75B55A007B680F /* MKDropdownMenu.m */,
+			);
+			path = MKDropdownMenu;
+			sourceTree = "<group>";
+		};
 		D7B01FAB1D6E99A200B0E6C1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -1578,6 +1612,7 @@
 		D7E16B051D46F18600788CB1 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				D796BCC11D75B55A007B680F /* MKDropdownMenu */,
 				D709C7131D4AFF3E0093A0DE /* RxWebViewController */,
 				D709C5751D4A5EA00093A0DE /* EaseUI */,
 				D78BDAE11D49B23D00E97C39 /* HyphenateFullSDK */,
@@ -1625,6 +1660,8 @@
 				D72CDC891D6B240100A7DD25 /* HWReqHireChatCell.m */,
 				D772B6871D6DA3CC0077BCB7 /* HWRoundBaseCell.h */,
 				D772B6881D6DA3CC0077BCB7 /* HWRoundBaseCell.m */,
+				D7AE92381D79180A008DBDAC /* HWSayHelloView.h */,
+				D7AE92391D79180A008DBDAC /* HWSayHelloView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1642,8 +1679,13 @@
 		D7E16B091D46F18600788CB1 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+
 				D73B0F031D83C5CF00FC5710 /* MBProgressHUD+MJ.h */,
 				D73B0F041D83C5CF00FC5710 /* MBProgressHUD+MJ.m */,
+
+				D796BCC91D75B7E9007B680F /* UIColor+RGB.h */,
+				D796BCCA1D75B7E9007B680F /* UIColor+RGB.m */,
+
 				D77D80381D6564C700E81E51 /* NSDate+NVTimeAgo.h */,
 				D77D80391D6564C700E81E51 /* NSDate+NVTimeAgo.m */,
 				D734F79F1D524D95007F5EF3 /* UIImageView+HeadImage.h */,
@@ -1664,12 +1706,17 @@
 		D7E16B0B1D46F18600788CB1 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+
 				D73B0F061D83C84200FC5710 /* RTAlbumsManager.h */,
 				D73B0F071D83C84200FC5710 /* RTAlbumsManager.m */,
 				D73B0EF01D83B30500FC5710 /* LYAccountDataManager.h */,
 				D73B0EF11D83B30500FC5710 /* LYAccountDataManager.m */,
 				D73B0EED1D83B2F900FC5710 /* LYOperationManager.m */,
 				D73B0EEE1D83B2F900FC5710 /* LYOperationManager.h */,
+
+				D72AAA3A1D73CF66003A6359 /* HWUsersManager.h */,
+				D72AAA3B1D73CF66003A6359 /* HWUsersManager.m */,
+
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -1685,6 +1732,8 @@
 				D7E16B331D47788800788CB1 /* HWCandidateInfo.m */,
 				D709C7291D501ED60093A0DE /* HWJobBaseInfo.h */,
 				D709C72A1D501ED60093A0DE /* HWJobBaseInfo.m */,
+				D72AAA3D1D73CF86003A6359 /* HWUserProfile.h */,
+				D72AAA3E1D73CF86003A6359 /* HWUserProfile.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1968,6 +2017,7 @@
 				D709C6B31D4A5EA10093A0DE /* MJRefreshBackNormalFooter.m in Sources */,
 				D709C7071D4A5EA10093A0DE /* EaseBubbleView.m in Sources */,
 				D734F7A41D524DD5007F5EF3 /* RobotManager.m in Sources */,
+				D796BCCB1D75B7E9007B680F /* UIColor+RGB.m in Sources */,
 				D772B67D1D6D9E7E0077BCB7 /* HWJobDetailInfoCell.m in Sources */,
 				D709C6A31D4A5EA10093A0DE /* amrFileCodec.mm in Sources */,
 				D7E16B1F1D4726FC00788CB1 /* HWLoginSetBaseController.m in Sources */,
@@ -1980,6 +2030,7 @@
 				D734F79B1D524D48007F5EF3 /* EMSearchDisplayController.m in Sources */,
 				D709C6A91D4A5EA10093A0DE /* MBProgressHUD.m in Sources */,
 				D709C6CB1D4A5EA10093A0DE /* EMSDWebImageManager.m in Sources */,
+				D72AAA3F1D73CF86003A6359 /* HWUserProfile.m in Sources */,
 				D734F79E1D524D6D007F5EF3 /* BaseTableViewCell.m in Sources */,
 				D709C6A81D4A5EA10093A0DE /* MBProgressHUD+Add.m in Sources */,
 				D73B0F0B1D844F6800FC5710 /* HWWelcomeController.m in Sources */,
@@ -1999,6 +2050,7 @@
 				D709C6B01D4A5EA10093A0DE /* MJRefreshAutoNormalFooter.m in Sources */,
 				D77D803A1D6564C700E81E51 /* NSDate+NVTimeAgo.m in Sources */,
 				D7E16B251D47318500788CB1 /* HWLoginComparyUserSetController.m in Sources */,
+				D796BCC41D75B55A007B680F /* MKDropdownMenu.m in Sources */,
 				D709C6BE1D4A5EA10093A0DE /* MWGridCell.m in Sources */,
 				D709C6C61D4A5EA10093A0DE /* EMSDImageCache.m in Sources */,
 				D709C6DD1D4A5EA10093A0DE /* PSTCollectionViewLayout.m in Sources */,
@@ -2014,9 +2066,15 @@
 				D772B6891D6DA3CC0077BCB7 /* HWRoundBaseCell.m in Sources */,
 				D709C7091D4A5EA10093A0DE /* EaseChatToolbarItem.m in Sources */,
 				D709C6E71D4A5EA10093A0DE /* EaseUserModel.m in Sources */,
+
 				D73B0EF21D83B30500FC5710 /* LYAccountDataManager.m in Sources */,
 				D709C7001D4A5EA10093A0DE /* EaseBubbleView+File.m in Sources */,
 				D73B0EFB1D83B8AE00FC5710 /* NSString+md5.m in Sources */,
+
+				D72AAA3C1D73CF66003A6359 /* HWUsersManager.m in Sources */,
+				D709C7001D4A5EA10093A0DE /* EaseBubbleView+File.m in Sources */,
+				D73ACDF51D7D124D00722007 /* HWJobNewController.m in Sources */,
+
 				D734F7971D524CB9007F5EF3 /* EMSearchBar.m in Sources */,
 				D709C6CF1D4A5EA10093A0DE /* UIButton+EMWebCache.m in Sources */,
 				D709C6B21D4A5EA10093A0DE /* MJRefreshBackGifFooter.m in Sources */,
@@ -2076,6 +2134,7 @@
 				D709C6D41D4A5EA10093A0DE /* UIImageView+EMWebCache.m in Sources */,
 				D709C69B1D4A5EA10093A0DE /* EaseUI.m in Sources */,
 				D709C6C71D4A5EA10093A0DE /* EMSDWebImageCompat.m in Sources */,
+				D7AE923A1D79180A008DBDAC /* HWSayHelloView.m in Sources */,
 				D709C6D21D4A5EA10093A0DE /* UIImage+EMWebP.m in Sources */,
 				D7E16B391D4797E700788CB1 /* HWMsgsListController.m in Sources */,
 				D709C6D71D4A5EA10093A0DE /* PSTCollectionView.m in Sources */,
@@ -2221,6 +2280,7 @@
 			baseConfigurationReference = 5ACE15E86821C03027AFF0F5 /* Pods-HWJ.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: yang zhiyuan (AU7C9SH5J4)";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2230,6 +2290,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/HWJ/HWJ.pch";
 				INFOPLIST_FILE = HWJ/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2240,6 +2301,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.helloworld-job.HWJ";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -2248,6 +2310,7 @@
 			baseConfigurationReference = A4C7B6D04E851E9703947226 /* Pods-HWJ.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: yang zhiyuan (AU7C9SH5J4)";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2257,6 +2320,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/HWJ/HWJ.pch";
 				INFOPLIST_FILE = HWJ/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2267,6 +2331,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.helloworld-job.HWJ";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

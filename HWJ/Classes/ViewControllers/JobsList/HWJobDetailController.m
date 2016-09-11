@@ -12,6 +12,7 @@
 #import "HWJobDetailInfoCell.h"
 #import "HWJobBossInfoCell.h"
 #import "HWJobDetailRequestCell.h"
+#import "HWSayHelloView.h"
 
 @interface HWJobDetailController()<UITableViewDelegate, UITableViewDataSource>
 
@@ -96,7 +97,9 @@
 
 - (void)onSendMsg:(id)sender
 {
-    
+    HWSayHelloView *helloView = [[HWSayHelloView alloc] initWithFrame:self.view.bounds];
+    [helloView loadData:nil];
+    [self.view addSubview:helloView];
 }
 
 

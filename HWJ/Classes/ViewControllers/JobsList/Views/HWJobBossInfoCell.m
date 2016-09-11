@@ -53,7 +53,7 @@
     
     UILabel *workInfo = [[UILabel alloc] init];
     [workInfo setFont:[UIFont systemFontOfSize:12]];
-    [workInfo setTextColor:[UIColor grayColor]];
+    [workInfo setTextColor:[UIColor colorWithRed:0.5 green:.9 blue:0.5 alpha:1.0]];
     [self.cardBgView addSubview:workInfo];
     self.userInfoLabel = workInfo;
     

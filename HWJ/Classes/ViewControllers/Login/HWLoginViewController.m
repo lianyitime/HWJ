@@ -10,7 +10,10 @@
 #import "HWNotificationDef.h"
 #import "HWLoginSetUserController.h"
 #import "HWLoginComparySetController.h"
+
 #import "HWFrameSet.h"
+#import "HWUsersManager.h"
+
 
 #define offsetLeftHand      60
 
@@ -247,6 +250,10 @@
     } completion:^(BOOL finished) {
         
     }];
+    
+    HWUserProfile *user = [[HWUserProfile alloc] init];
+    user.account = txtUser.text;
+    [HWUsersManager sharedInstance].currentUser = user;
 }
 
 - (void)onFindJob:(UIButton *)sender

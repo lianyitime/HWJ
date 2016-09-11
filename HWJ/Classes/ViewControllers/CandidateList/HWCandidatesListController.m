@@ -19,6 +19,13 @@
 
 #import "ZYAdTipsView.h"
 
+#import "MKDropdownMenu.h"
+#import "UIColor+RGB.h"
+
+static inline void delay(NSTimeInterval delay, dispatch_block_t block) {
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delay * NSEC_PER_SEC)), dispatch_get_main_queue(), block);
+}
+
 @interface HWCandidatesListController()<UITableViewDelegate, UITableViewDataSource, HWCandidateInfoDelegate>
 
 @property (nonatomic, strong)UITableView *tableView;
@@ -26,6 +33,10 @@
 @property (nonatomic, strong)NSMutableArray *jobs;
 
 @property (nonatomic, strong)NSMutableDictionary *emotionDic;
+
+@property (strong, nonatomic) MKDropdownMenu *navBarMenu;
+
+@property (nonatomic, strong)NSString *titleStr;
 
 @end
 
@@ -50,17 +61,73 @@
     [self.view addSubview:table];
     self.tableView = table;
     
+    self.titleStr = @"候选人";
+    
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(doSerach)];
     
     //[self performSelector:@selector(showAdTip) withObject:nil afterDelay:0.5];
     [self showAdTip];
     
+    [self configTitleMenu];
+    
     [self loadData];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    [self.navBarMenu closeAllComponentsAnimated:NO];
+}
+
+- (void)configTitleMenu
+{
+    // Create dropdown menu in code
+    
+    self.navBarMenu = [[MKDropdownMenu alloc] initWithFrame:CGRectMake(0, 0, 100, 44)];
+    self.navBarMenu.dataSource = self;
+    self.navBarMenu.delegate = self;
+    
+    // Make background light instead of dark when presenting the dropdown
+    self.navBarMenu.backgroundDimmingOpacity = -0.67;
+    
+    // Set custom disclosure indicator image
+    UIImage *indicator = [UIImage imageNamed:@"indicator"];
+    self.navBarMenu.disclosureIndicatorImage = indicator;
+    
+    // Add an arrow between the menu header and the dropdown
+    UIImageView *spacer = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"triangle"]];
+    
+    // Prevent the arrow image from stretching
+    spacer.contentMode = UIViewContentModeCenter;
+    
+    self.navBarMenu.spacerView = spacer;
+    
+    // Offset the arrow to align with the disclosure indicator
+    self.navBarMenu.spacerViewOffset = UIOffsetMake(self.navBarMenu.bounds.size.width/2 - indicator.size.width/2 - 8, 1);
+    
+    // Hide top row separator to blend with the arrow
+    self.navBarMenu.showsTopRowSeparator = NO;
+    
+    self.navBarMenu.dropdownBouncesScroll = NO;
+    
+    self.navBarMenu.rowSeparatorColor = [UIColor colorWithWhite:1.0 alpha:0.2];
+    self.navBarMenu.rowTextAlignment = NSTextAlignmentCenter;
+    
+    // Round all corners (by default only bottom corners are rounded)
+    self.navBarMenu.dropdownRoundedCorners = UIRectCornerAllCorners;
+    
+    // Let the dropdown take the whole width of the screen with 10pt insets
+    self.navBarMenu.useFullScreenWidth = YES;
+    self.navBarMenu.fullScreenInsetLeft = 10;
+    self.navBarMenu.fullScreenInsetRight = 10;
+    
+    // Add the dropdown menu to navigation bar
+    self.navigationItem.titleView = self.navBarMenu;
 }
 
 - (void)showAdTip
 {
-    [ZYAdTipsView showInTable:self.tableView withTitle:@"内推:成功推荐一人可获得奖励1千"];
+    [ZYAdTipsView showInTable:self.tableView withTitle:@"内推:每推荐成功一人可获得奖励1千"];
 }
 
 - (void)loadData
@@ -143,9 +210,15 @@
             break;
         case HWCandidateEventClickProduct:
         {
-            RxWebViewController *webVC = [[RxWebViewController alloc] initWithUrl:[NSURL URLWithString:@"https://itunes.apple.com/us/app/lian-yi-xiang-ce/id1040060813?l=zh&ls=1&mt=8"]];
-            webVC.hidesBottomBarWhenPushed = YES;
-            [self.navigationController pushViewController:webVC animated:YES];
+            NSURL *url = [NSURL URLWithString:@"https://itunes.apple.com/us/app/lian-yi-xiang-ce/id1040060813?l=zh&ls=1&mt=8"];
+            if ([url.host.lowercaseString isEqualToString:@"itunes.apple.com"]) {
+                [[UIApplication sharedApplication] openURL:url];
+            }
+            else {
+                RxWebViewController *webVC = [[RxWebViewController alloc] initWithUrl:[NSURL URLWithString:@"https://itunes.apple.com/us/app/lian-yi-xiang-ce/id1040060813?l=zh&ls=1&mt=8"]];
+                webVC.hidesBottomBarWhenPushed = YES;
+                [self.navigationController pushViewController:webVC animated:YES];
+            }
         }
             break;
         case HWCandidateEventClickBlog:
@@ -187,5 +260,53 @@
     
     return @[managerDefault,managerGif];
 }
+
+#pragma mark - MKDropdownMenuDataSource
+
+- (NSInteger)numberOfComponentsInDropdownMenu:(MKDropdownMenu *)dropdownMenu {
+    return 1;
+}
+
+- (NSInteger)dropdownMenu:(MKDropdownMenu *)dropdownMenu numberOfRowsInComponent:(NSInteger)component {
+    return 3;
+}
+
+#pragma mark - MKDropdownMenuDelegate
+
+- (CGFloat)dropdownMenu:(MKDropdownMenu *)dropdownMenu rowHeightForComponent:(NSInteger)component {
+    return 50;
+}
+
+- (NSAttributedString *)dropdownMenu:(MKDropdownMenu *)dropdownMenu attributedTitleForComponent:(NSInteger)component {
+    return [[NSAttributedString alloc] initWithString:self.titleStr
+                                           attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:16 weight:UIFontWeightLight],
+                                                        NSForegroundColorAttributeName: [UIColor grayColor]}];
+}
+
+- (NSAttributedString *)dropdownMenu:(MKDropdownMenu *)dropdownMenu attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    NSMutableAttributedString *string =
+    [[NSMutableAttributedString alloc] initWithString: [NSString stringWithFormat:@"岗位%ld", row + 1]
+                                           attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:16 weight:UIFontWeightLight],
+                                                        NSForegroundColorAttributeName: [UIColor grayColor]}];
+    return string;
+}
+
+- (UIColor *)dropdownMenu:(MKDropdownMenu *)dropdownMenu backgroundColorForRow:(NSInteger)row forComponent:(NSInteger)component {
+    return [UIColor colorWithHexString:@"#1B86E3"];
+}
+
+- (UIColor *)dropdownMenu:(MKDropdownMenu *)dropdownMenu backgroundColorForHighlightedRowsInComponent:(NSInteger)component {
+    return [UIColor lightGrayColor];
+}
+
+- (void)dropdownMenu:(MKDropdownMenu *)dropdownMenu didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+    self.titleStr = [NSString stringWithFormat:@"岗位%ld", row + 1];
+    [dropdownMenu reloadComponent:component];
+    
+    delay(0.15, ^{
+        [dropdownMenu closeAllComponentsAnimated:YES];
+    });
+}
+
 
 @end

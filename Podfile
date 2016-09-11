@@ -3,4 +3,6 @@ target 'HWJ' do
 pod 'Masonry'
 pod 'RETableViewManager', '~> 1.6'
 pod 'SDWebImage'
+pod 'AFNetworking'
+pod 'RKNotificationHub'
 end

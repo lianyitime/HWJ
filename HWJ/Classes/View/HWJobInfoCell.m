@@ -21,6 +21,8 @@
 
 @property(nonatomic, strong)UILabel *expectMoney;
 
+@property (nonatomic, strong)UILabel *education;
+
 @property (nonatomic,strong)UILabel *location;
 
 @property (nonatomic, strong)UIButton *userBtview;
@@ -96,13 +98,13 @@
         make.right.mas_equalTo(workYear.mas_left).offset(-5);
     }];
     
-    UILabel *location = [[UILabel alloc] init];
-    [location setFont:[UIFont systemFontOfSize:12]];
-    [location setTextColor:[UIColor grayColor]];
-    [self.cardBgView addSubview:location];
-    self.location = location;
+    UILabel *education = [[UILabel alloc] init];
+    [education setFont:[UIFont systemFontOfSize:12]];
+    [education setTextColor:[UIColor grayColor]];
+    [self.cardBgView addSubview:education];
+    self.education = education;
     
-    [location mas_makeConstraints:^(MASConstraintMaker *make) {
+    [education mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.mas_equalTo(yearImgView.mas_left).offset(-10);
         make.centerY.mas_equalTo(yearImgView.mas_centerY);
     }];
@@ -110,8 +112,8 @@
     UIImageView *expectImgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"about"]];
     [self.cardBgView addSubview:expectImgView];
     [expectImgView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerY.mas_equalTo(location.mas_centerY);
-        make.right.mas_equalTo(location.mas_left).offset(-5);
+        make.centerY.mas_equalTo(education.mas_centerY);
+        make.right.mas_equalTo(education.mas_left).offset(-5);
     }];
     
     UILabel *expectLab = [[UILabel alloc] init];
@@ -228,12 +230,30 @@
         make.width.mas_equalTo(70);
     }];
     
+    UILabel *location = [[UILabel alloc] init];
+    [location setFont:[UIFont systemFontOfSize:12]];
+    [location setTextColor:[UIColor grayColor]];
+    [self.cardBgView addSubview:location];
+    self.location = location;
+    
+    [location mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.nameLabel.mas_left);
+        make.centerY.mas_equalTo(self.sendMsgBt.mas_centerY);
+    }];
+
+    UIImageView *aboutImg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"about"]];
+    [self.cardBgView addSubview:aboutImg];
+    [aboutImg mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.mas_equalTo(location.mas_centerY);
+        make.left.mas_equalTo(location.mas_right).offset(5);
+    }];
+    
     UILabel *peoplesLabel = [[UILabel alloc] init];
     [peoplesLabel setFont:[UIFont systemFontOfSize:12]];
     [peoplesLabel setTextColor:[UIColor grayColor]];
     [self.cardBgView addSubview:peoplesLabel];
     [peoplesLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(self.nameLabel.mas_left);
+        make.left.mas_equalTo(aboutImg.mas_right).offset(5);
         make.centerY.mas_equalTo(self.sendMsgBt.mas_centerY);
     }];
     self.peoplesLabel = peoplesLabel;
@@ -252,6 +272,7 @@
     else {
         [self.workTipLabel setText:@"内推人:"];
     }
+    [self.education setText:@"本科"];
     [self.userBtview sd_setImageWithURL:[NSURL URLWithString:data.userImgUrl] forState:UIControlStateNormal];
     [self.userInfoLabel setText:[NSString stringWithFormat:@"%@ | %@ | %@", data.userName, data.userTitle, data.company]];
     [self.appNameBt setTitle:[NSString stringWithFormat:@"%@", data.appName] forState:UIControlStateNormal];

@@ -12,10 +12,12 @@
 #import "ZYAdTipsView.h"
 #import "EaseSDKHelper.h"
 #import "HWJobDetailController.h"
+#import "HWSayHelloView.h"
+#import "RKNotificationHub.h"
 
 @interface HWJosbListController()<UITableViewDelegate, UITableViewDataSource>
 
-
+@property (nonatomic, strong)RKNotificationHub *dollarHub;
 @end
 
 @implementation HWJosbListController
@@ -38,12 +40,17 @@
     [self.view addSubview:table];
     self.tableView = table;
     
-    UIImage *image =  [[UIImage imageNamed:@"rmb"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    // 禁用图片渲染
-    UIBarButtonItem *bar = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(onSelectedRMBMsg)];
+
+    UIBarButtonItem *speaceRight = [[UIBarButtonItem alloc]
+                                    initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
+                                    target:nil action:nil];
     
-    self.navigationItem.rightBarButtonItem = bar;
+    UIBarButtonItem *dollarBar = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"dollar"] style:UIBarButtonItemStylePlain target:self action:@selector(onDollarMsg)];
+    self.navigationItem.rightBarButtonItems = @[speaceRight, dollarBar];
+    RKNotificationHub *hub = [[RKNotificationHub alloc] initWithBarButtonItem:dollarBar];
+    self.dollarHub = hub;
     
+    [self.dollarHub increment];
     //[self performSelector:@selector(showAdTip) withObject:nil afterDelay:0.5];
     [self showAdTip];
 
@@ -53,6 +60,8 @@
 - (void)showAdTip
 {
     [ZYAdTipsView showInTable:self.tableView withTitle:@"今天投入多几百，明年年薪多几万"];
+    [self.dollarHub incrementBy:2];
+    [self.dollarHub pop];
 }
 
 - (void)loadData
@@ -93,7 +102,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 160.0;
+    return 163.0;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -116,22 +125,25 @@
     switch (event) {
         case HWJobInfoEventSendMsg:
         {
-            EMMessage *message = [EaseSDKHelper sendCustomMessageWithTitle:@"测试信息"
-                                                             to:@"8001"
-                                                    messageType:EMChatTypeChat
-                                                        bizType:HWChatBaseMsgTypeReqFindJobByBoss
-                                                     messageExt:nil];
-            //message.ext = @{@"msgBizType":@(HWChatBaseMsgTypeReqFindJobByBoss)}; // 扩展消息部分
-            
-            __weak typeof(self) weakself = self;
-            [[EMClient sharedClient].chatManager asyncSendMessage:message progress:nil completion:^(EMMessage *aMessage, EMError *aError) {
-                if (!aError) {
-                    
-                }
-                else {
-                    
-                }
-            }];
+            HWSayHelloView *helloView = [[HWSayHelloView alloc] initWithFrame:self.view.bounds];
+            [helloView loadData:nil];
+            [self.view addSubview:helloView];
+//            EMMessage *message = [EaseSDKHelper sendCustomMessageWithTitle:@"测试信息"
+//                                                             to:@"8001"
+//                                                    messageType:EMChatTypeChat
+//                                                        bizType:HWChatBaseMsgTypeReqFindJobByBoss
+//                                                     messageExt:nil];
+//            //message.ext = @{@"msgBizType":@(HWChatBaseMsgTypeReqFindJobByBoss)}; // 扩展消息部分
+//            
+//            __weak typeof(self) weakself = self;
+//            [[EMClient sharedClient].chatManager asyncSendMessage:message progress:nil completion:^(EMMessage *aMessage, EMError *aError) {
+//                if (!aError) {
+//                    
+//                }
+//                else {
+//                    
+//                }
+//            }];
         }
             break;
         case HWJobInfoEventClickBlog:
@@ -149,6 +161,23 @@
             break;
     }
     
+}
+
+- (void)onDollarMsg
+{
+    self.dollarHub.count = 0;
+    [self performSelector:@selector(showNewDollarHub) withObject:nil afterDelay:3.0];
+}
+
+- (void)showNewDollarHub
+{
+    [self.dollarHub incrementBy:arc4random() % 10 + 1];
+    [self.dollarHub pop];
+}
+
+- (void)dealloc
+{
+    [NSObject cancelPreviousPerformRequestsWithTarget:self];
 }
 
 @end
