@@ -20,6 +20,8 @@
 #import "HWProcessListController.h"
 #import "HWJobsManagerController.h"
 
+#import "PhoneLoginController.h"
+
 @interface AppDelegate ()<EMClientDelegate>
 
 @end
@@ -38,8 +40,27 @@
                                                appkey:@"douser#istore"
                                          apnsCertName:@"istore_dev"
                                           otherConfig:@{kSDKConfigEnableConsoleLogger:[NSNumber numberWithBool:YES]}];
+    if ([self canAutoLogin]) {
+        
+    }
+    else {
+        [self performSelector:@selector(loadPhoneLogin) withObject:nil afterDelay:2.];
+
+    }
     
     return YES;
+}
+
+- (BOOL)canAutoLogin
+{
+    return NO;
+}
+
+- (void)loadPhoneLogin
+{
+    PhoneLoginController *login = [[PhoneLoginController alloc] initWithNibName:@"PhoneLoginController" bundle:nil];
+    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:login];
+    self.window.rootViewController = navi;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

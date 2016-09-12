@@ -11,9 +11,9 @@
 #import "HWLoginSetUserController.h"
 #import "HWLoginComparySetController.h"
 
+#import "HWFrameSet.h"
 #import "HWUsersManager.h"
 
-#define mainSize    [UIScreen mainScreen].bounds.size
 
 #define offsetLeftHand      60
 

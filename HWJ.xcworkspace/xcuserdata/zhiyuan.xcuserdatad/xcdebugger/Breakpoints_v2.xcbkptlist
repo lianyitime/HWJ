@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HWJ/Classes/ViewControllers/CandidateList/HWCandidatesListController.m"
-            timestampString = "494254880.996462"
+            timestampString = "493790654.965738"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "152"
-            endingLineNumber = "152"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "-loadData"
             landmarkType = "5">
          </BreakpointContent>
@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HWJ/AppDelegate.m"
-            timestampString = "493530377.240532"
+            timestampString = "495211419.565665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
             landmarkName = "-loginUserIM"
             landmarkType = "5">
          </BreakpointContent>
@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HWJ/AppDelegate.m"
-            timestampString = "493530377.240532"
+            timestampString = "495211419.565665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
             landmarkName = "-loginUserIM"
             landmarkType = "5">
          </BreakpointContent>
@@ -154,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HWJ/AppDelegate.m"
-            timestampString = "493530377.240532"
+            timestampString = "495211419.565665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
             landmarkName = "-loginUserIM"
             landmarkType = "5">
          </BreakpointContent>
@@ -170,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HWJ/AppDelegate.m"
-            timestampString = "493530377.240532"
+            timestampString = "495211419.565665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
             landmarkName = "-loginUserIM"
             landmarkType = "5">
          </BreakpointContent>
@@ -249,6 +249,22 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
+            filePath = "HWJ/Classes/ViewControllers/CandidateList/HWCandidatesListController.m"
+            timestampString = "493790770.829847"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
+            landmarkName = "-onClickCell:event:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
             filePath = "HWJ/Classes/Others/EaseUI/EMUIKit/Views/conversation/toolbar/FaceView/EaseFacialView.m"
             timestampString = "491624391.200021"
             startingColumnNumber = "9223372036854775807"
@@ -265,13 +281,13 @@
                   symbolName = "-[EaseFacialView loadFacialView:size:]"
                   moduleName = "HWJ"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zhiyuan/Documents/Projects/HWJ/Classes/Others/EaseUI/EMUIKit/Views/conversation/toolbar/FaceView/EaseFacialView.m"
-                  timestampString = "494653936.758014"
+                  urlString = "file:///Users/zhiyuan/Documents/HWJ/HWJ/Classes/Others/EaseUI/EMUIKit/Views/conversation/toolbar/FaceView/EaseFacialView.m"
+                  timestampString = "495212093.324097"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "297"
                   endingLineNumber = "297"
-                  offsetFromSymbolStart = "100">
+                  offsetFromSymbolStart = "102">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -280,13 +296,13 @@
                   symbolName = "-[EaseFacialView loadFacialView:size:]"
                   moduleName = "HWJ"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zhiyuan/Documents/Projects/HWJ/Classes/Others/EaseUI/EMUIKit/Views/conversation/toolbar/FaceView/EaseFacialView.m"
-                  timestampString = "494653936.758114"
+                  urlString = "file:///Users/zhiyuan/Documents/HWJ/HWJ/Classes/Others/EaseUI/EMUIKit/Views/conversation/toolbar/FaceView/EaseFacialView.m"
+                  timestampString = "495212093.324347"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "297"
                   endingLineNumber = "297"
-                  offsetFromSymbolStart = "116">
+                  offsetFromSymbolStart = "110">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -298,11 +314,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HWJ/Classes/ViewControllers/CandidateList/HWCandidatesListController.m"
-            timestampString = "494737349.96349"
+            timestampString = "493790770.829847"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "241"
-            endingLineNumber = "241"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
             landmarkName = "-emotionFormessageViewController:"
             landmarkType = "5">
          </BreakpointContent>
@@ -314,11 +330,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HWJ/Classes/ViewControllers/CandidateList/HWCandidatesListController.m"
-            timestampString = "494737349.96349"
+            timestampString = "493790770.829847"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "259"
-            endingLineNumber = "259"
+            startingLineNumber = "186"
+            endingLineNumber = "186"
             landmarkName = "-emotionFormessageViewController:"
             landmarkType = "5">
          </BreakpointContent>
@@ -346,11 +362,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HWJ/Classes/View/HWJobInfoCell.m"
-            timestampString = "494652688.537062"
+            timestampString = "493717081.346147"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "263"
-            endingLineNumber = "263"
+            startingLineNumber = "243"
+            endingLineNumber = "243"
             landmarkName = "-loadData:"
             landmarkType = "5">
          </BreakpointContent>
@@ -378,11 +394,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HWJ/AppDelegate.m"
-            timestampString = "493530377.240532"
+            timestampString = "495211419.565665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
             landmarkName = "-onLogin:"
             landmarkType = "5">
          </BreakpointContent>
@@ -857,13 +873,13 @@
                   symbolName = "-[HWJobSettingCell loadSubviews]"
                   moduleName = "HWJ"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zhiyuan/Documents/Projects/HWJ/Classes/View/HWJobSettingCell.m"
-                  timestampString = "494653936.768255"
+                  urlString = "file:///Users/zhiyuan/Documents/HWJ/HWJ/Classes/View/HWJobSettingCell.m"
+                  timestampString = "495212093.343489"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "148"
                   endingLineNumber = "148"
-                  offsetFromSymbolStart = "4780">
+                  offsetFromSymbolStart = "5021">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -872,13 +888,13 @@
                   symbolName = "__32-[HWJobSettingCell loadSubviews]_block_invoke.146"
                   moduleName = "HWJ"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zhiyuan/Documents/Projects/HWJ/Classes/View/HWJobSettingCell.m"
-                  timestampString = "494653936.768349"
+                  urlString = "file:///Users/zhiyuan/Documents/HWJ/HWJ/Classes/View/HWJobSettingCell.m"
+                  timestampString = "495212093.343656"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "148"
                   endingLineNumber = "148"
-                  offsetFromSymbolStart = "28">
+                  offsetFromSymbolStart = "19">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -905,93 +921,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HWJ/Classes/ViewControllers/CandidateList/HWCandidatesListController.m"
-            timestampString = "494737349.96349"
+            filePath = "HWJ/AppDelegate.m"
+            timestampString = "495211365.979465"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "303"
-            endingLineNumber = "303"
-            landmarkName = "-dropdownMenu:didSelectRow:inComponent:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HWJ/Classes/ViewControllers/CandidateList/HWCandidatesListController.m"
-            timestampString = "494737349.96349"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "281"
-            endingLineNumber = "281"
-            landmarkName = "-dropdownMenu:attributedTitleForComponent:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HWJ/Classes/ViewControllers/JobsList/HWJosbListController.m"
-            timestampString = "494740705.016712"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
-            landmarkName = "-onClickCell:event:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HWJ/Classes/View/HWSayHelloView.m"
-            timestampString = "494519127.88707"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "201"
-            endingLineNumber = "201"
-            landmarkName = "-onTapBg:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HWJ/Classes/View/HWJobInfoCell.m"
-            timestampString = "494652896.012416"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "-loadSubviews"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HWJ/Classes/View/HWJobInfoCell.m"
-            timestampString = "494652977.957961"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
-            landmarkName = "-loadSubviews"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "-loadPhoneLogin"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

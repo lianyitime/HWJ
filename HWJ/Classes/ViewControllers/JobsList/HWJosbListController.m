@@ -40,6 +40,7 @@
     [self.view addSubview:table];
     self.tableView = table;
     
+
     UIBarButtonItem *speaceRight = [[UIBarButtonItem alloc]
                                     initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
                                     target:nil action:nil];
@@ -81,6 +82,11 @@
     
     self.jobs = [[NSMutableArray alloc] initWithObjects:candi, nil];
     [self.tableView reloadData];
+}
+
+- (void)onSelectedRMBMsg
+{
+    
 }
 
 #pragma mark -
