@@ -1,24 +1,29 @@
 PODS:
-  - Masonry (0.6.1)
-  - REFormattedNumberField (1.1.5)
-  - RETableViewManager (1.6):
+  - Masonry (1.0.1)
+  - REFormattedNumberField (1.1.6)
+  - RETableViewManager (1.7):
     - REFormattedNumberField (~> 1.1.5)
     - REValidation (~> 0.1.4)
   - REValidation (0.1.4)
-  - SDWebImage (3.7.2):
-    - SDWebImage/Core (= 3.7.2)
-  - SDWebImage/Core (3.7.2)
+  - RKNotificationHub (2.0.4)
+  - SDWebImage (3.8.1):
+    - SDWebImage/Core (= 3.8.1)
+  - SDWebImage/Core (3.8.1)
 
 DEPENDENCIES:
   - Masonry
   - RETableViewManager (~> 1.6)
+  - RKNotificationHub
   - SDWebImage
 
 SPEC CHECKSUMS:
-  Masonry: 4972309f2f134de9dd312f4dc4a21359b50e6caa
-  REFormattedNumberField: be3d55dd709f65541fb26b7e1709da07903147f8
-  RETableViewManager: 9667ecb29c005c32df40a1dd1828224840a351a2
+  Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
+  REFormattedNumberField: 70fc5fb1218ebd5ee9983820defd12806d5c6ec6
+  RETableViewManager: 0f24d796c42c0890d38c79cc9aeb3871e186726e
   REValidation: 38c4de1be58455f8b00aab208ac80db316a66b7f
-  SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
+  RKNotificationHub: 3765424499139c3d3885b681bb0837f072d12ae6
+  SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: cf3a58673dfcb13f7b4ec603d2457e736458f69b
+
+COCOAPODS: 1.0.0
