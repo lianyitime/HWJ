@@ -642,7 +642,7 @@
 
 - (BOOL)checkResultSuccess:(NSDictionary *)result
 {
-    if ([[result objectForKey:@"code"] integerValue] == 0 && [[[result objectForKey:@"data"] objectForKey:@"status"] isEqualToString:@"success"]) {
+    if ([[[result objectForKey:@"code"] lowercaseString] isEqualToString:@"ok"]) {
         return YES;
     }
     else {

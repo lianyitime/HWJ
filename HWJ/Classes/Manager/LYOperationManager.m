@@ -156,9 +156,16 @@
         return [obj1 compare:obj2 options:NSCaseInsensitiveSearch];
     }];
     NSMutableString * sourceStr = [[NSMutableString alloc] init];
+    NSString *lastKey = [allKey lastObject];
     for (NSString *key in allKey) {
-        NSString *formatStr = [NSString stringWithFormat:@"%@%@", key, [param objectForKey:key]];
-        [sourceStr appendString:formatStr];
+        if ([lastKey isEqualToString:key]) {
+            NSString *formatStr = [NSString stringWithFormat:@"%@=%@", key, [param objectForKey:key]];
+            [sourceStr appendString:formatStr];
+        }
+        else {
+            NSString *formatStr = [NSString stringWithFormat:@"%@=%@&", key, [param objectForKey:key]];
+            [sourceStr appendString:formatStr];
+        }
     }
     NSString *appCode = [NSString  stringWithFormat:@"%@",@"218abfa6e12e2adcfa0657840cb73ac45640fc07bc724485"];
     NSString *signStr = [NSString hmacSha1:appCode text:sourceStr];
