@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^SayHello)(id sender);
+
 @interface HWSayHelloView : UIView
 
-- (void)loadData:(id)data;
+- (void)loadData:(id)data withHandle:(SayHello)handle;
 
 @end

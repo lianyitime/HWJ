@@ -98,7 +98,9 @@
 - (void)onSendMsg:(id)sender
 {
     HWSayHelloView *helloView = [[HWSayHelloView alloc] initWithFrame:self.view.bounds];
-    [helloView loadData:nil];
+    [helloView loadData:nil withHandle:^(id sender) {
+        
+    }];
     [self.view addSubview:helloView];
 }
 

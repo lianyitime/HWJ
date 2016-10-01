@@ -25,6 +25,8 @@
 
 @property (nonatomic, strong)UIButton *sendBt;
 
+@property (nonatomic, copy)SayHello handle;
+
 @end
 
 @implementation HWSayHelloView
@@ -160,7 +162,7 @@
     self.textView = textView;
     
     UIButton *sendBt = [UIButton buttonWithType:UIButtonTypeCustom];
-    [sendBt setTitle:@"￥搭讪￥" forState:UIControlStateNormal];
+    [sendBt setTitle:@"发送" forState:UIControlStateNormal];
     [sendBt addTarget:self action:@selector(sendInviteMsg:) forControlEvents:UIControlEventTouchUpInside];
     [sendBt.titleLabel setFont:[UIFont systemFontOfSize:13]];
     [sendBt setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -179,16 +181,20 @@
     
 }
 
-- (void)loadData:(id)data
+- (void)loadData:(id)data withHandle:(SayHello)handle
 {
     [self.userLabel setText:@"To:马云"];
     [self.companyLabel setText:@"阿里哈哈"];
     [self.jobLabel setText:@"应聘:阿里CTO"];
+    
+    self.handle = handle;
 }
 
 - (void)sendInviteMsg:(id)sender
 {
-    
+    if (self.handle) {
+        self.handle(sender);
+    }
 }
 
 - (void)doExitView

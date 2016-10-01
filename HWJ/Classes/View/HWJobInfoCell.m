@@ -212,7 +212,7 @@
     }];
     
     UIButton *sendBt = [UIButton buttonWithType:UIButtonTypeCustom];
-    [sendBt setTitle:@"￥搭讪￥" forState:UIControlStateNormal];
+    [sendBt setTitle:@"申请应聘" forState:UIControlStateNormal];
     [sendBt addTarget:self action:@selector(sendInviteMsg:) forControlEvents:UIControlEventTouchUpInside];
     [sendBt.titleLabel setFont:[UIFont systemFontOfSize:13]];
     [sendBt setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];

@@ -14,6 +14,7 @@
 #import "HWJobDetailController.h"
 #import "HWSayHelloView.h"
 #import "RKNotificationHub.h"
+#import "MBProgressHUD+MJ.h"
 
 @interface HWJosbListController()<UITableViewDelegate, UITableViewDataSource>
 
@@ -126,7 +127,11 @@
         case HWJobInfoEventSendMsg:
         {
             HWSayHelloView *helloView = [[HWSayHelloView alloc] initWithFrame:self.view.bounds];
-            [helloView loadData:nil];
+            [helloView loadData:nil withHandle:^(id sender) {
+                [helloView removeFromSuperview];
+                [MBProgressHUD showTipsMessage:@"应聘申请已发送" toView:self.view];
+                
+            }];
             [self.view addSubview:helloView];
 //            EMMessage *message = [EaseSDKHelper sendCustomMessageWithTitle:@"测试信息"
 //                                                             to:@"8001"
