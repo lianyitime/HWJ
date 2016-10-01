@@ -157,8 +157,12 @@
     }];
     NSMutableString * sourceStr = [[NSMutableString alloc] init];
     for (NSString *key in allKey) {
-        NSString *formatStr = [NSString stringWithFormat:@"%@%@", key, [param objectForKey:key]];
+        NSString *lastKey = [allKey lastObject];
+        NSString *formatStr = [NSString stringWithFormat:@"%@=%@", key, [param objectForKey:key]];
         [sourceStr appendString:formatStr];
+        if (![key isEqualToString:lastKey]) {
+            [sourceStr appendString:@"&"];
+        }
     }
     NSString *appCode = [NSString  stringWithFormat:@"%@",@"218abfa6e12e2adcfa0657840cb73ac45640fc07bc724485"];
     NSString *signStr = [NSString hmacSha1:appCode text:sourceStr];

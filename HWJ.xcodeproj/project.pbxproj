@@ -2272,7 +2272,7 @@
 			baseConfigurationReference = 5ACE15E86821C03027AFF0F5 /* Pods-HWJ.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: yang zhiyuan (AU7C9SH5J4)";
+				CODE_SIGN_IDENTITY = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2293,7 +2293,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.helloworld-job.HWJ";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "ce4b276e-3b95-4ba4-b459-1222e979827e";
 			};
 			name = Debug;
 		};
@@ -2302,7 +2302,7 @@
 			baseConfigurationReference = A4C7B6D04E851E9703947226 /* Pods-HWJ.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: yang zhiyuan (AU7C9SH5J4)";
+				CODE_SIGN_IDENTITY = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2323,7 +2323,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.helloworld-job.HWJ";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "ce4b276e-3b95-4ba4-b459-1222e979827e";
 			};
 			name = Release;
 		};

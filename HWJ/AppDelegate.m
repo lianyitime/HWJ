@@ -21,6 +21,7 @@
 #import "HWJobsManagerController.h"
 
 #import "PhoneLoginController.h"
+#import "HWLoginViewController.h"
 
 @interface AppDelegate ()<EMClientDelegate>
 
@@ -44,7 +45,9 @@
         
     }
     else {
-        [self performSelector:@selector(loadPhoneLogin) withObject:nil afterDelay:2.];
+        //[self performSelector:@selector(loadPhoneLogin) withObject:nil afterDelay:2.];
+        HWLoginViewController *loginVC = [[HWLoginViewController alloc] init];
+        self.window.rootViewController = loginVC;
 
     }
     

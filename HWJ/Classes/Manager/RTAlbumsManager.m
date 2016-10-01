@@ -512,7 +512,7 @@
 - (void)loginWtihAuthCode:(NSString *)phone withCode:(NSString *)code withBlock:(RTRequestCompBlock)block
 {
     NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:phone, @"mobile", code, @"code", nil];
-    [[LYOperationManager sharedInstance] POST:@"/api/checkauthcode" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [[LYOperationManager sharedInstance] POST:@"/v1/login" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         if ([self checkResultSuccess:responseObject]) {
             block(YES, responseObject, nil);
         }
@@ -642,7 +642,7 @@
 
 - (BOOL)checkResultSuccess:(NSDictionary *)result
 {
-    if ([[result objectForKey:@"code"] integerValue] == 0 && [[[result objectForKey:@"data"] objectForKey:@"status"] isEqualToString:@"success"]) {
+    if ([[[result objectForKey:@"code"] lowercaseString] isEqualToString:@"ok"]) {
         return YES;
     }
     else {

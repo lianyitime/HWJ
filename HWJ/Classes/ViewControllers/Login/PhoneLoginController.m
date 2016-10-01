@@ -253,8 +253,8 @@
 }
 
 - (IBAction)loginButtonClick:(id)sender {
-    [self onLogin:sender];
-    return;
+//    [self onLogin:sender];
+//    return;
     
     if (self.phoneTextField.text == nil || [self.phoneTextField.text isEqualToString:@""]) {
         [MBProgressHUD showTipsMessage:@"请输入手机号" toView:self.view];
