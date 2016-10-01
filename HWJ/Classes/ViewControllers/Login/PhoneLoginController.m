@@ -277,6 +277,9 @@
     }
     
     [MBProgressHUD showMessage:@"登录中..." toView:self.view];
+    
+    [self.phoneTextField resignFirstResponder];
+    [self.authCodeTextField resignFirstResponder];
 
     [[RTAlbumsManager sharedInstance] loginWtihAuthCode:self.phoneTextField.text withCode:self.authCodeTextField.text withBlock:^(BOOL success, id responseObject, NSError *error) {
         if (success) {
