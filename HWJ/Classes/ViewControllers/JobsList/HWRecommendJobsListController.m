@@ -28,7 +28,7 @@
 
 - (void)showAdTip
 {
-    [ZYAdTipsView showInTable:self.tableView withTitle:@"内部员工推荐，入职BAT不再遥不可及"];
+    [ZYAdTipsView showInTable:self.tableView withTitle:@"视频面试，轻轻松松随时随地进行面试"];
 }
 
 - (void)loadData
@@ -38,6 +38,7 @@
     candi.expectMaxMoney = @"30K";
     candi.expectMinMoney = @"20K";
     candi.expectYear = @"5年以上";
+    candi.expectEdutation = @"专科";
     candi.location = @"中关村";
     candi.company = @"百度";
     candi.userTitle = @"开发工程师";
@@ -46,6 +47,8 @@
     candi.appName = @"涟漪相册";
     candi.peoples = @"10000人以上";
     candi.jobType = 1;
+    candi.jobState = @"2";
+
     
     self.jobs = [[NSMutableArray alloc] initWithObjects:candi, nil];
     [self.tableView reloadData];

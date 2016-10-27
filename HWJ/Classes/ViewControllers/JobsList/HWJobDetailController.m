@@ -13,10 +13,16 @@
 #import "HWJobBossInfoCell.h"
 #import "HWJobDetailRequestCell.h"
 #import "HWSayHelloView.h"
+#import "MBProgressHUD+MJ.h"
+
+#import "SPMiniVideoRecorderController.h"
+
 
 @interface HWJobDetailController()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong)UITableView *tableView;
+
+@property (nonatomic, strong)UIButton *sendMsgBt;
 
 @property (nonatomic, strong)HWJobBaseInfo *jobInfo;
 
@@ -47,13 +53,12 @@
     [self.view addSubview:table];
     self.tableView = table;
     
-    [self loadData];
-    
     UIButton *sendMsgBt = [UIButton buttonWithType:UIButtonTypeCustom];
     [sendMsgBt setBackgroundColor:[UIColor colorWithRed:0.5 green:.9 blue:0.5 alpha:1.0]];
-    [sendMsgBt setTitle:@"￥搭讪￥" forState:UIControlStateNormal];
+    [sendMsgBt setTitle:@"申请视频面试" forState:UIControlStateNormal];
     [sendMsgBt addTarget:self action:@selector(onSendMsg:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:sendMsgBt];
+    self.sendMsgBt = sendMsgBt;
     
     [sendMsgBt mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.mas_equalTo(self.view.mas_centerX);
@@ -61,6 +66,8 @@
         make.height.mas_equalTo(49.);
         make.bottom.mas_equalTo(self.view.mas_bottom);
     }];
+    
+    [self updateJobState];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -71,37 +78,84 @@
 
 - (void)showAdTip
 {
-    [ZYAdTipsView showInTable:self.tableView withTitle:@"测试广告位"];
+    [ZYAdTipsView showInTable:self.tableView withTitle:@"视频面试，再也不用装病请假去面试了"];
 }
 
-- (void)loadData
+- (void)loadData:(HWJobBaseInfo *)job
 {
-    HWJobBaseInfo *candi = [[HWJobBaseInfo alloc] init];
-    candi.title = @"iOS高级工程师";
-    candi.expectMaxMoney = @"15K";
-    candi.expectMinMoney = @"12K";
-    candi.expectEdutation = @"本科";
-    candi.expectYear = @"3年以上";
-    candi.location = @"望京";
-    candi.company = @"哈哈科技";
-    candi.userTitle = @"CXO";
-    candi.userName = @"杨志远";
-    candi.userImgUrl = @"http://tva4.sinaimg.cn/crop.0.0.180.180.180/62667ea8jw1e8qgp5bmzyj2050050aa8.jpg";
-    candi.appName = @"涟漪相册";
-    candi.peoples = @"20-50人";
-    candi.jobType = 0;
-    
-    self.jobInfo = candi;
+    self.jobInfo = job;
     [self.tableView reloadData];
+    [self updateJobState];
+}
+
+- (void)updateJobState
+{
+    NSInteger jobState = [self.jobInfo.jobState integerValue];
+    switch (jobState) {
+        case 0:
+            [self.sendMsgBt setTitle:@"申请视频面试" forState:UIControlStateNormal];
+            break;
+        case 1:
+            [self.sendMsgBt setTitle:@"已申请" forState:UIControlStateNormal];
+            break;
+        case 2:
+            [self.sendMsgBt setTitle:@"开始视频面试" forState:UIControlStateNormal];
+            break;
+        case 3:
+            [self.sendMsgBt setTitle:@"已完成面试" forState:UIControlStateNormal];
+            break;
+            
+        default:
+            [self.sendMsgBt setTitle:@"申请视频面试" forState:UIControlStateNormal];
+            break;
+    }
 }
 
 - (void)onSendMsg:(id)sender
 {
-    HWSayHelloView *helloView = [[HWSayHelloView alloc] initWithFrame:self.view.bounds];
-    [helloView loadData:nil withHandle:^(id sender) {
-        
+    NSInteger jobState = [self.jobInfo.jobState integerValue];
+
+    switch (jobState) {
+        case 0:
+        {
+            HWSayHelloView *helloView = [[HWSayHelloView alloc] initWithFrame:self.view.bounds];
+            [helloView loadData:nil withHandle:^(id sender) {
+                [MBProgressHUD showTipsMessage:@"应聘申请已发送" toView:self.view];
+                self.jobInfo.jobState = @"1";
+                [self updateJobState];
+                
+                [self performSelector:@selector(receiveInterview) withObject:nil afterDelay:3.];
+            }];
+            [self.view addSubview:helloView];
+        }
+            break;
+        case 2:
+        {
+            [self startVideoInterview];
+        }
+            break;
+            
+        default:
+            break;
+    }
+
+}
+
+- (void)receiveInterview
+{
+    [MBProgressHUD showTipsMessage:@"申请已通过,请24小时内完成面试" toView:self.view];
+    self.jobInfo.jobState = @"2";
+    [self updateJobState];
+}
+
+- (void)startVideoInterview
+{
+    SPMiniVideoRecorderController *videoVC = [[SPMiniVideoRecorderController alloc] init];
+    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:videoVC];
+    [self presentViewController:navi animated:YES completion:^{
+        self.jobInfo.jobState = @"3";
+        [self updateJobState];
     }];
-    [self.view addSubview:helloView];
 }
 
 
@@ -163,4 +217,8 @@
 //    
 //}
 
+- (void)dealloc
+{
+    [NSObject cancelPreviousPerformRequestsWithTarget:self];
+}
 @end

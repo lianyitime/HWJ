@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class HWJobBaseInfo;
+
 @interface HWJobDetailController : UIViewController
+
+- (void)loadData:(HWJobBaseInfo *)job;
 
 @end

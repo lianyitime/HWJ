@@ -24,6 +24,8 @@
 #import "EaseEmotionManager.h"
 #import "HWReqJobChatCell.h"
 
+#import "SPMiniVideoRecorderController.h"
+
 @interface ChatViewController ()<UIAlertViewDelegate,EMClientDelegate, EMChooseViewDelegate>
 {
     UIMenuItem *_copyMenuItem;
@@ -196,7 +198,9 @@
                 job.appName = @"涟漪相册";
                 job.peoples = @"20-50人";
                 job.jobType = 0;
-                [reqcell loadJobData:job];
+                [reqcell loadJobData:job handle:^(id sender) {
+                    [self onVideoInterviewWithJob:job];
+                }];
                 
                 return reqcell;
                 
@@ -613,6 +617,14 @@
     [self.menuController setMenuVisible:YES animated:YES];
 }
 
+- (void)onVideoInterviewWithJob:(HWJobBaseInfo *)job
+{
+    SPMiniVideoRecorderController *recordVC = [[SPMiniVideoRecorderController alloc] init];
+    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:recordVC];
+    [self presentViewController:navi animated:YES completion:^{
+        
+    }];
+}
 
 #pragma mark - EMChooseViewDelegate
 

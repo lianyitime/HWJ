@@ -10,10 +10,12 @@
 #import "HWCandidateInfo.h"
 #import "HWJobBaseInfo.h"
 
+typedef void(^JobChatBlock)(id sender);
+
 @interface HWReqJobChatCell : UITableViewCell
 
 - (void)loadUserData:(HWCandidateInfo *)data;
 
-- (void)loadJobData:(HWJobBaseInfo *)data;
+- (void)loadJobData:(HWJobBaseInfo *)data handle:(JobChatBlock)handler;
 
 @end

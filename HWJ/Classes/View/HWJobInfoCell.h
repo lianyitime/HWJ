@@ -29,4 +29,10 @@ typedef enum {
 
 - (void)loadData:(HWJobBaseInfo *)data;
 
+- (void)updateJobState;
+
+- (HWJobBaseInfo *)getJobData;
+
+- (NSInteger)getJobState;
+
 @end

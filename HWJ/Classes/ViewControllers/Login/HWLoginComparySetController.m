@@ -35,8 +35,8 @@
     
     // Add items to this section
     //
-    RETextItem *userItem  = [RETextItem itemWithTitle:@"公司名称" value:nil placeholder:@"Text"];
-    RETextItem *prodNameItem  = [RETextItem itemWithTitle:@"主打产品" value:nil placeholder:@"（选填）"];
+    RETextItem *userItem  = [RETextItem itemWithTitle:@"公司名称" value:nil placeholder:@"公司简称"];
+    RETextItem *prodNameItem  = [RETextItem itemWithTitle:@"业务/产品" value:nil placeholder:@"（选填）"];
     RETextItem *prodTypeItem  = [RETextItem itemWithTitle:@"产品领域" value:nil placeholder:@"电商/社交/视频/...（选填）"];
     RETextItem *prodLinkItem  = [RETextItem itemWithTitle:@"产品地址" value:nil placeholder:@"网站地址或AppStore地址"];
     RETextItem *cityItem  = [RETextItem itemWithTitle:@"所在城市" value:@"北京" placeholder:@"北京"];

@@ -31,7 +31,7 @@
     // Do any additional setup after loading the view.
     [self.view setBackgroundColor:[UIColor whiteColor]];
     
-    UISegmentedControl *ctrl = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"临时队列", @"跟踪队列", nil]];
+    UISegmentedControl *ctrl = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"候选列表", @"招聘进度", nil]];
     [ctrl setSelectedSegmentIndex:0];
     [ctrl addTarget:self action:@selector(onSelectedItemChanged:) forControlEvents:UIControlEventValueChanged];
     self.navigationItem.titleView = ctrl;

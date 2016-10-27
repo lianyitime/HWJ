@@ -155,17 +155,16 @@
     NSString *flag = notification.object;
     if ([flag isKindOfClass:[NSString class]] && [flag isEqualToString:@"user"])  {
         HWJosbListController *jobsVC = [[HWJosbListController alloc] init];
-        jobsVC.title = @"直聘";
-        jobsVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"直聘" image:[UIImage imageNamed:@"LYTabBarMyInfo"] selectedImage:[UIImage imageNamed:@"LYTabBarMyInfo_h"]];
+        jobsVC.title = @"机会";
+        jobsVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"机会" image:[UIImage imageNamed:@"LYTabBarMyInfo"] selectedImage:[UIImage imageNamed:@"LYTabBarMyInfo_h"]];
         HWNavigationViewController *navi1 = [[HWNavigationViewController alloc] initWithRootViewController:jobsVC];
         
         HWRecommendJobsListController *recommendVC = [[HWRecommendJobsListController alloc] init];
-        recommendVC.title = @"内推";
-        recommendVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"内推" image:[UIImage imageNamed:@"LYTabBarMyInfo"] selectedImage:[UIImage imageNamed:@"LYTabBarMyInfo_h"]];
+        recommendVC.title = @"面试";
+        recommendVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"面试" image:[UIImage imageNamed:@"LYTabBarMyInfo"] selectedImage:[UIImage imageNamed:@"LYTabBarMyInfo_h"]];
         HWNavigationViewController *navi = [[HWNavigationViewController alloc] initWithRootViewController:recommendVC];
         
         ConversationListController *chatListVC = [[ConversationListController alloc] init];
-        
         chatListVC.title = @"消息";
         chatListVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"消息" image:[UIImage imageNamed:@"LYTabBarMyInfo"] selectedImage:[UIImage imageNamed:@"LYTabBarMyInfo_h"]];
         
@@ -206,7 +205,7 @@
         
         HWNavigationViewController *nav4 = [[HWNavigationViewController alloc] initWithRootViewController:setVC];
         
-        tabController.viewControllers = @[navi1, nav2, naviCenter, nav3, nav4];
+        tabController.viewControllers = @[navi1,nav3, naviCenter, nav2, nav4];
     }
     
     HWNavigationViewController *navi = [[HWNavigationViewController alloc] initWithRootViewController:tabController];

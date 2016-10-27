@@ -205,14 +205,15 @@
     }];
     
     UIButton *sendBt = [UIButton buttonWithType:UIButtonTypeCustom];
-    [sendBt setTitle:@"￥搭讪￥" forState:UIControlStateNormal];
+    [sendBt setTitle:@"邀请视频面试" forState:UIControlStateNormal];
     [sendBt addTarget:self action:@selector(sendInviteMsg:) forControlEvents:UIControlEventTouchUpInside];
     [sendBt.titleLabel setFont:[UIFont systemFontOfSize:13]];
     [sendBt setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [sendBt setClipsToBounds:YES];
     [sendBt.layer setCornerRadius:4.0];
     [sendBt setBackgroundColor:[UIColor colorWithRed:0.5 green:.9 blue:0.5 alpha:1.0]];
-    
+    [sendBt setContentEdgeInsets:UIEdgeInsetsMake(4, 10, 4, 10)];
+
     [self.cardBgView addSubview:sendBt];
     self.sendMsgBt = sendBt;
     
@@ -220,7 +221,7 @@
         make.right.mas_equalTo(self.cardBgView.mas_right).offset(-15);
         make.centerY.mas_equalTo(self.collage.mas_centerY);
         make.height.mas_equalTo(25);
-        make.width.mas_equalTo(70);
+        //make.width.mas_equalTo(70);
     }];
 
 }

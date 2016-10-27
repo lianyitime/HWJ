@@ -12,6 +12,8 @@
 
 @interface HWReqJobChatCell()
 
+@property (nonatomic, copy)JobChatBlock handler;
+
 @property(nonatomic, strong)UIView *cardBgView;
 
 @property(nonatomic, strong)UILabel *nameLab;
@@ -63,6 +65,8 @@
 
 @property (nonatomic, strong)UILabel *wordLabel;
 
+@property (nonatomic, strong)UITapGestureRecognizer *bgTap;
+
 @end
 
 @implementation HWReqJobChatCell
@@ -79,6 +83,10 @@
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     [self setBackgroundColor:[UIColor clearColor]];
     [self.contentView setBackgroundColor:[UIColor clearColor]];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTapBg:)];
+    tap.delegate = self;
+    [self.contentView addGestureRecognizer:tap];
     
     UIView *cardView = [[UIView alloc] init];
     [cardView setBackgroundColor:[UIColor whiteColor]];
@@ -396,6 +404,7 @@
 
 - (void)loadUserData:(HWCandidateInfo *)data
 {
+    
     [self.nameLab setText:data.name];
     if([data.gender isEqualToString:@"男"]) {
         [self.genderView setImage:[UIImage imageNamed:@"about"]];
@@ -418,8 +427,10 @@
     
 }
 
-- (void)loadJobData:(HWJobBaseInfo *)data
+- (void)loadJobData:(HWJobBaseInfo *)data handle:(JobChatBlock)handler
 {
+    self.handler = handler;
+    
     [self.nameLabel setText:data.title];
     
     [self.expectMoney setText:[NSString stringWithFormat:@"%@-%@", data.expectMinMoney, data.expectMaxMoney]];
@@ -428,6 +439,28 @@
     
     [self.managerName setText:[NSString stringWithFormat:@"%@|%@:", data.userTitle, data.company]];
     [self.wordLabel setText:@"我觉的自己适合此岗位，是否可以进一步沟通"];
+}
+
+- (void)onTapBg:(UITapGestureRecognizer *)tap
+{
+    if (self.handler) {
+        self.handler(self);
+    }
+}
+
+- (void)onSelectedProduct:(id)sender
+{
+    
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
+{
+    if([touch.view isKindOfClass:[UIButton class]]) {
+        return NO;
+    }
+    else {
+        return YES;
+    }
 }
 
 @end

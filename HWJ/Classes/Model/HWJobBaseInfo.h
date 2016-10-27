@@ -37,4 +37,6 @@
 //0 直聘，1 内推
 @property (nonatomic, assign)NSInteger jobType;
 
+@property (nonatomic, strong)NSString *jobState;
+
 @end

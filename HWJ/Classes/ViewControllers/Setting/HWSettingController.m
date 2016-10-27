@@ -85,7 +85,7 @@
     
     ZYDoubleBtHeaderView *head = [[ZYDoubleBtHeaderView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 44)];
     [head setLeftTitle:@"梦想基金：100.00"];
-    [head setRightTitle:@"今日收益：20.00"];
+    [head setRightTitle:@"可申请面试次数：5"];
     
     RETableViewSection *section = [RETableViewSection sectionWithHeaderView:head footerView:nil];
     [self.manager addSection:section];

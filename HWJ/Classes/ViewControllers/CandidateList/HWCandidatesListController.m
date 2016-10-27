@@ -13,6 +13,7 @@
 #import "HWNavigationViewController.h"
 #import "RxWebViewController.h"
 #import "HWCandidateDetailController.h"
+#import "HWSetInterviewQuestionController.h"
 
 #import "EaseEmoji.h"
 #import "EaseEmotionManager.h"
@@ -127,7 +128,7 @@ static inline void delay(NSTimeInterval delay, dispatch_block_t block) {
 
 - (void)showAdTip
 {
-    [ZYAdTipsView showInTable:self.tableView withTitle:@"内推:每推荐成功一人可获得奖励1千"];
+    [ZYAdTipsView showInTable:self.tableView withTitle:@"爽约、迟到各种不靠谱？试试视频面试吧"];
 }
 
 - (void)loadData
@@ -201,24 +202,28 @@ static inline void delay(NSTimeInterval delay, dispatch_block_t block) {
     switch (event) {
         case HWCandidateEventSendMsg:
         {
-            EaseMessageViewController *chatController = [[EaseMessageViewController alloc] initWithConversationChatter:@"8001" conversationType:EMConversationTypeChat];
-            chatController.hidesBottomBarWhenPushed = YES;
-            [self.navigationController pushViewController:chatController animated:YES];
-            chatController.delegate = self;
-            chatController.dataSource = self;
+//            EaseMessageViewController *chatController = [[EaseMessageViewController alloc] initWithConversationChatter:@"8001" conversationType:EMConversationTypeChat];
+//            chatController.hidesBottomBarWhenPushed = YES;
+//            [self.navigationController pushViewController:chatController animated:YES];
+//            chatController.delegate = self;
+//            chatController.dataSource = self;
+            HWSetInterviewQuestionController *questionVC = [[HWSetInterviewQuestionController alloc] init];
+            //questionVC.delegate = self;
+            [self.navigationController pushViewController: questionVC animated:YES];
+            
         }
             break;
         case HWCandidateEventClickProduct:
         {
-            NSURL *url = [NSURL URLWithString:@"https://itunes.apple.com/us/app/lian-yi-xiang-ce/id1040060813?l=zh&ls=1&mt=8"];
-            if ([url.host.lowercaseString isEqualToString:@"itunes.apple.com"]) {
-                [[UIApplication sharedApplication] openURL:url];
-            }
-            else {
-                RxWebViewController *webVC = [[RxWebViewController alloc] initWithUrl:[NSURL URLWithString:@"https://itunes.apple.com/us/app/lian-yi-xiang-ce/id1040060813?l=zh&ls=1&mt=8"]];
-                webVC.hidesBottomBarWhenPushed = YES;
-                [self.navigationController pushViewController:webVC animated:YES];
-            }
+//            NSURL *url = [NSURL URLWithString:@"https://itunes.apple.com/us/app/lian-yi-xiang-ce/id1040060813?l=zh&ls=1&mt=8"];
+//            if ([url.host.lowercaseString isEqualToString:@"itunes.apple.com"]) {
+//                [[UIApplication sharedApplication] openURL:url];
+//            }
+//            else {
+//                RxWebViewController *webVC = [[RxWebViewController alloc] initWithUrl:[NSURL URLWithString:@"https://itunes.apple.com/us/app/lian-yi-xiang-ce/id1040060813?l=zh&ls=1&mt=8"]];
+//                webVC.hidesBottomBarWhenPushed = YES;
+//                [self.navigationController pushViewController:webVC animated:YES];
+//            }
         }
             break;
         case HWCandidateEventClickBlog:
@@ -284,8 +289,22 @@ static inline void delay(NSTimeInterval delay, dispatch_block_t block) {
 }
 
 - (NSAttributedString *)dropdownMenu:(MKDropdownMenu *)dropdownMenu attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    NSString *title = nil;
+    switch (row) {
+        case 0:
+            title = @"iOS";
+            break;
+        case 1:
+            title = @"Android";
+            break;
+        case 2:
+            title = @"Java";
+            break;
+        default:
+            break;
+    }
     NSMutableAttributedString *string =
-    [[NSMutableAttributedString alloc] initWithString: [NSString stringWithFormat:@"岗位%ld", row + 1]
+    [[NSMutableAttributedString alloc] initWithString: title
                                            attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:16 weight:UIFontWeightLight],
                                                         NSForegroundColorAttributeName: [UIColor grayColor]}];
     return string;
@@ -300,7 +319,21 @@ static inline void delay(NSTimeInterval delay, dispatch_block_t block) {
 }
 
 - (void)dropdownMenu:(MKDropdownMenu *)dropdownMenu didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-    self.titleStr = [NSString stringWithFormat:@"岗位%ld", row + 1];
+    NSString *title = nil;
+    switch (row) {
+        case 0:
+            title = @"iOS";
+            break;
+        case 1:
+            title = @"Android";
+            break;
+        case 2:
+            title = @"Java";
+            break;
+        default:
+            break;
+    }
+    self.titleStr = title;
     [dropdownMenu reloadComponent:component];
     
     delay(0.15, ^{

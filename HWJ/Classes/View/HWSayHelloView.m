@@ -194,6 +194,7 @@
 {
     if (self.handle) {
         self.handle(sender);
+        [self doExitView];
     }
 }
 

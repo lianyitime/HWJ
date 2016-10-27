@@ -36,8 +36,8 @@
     
     // Add items to this section
     //
-    RETextItem *titleItem  = [RETextItem itemWithTitle:@"职位" value:nil placeholder:@"CTO/技术总监/技术负责人/技术组长"];
-    RETextItem *userItem  = [RETextItem itemWithTitle:@"姓名" value:nil placeholder:@"Text"];
+    RETextItem *titleItem  = [RETextItem itemWithTitle:@"职位" value:nil placeholder:@"CTO/总监/项目经理/无线负责人..."];
+    RETextItem *userItem  = [RETextItem itemWithTitle:@"姓名" value:nil placeholder:@"真实姓名"];
     RENumberItem *phoneItem = [RENumberItem itemWithTitle:@"手机号" value:@"" placeholder:@"(123) 456-7890" format:@"(XXX) XXX-XXXX"];
     phoneItem.onEndEditing = ^(RETextItem *item){
         NSLog(@"Value: %@", item.value);

@@ -13,6 +13,8 @@
 
 @interface HWJobInfoCell()
 
+@property (nonatomic, strong)HWJobBaseInfo *jobInfo;
+
 @property(nonatomic, strong)UIView *cardBgView;
 
 @property(nonatomic, strong)UILabel *nameLabel;
@@ -212,14 +214,14 @@
     }];
     
     UIButton *sendBt = [UIButton buttonWithType:UIButtonTypeCustom];
-    [sendBt setTitle:@"申请应聘" forState:UIControlStateNormal];
+    //[sendBt setTitle:@"申请面试" forState:UIControlStateNormal];
     [sendBt addTarget:self action:@selector(sendInviteMsg:) forControlEvents:UIControlEventTouchUpInside];
     [sendBt.titleLabel setFont:[UIFont systemFontOfSize:13]];
     [sendBt setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [sendBt setClipsToBounds:YES];
     [sendBt.layer setCornerRadius:4.0];
     [sendBt setBackgroundColor:[UIColor colorWithRed:0.5 green:.9 blue:0.5 alpha:1.0]];
-    
+    [sendBt setContentEdgeInsets:UIEdgeInsetsMake(4, 10, 4, 10)];
     [self.cardBgView addSubview:sendBt];
     self.sendMsgBt = sendBt;
     
@@ -227,8 +229,10 @@
         make.right.mas_equalTo(self.cardBgView.mas_right).offset(-15);
         make.top.mas_equalTo(sepLine2.mas_bottom).offset(5);
         make.bottom.mas_equalTo(self.cardBgView.mas_bottom).offset(-5);
-        make.width.mas_equalTo(70);
+       // make.width.mas_equalTo(70);
     }];
+    
+    [self updateJobState];
     
     UILabel *location = [[UILabel alloc] init];
     [location setFont:[UIFont systemFontOfSize:12]];
@@ -259,8 +263,21 @@
     self.peoplesLabel = peoplesLabel;
 }
 
+- (NSInteger)getJobState
+{
+    NSInteger state = [self.jobInfo.jobState integerValue];
+    return state;
+}
+
+- (HWJobBaseInfo *)getJobData
+{
+    return self.jobInfo;
+}
+
 - (void)loadData:(HWJobBaseInfo *)data
 {
+    self.jobInfo = data;
+    
     [self.nameLabel setText:data.title];
     
     [self.expectMoney setText:[NSString stringWithFormat:@"%@-%@", data.expectMinMoney, data.expectMaxMoney]];
@@ -283,6 +300,29 @@
 {
     if ([self.delegate respondsToSelector:@selector(onClickCell:event:)]) {
         [self.delegate onClickCell:self event:HWJobInfoEventSendMsg];
+    }
+}
+
+- (void)updateJobState
+{
+    NSInteger jobState = [self.jobInfo.jobState integerValue];
+    switch (jobState) {
+        case 0:
+            [self.sendMsgBt setTitle:@"申请视频面试" forState:UIControlStateNormal];
+            break;
+        case 1:
+            [self.sendMsgBt setTitle:@"已申请" forState:UIControlStateNormal];
+            break;
+        case 2:
+            [self.sendMsgBt setTitle:@"开始视频面试" forState:UIControlStateNormal];
+            break;
+        case 3:
+            [self.sendMsgBt setTitle:@"已完成面试" forState:UIControlStateNormal];
+            break;
+            
+        default:
+            [self.sendMsgBt setTitle:@"申请视频面试" forState:UIControlStateNormal];
+            break;
     }
 }
 
