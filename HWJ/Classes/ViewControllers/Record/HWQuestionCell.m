@@ -28,6 +28,12 @@
     UIView *bg = [[UIView alloc] initWithFrame:self.frame];
     [self.contentView addSubview:bg];
     self.bgView = bg;
+    [bg mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.contentView.mas_left).offset(0);
+        make.top.mas_equalTo(self.contentView.mas_top).offset(2);
+        make.bottom.mas_equalTo(self.contentView.mas_bottom).offset(-2);
+        make.right.mas_equalTo(self.contentView.mas_right).offset(0);
+    }];
     
     UILabel *label = [[UILabel alloc] initWithFrame:self.frame];
     [self.contentView addSubview:label];

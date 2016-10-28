@@ -41,7 +41,7 @@
     
     // Add items to this section
     //
-    RETextItem *userItem  = [RETextItem itemWithTitle:@"姓名" value:nil placeholder:@"Text"];
+    RETextItem *userItem  = [RETextItem itemWithTitle:@"姓名" value:nil placeholder:@"姓名"];
     RENumberItem *phoneItem = [RENumberItem itemWithTitle:@"手机号" value:@"" placeholder:@"(123) 456-7890" format:@"(XXX) XXX-XXXX"];
     phoneItem.onEndEditing = ^(RETextItem *item){
         NSLog(@"Value: %@", item.value);
